@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>统计推断综合练习</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}details.answer{margin:1em 0;padding:0 1em;background:#f2f7fb;border:1px solid #d5e5f0;border-radius:10px}details.answer summary{cursor:pointer;padding:.65em 0;color:#145e96;font-weight:700}details.answer p{margin-top:.2em}details.answer summary:focus-visible{outline:3px solid #226b9a;outline-offset:2px}</style></head><body><main><nav><a href="index.html">← 返回概率论课程</a></nav><h1>统计推断综合练习：从抽样到结论</h1><!-- 练习答案折叠 --><p>建议先独立完成每道题，再点开“查看解答”，对照思路和易错点。</p>
+<p>本练习串联第五至八章，覆盖大数定律、抽样分布、参数估计和假设检验。题目为新编；先检查条件，再计算和解释。</p>
+<h2>题 1：样本均值的波动</h2>
+<p>X₁,…,X₆₄ 独立同分布，总体均值为 20、标准差为 8。求样本均值的期望和标准差。</p>
+<details class="answer"><summary>查看解答</summary><p> E(X̄)=20，D(X̄)=8²/64=1，所以标准差为 1。这个计算不需要总体本身正态；若要把样本均值的分布视为精确正态，则还需要相应条件，或在适当大样本条件下使用近似。</p></details>
+<h2>题 2：切比雪夫不等式是界，不是等式</h2>
+<p>已知 E(X)=10、D(X)=9，求 P(|X−10|≥6) 的一个上界。</p>
+<details class="answer"><summary>查看解答</summary><p> 切比雪夫不等式给 P(|X−10|≥6)≤9/6²=1/4。仅有均值与方差不能确定该概率恰好为 1/4。</p></details>
+<h2>题 3：经验分布函数</h2>
+<p>观测值为 2、3、3、6、8。求经验分布函数在 3 处的值。</p>
+<details class="answer"><summary>查看解答</summary><p> 不大于 3 的观测共有 2、3、3，计 3 个；因此 F₅(3)=3/5。两个 3 是两次观测，均应计入。</p></details>
+<h2>题 4：样本方差与自由度</h2>
+<p>独立正态样本为 2、4、6、8、10。求样本均值、通常定义的样本方差，以及方差推断中 χ² 分布的自由度。</p>
+<details class="answer"><summary>查看解答</summary><p> 均值为 6；偏差平方和为 16+4+0+4+16=40；样本方差 S²=40/(5−1)=10。正态总体模型下，(n−1)S²/σ² 的自由度是 4。该精确分布依赖独立正态抽样假设。</p></details>
+<h2>题 5：已知标准差的均值区间</h2>
+<p>独立样本来自正态总体，总体标准差 σ=6、样本量 n=36，样本均值为 20。求总体均值的双侧 95% 置信区间，取 z₀.₉₇₅=1.96。</p>
+<details class="answer"><summary>查看解答</summary><p> 标准误 6/√36=1；区间为 20±1.96×1，即 [18.04,21.96]。95% 是构造方法在重复抽样下的覆盖率，不是说已固定的参数随机落入这个已算出区间的概率为 95%。</p></details>
+<h2>题 6：正态总体标准差未知时</h2>
+<p>总体正态，独立样本量为 10，总体标准差未知。构造单总体均值的精确双侧置信区间应选什么分布，自由度是多少？</p>
+<details class="answer"><summary>查看解答</summary><p> 使用样本标准差 S 构造 t 统计量，服从自由度 10−1=9 的 t 分布。还需要查对应置信水平的 t 分位数；不能直接用未知的总体标准差。</p></details>
+<h2>题 7：p 值与检验决定</h2>
+<p>预先设 α=0.05，某双侧检验得到 p=0.08。应当拒绝还是不拒绝原假设？</p>
+<details class="answer"><summary>查看解答</summary><p> p&gt;0.05，按该规则不拒绝原假设。这不证明原假设成立；样本量、模型与检验功效也影响结果。p 值不是原假设为真的概率。</p></details>
+<h2>题 8：配对与两独立样本</h2>
+<p>对 15 个学生，分别记录同一人培训前后成绩。检验平均变化是否为零，应如何构造样本？</p>
+<details class="answer"><summary>查看解答</summary><p> 对每个人计算“培训后−培训前”的差值，共 15 个差值。若差值满足独立正态等条件，可对差值均值使用单样本 t 方法，自由度 14。不能忽略同一个人的前后配对关系。</p></details>
+<h2>题 9：方差区间的分位数顺序</h2>
+<p>正态总体独立样本 n=11，样本方差 4。给定 χ²(10) 的左侧 0.025 与 0.975 分位数分别为 3.247、20.483，求方差的 95% 置信区间。</p>
+<details class="answer"><summary>查看解答</summary><p> 分子 (n−1)S²=40。区间为 [40/20.483,40/3.247]≈[1.95,12.32]；大分位数放左端分母。标准差区间需对两个端点分别开平方。</p></details>
+<h2>学完检查</h2>
+<p>能区分总体分布、样本分布和统计量抽样分布；能解释置信水平与 p 值；能判断独立样本和配对样本；使用 t、χ² 等精确分布之前会检查模型条件。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《概率论与数理统计》，王丽主编，科学出版社，2026 年第一版；题目为新编，依据已有第五至八章内容组织，教材扫描正文及习题仍待逐页核对。</li>
+<li>OpenStax, Introductory Statistics 2e, Confidence Intervals: <a href="https://openstax.org/books/introductory-statistics-2e/pages/8-introduction">https://openstax.org/books/introductory-statistics-2e/pages/8-introduction</a></li>
+<li>OpenStax, Introductory Statistics 2e, Hypothesis Testing: <a href="https://openstax.org/books/introductory-statistics-2e/pages/9-introduction">https://openstax.org/books/introductory-statistics-2e/pages/9-introduction</a></li>
+</ul>
+<nav><a href="chapter8.html">返回第八章</a></nav></main></body></html>

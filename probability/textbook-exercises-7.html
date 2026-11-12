@@ -1,0 +1,54 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教材习题7逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="chapter7.html">← 返回概率论第七章</a></nav><h1>教材习题 7 逐题讲解：参数估计</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">第 1 题：矩估计</a></li><li><a href="#exercise-2">第 2 题：四种分布的矩估计</a></li><li><a href="#exercise-3">第 3 题：极大似然估计</a></li><li><a href="#exercise-4">第 4 题：无偏与有效性</a></li><li><a href="#exercise-5">第 5 题：废品率</a></li><li><a href="#exercise-6">第 6 题：泊松参数</a></li><li><a href="#exercise-7">第 7 题：相邻差估计方差</a></li><li><a href="#exercise-8">第 8 题：有偏估计也可能更好</a></li><li><a href="#exercise-9">第 9 题：已知与未知标准差</a></li><li><a href="#exercise-10">第 10 题：大样本均值区间</a></li><li><a href="#exercise-11">第 11 题：已知 σ 与样本量</a></li><li><a href="#exercise-12">第 12 题：两独立正态总体均值之差</a></li><li><a href="#exercise-13">第 13 题：标准差区间</a></li><li><a href="#exercise-14">第 14 题：方差比区间</a></li><li><a href="#exercise-15">核对说明</a></li></ol></details>
+<p>对应教材第 139—141 页。建议先自己判断估计方法，再展开计算。记 x̄ 为样本均值，S² 为分母 n−1 的样本方差；分布分位数取常用表的近似值。</p>
+<h2 id="exercise-1">第 1 题：矩估计</h2>
+<p>矩法用样本一、二阶矩代替总体一、二阶矩：μ̂=x̄，σ̂²=(1/n)Σ(xᵢ−x̄)²。四个寿命的均值为 <strong>1493.5 h</strong>，离均差平方和为 41705，因此 σ̂²=<strong>10426.25 h²</strong>。注意这里除以 4；分母为 3 的无偏样本方差是另一个估计量。</p>
+<h2 id="exercise-2">第 2 题：四种分布的矩估计</h2>
+<p>把 E(X) 与 x̄ 相等，然后解参数。</p>
+<ol>
+<li>离散均匀分布的 E(X)=(N+1)/2，故 N 的矩估计为 <strong>2x̄−1</strong>。N 是正整数，这个公式可能不是整数；实际选整数时还应考虑它不能小于样本最大值，简单取整需要额外约定。</li>
+<li>给定 c 的帕累托型密度，E(X)=θc/(θ−1)，故 <strong>θ̂=x̄/(x̄−c)</strong>。因为每个样本大于 c，分母为正。</li>
+<li>第 2 次成功所需试验次数的期望为 2/θ，故 <strong>θ̂=2/x̄</strong>。若所有观测均为 2，公式取到边界 1；题目写 θ&lt;1，边界问题需单独处理。</li>
+<li>令 a=√θ，E(X)=a/(a+1)，解得 <strong>θ̂=[x̄/(1−x̄)]²</strong>。</li>
+</ol>
+<h2 id="exercise-3">第 3 题：极大似然估计</h2>
+<p>先写联合似然，尤其要保留密度的取值范围。</p>
+<ol>
+<li>位移指数分布，若 μ、θ 均未知且 θ&gt;0，似然在 μ≤x₍₁₎ 时为 θ⁻ⁿexp[−Σ(xᵢ−μ)/θ]。固定 θ 时随 μ 增大而增大，故 <strong>μ̂=x₍₁₎=min xᵢ</strong>；再对 θ 求极值，得 <strong>θ̂=x̄−x₍₁₎</strong>。若所有样本相等，似然可随 θ→0 发散，不存在有限的内部极大值。</li>
+<li>Rayleigh 型密度：对数似然为常数−2n lnθ−Σxᵢ²/(2θ²)，求导得 <strong>θ̂=√[Σxᵢ²/(2n)]</strong>。</li>
+<li>长度为 1 的均匀分布：只有当 <strong>x₍ₙ₎−1/2 &lt; θ &lt; x₍₁₎+1/2</strong> 时似然为 1，其余为 0。因此该区间内每个 θ 都是极大似然估计；例如中点 (x₍₁₎+x₍ₙ₎)/2。端点由于题设为严格不等号，不能直接包含。合法样本的极差小于 1。</li>
+<li>二项分布 B(m,p)：对数似然与 Σxᵢ ln p+(nm−Σxᵢ)ln(1−p) 相差常数。内部解为 <strong>p̂=x̄/m</strong>。全为 0 或全为 m 时，最大值只在题目排除的边界趋近，不存在内部极大值。</li>
+</ol>
+<h2 id="exercise-4">第 4 题：无偏与有效性</h2>
+<p>四个估计量的权重各自加起来均为 1，所以期望都是 μ。利用样本独立，四个方差依次是 <strong>11σ²/25、13σ²/32、3σ²/8、σ²/3</strong>。最后一个最小，因此在所列四个中，样本均值 T₄ 最有效；若 σ²=0，它们方差同为零。</p>
+<h2 id="exercise-5">第 5 题：废品率</h2>
+<p>每个指示变量满足 E(Xᵢ)=1·p+0·(1−p)=p，故 E(p̂)=E(ΣXᵢ/n)=p，样本废品率是 p 的无偏估计。这个结论仅靠期望线性即可；求其方差时才需要考虑抽样是否独立。</p>
+<h2 id="exercise-6">第 6 题：泊松参数</h2>
+<p>泊松总体满足 E(X)=Var(X)=λ；样本方差以 n−1 为分母时 E(S²)=Var(X)=λ，故 S² 无偏。同时 E(x̄)=λ，所以 E[αx̄+(1−α)S²]=λ，所给范围内的任意 α 都成立。</p>
+<h2 id="exercise-7">第 7 题：相邻差估计方差</h2>
+<p>独立同分布给出 E(Xᵢ₊₁−Xᵢ)=0、Var(Xᵢ₊₁−Xᵢ)=2σ²，因此每一项平方的期望为 2σ²。即使相邻差彼此共享观测、并不独立，期望仍可相加，所以 <strong>C=1/[2(n−1)]</strong>，n≥2。</p>
+<h2 id="exercise-8">第 8 题：有偏估计也可能更好</h2>
+<p>指数总体的 E(x̄)=θ，Var(x̄)=θ²/n。对 θ̂ₐ=ax̄，均方误差是 θ²[a²/n+(a−1)²]。对 a 求导并令零，得 <strong>a=n/(n+1)</strong>，最小均方误差为 <strong>θ²/(n+1)</strong>，小于 x̄ 的 θ²/n。这个估计有偏，但总体误差更小；“无偏”并不自动意味着均方误差最小。</p>
+<h2 id="exercise-9">第 9 题：已知与未知标准差</h2>
+<p>16 个观测计算得 x̄=2.125 cm，s≈0.017127 cm。</p>
+<ol>
+<li>σ=0.01 已知，用正态分位数 z₀.₉₅≈1.645：2.125±1.645×0.01/4，即 <strong>(2.12089, 2.12911) cm</strong>。</li>
+<li>σ 未知且总体正态，用自由度 15 的 t₀.₉₅≈1.753：2.125±1.753s/4，即 <strong>(2.11749, 2.13251) cm</strong>。</li>
+</ol>
+<p>置信度描述的是长期重复抽样时构造区间的覆盖比例，不是固定参数在算出的区间中随机变动的概率。</p>
+<h2 id="exercise-10">第 10 题：大样本均值区间</h2>
+<p>题目未明确总体正态。以独立同分布、有限方差和大样本近似为前提，用 1.96×0.02/√50≈0.00554，得到 <strong>(12.29446, 12.30554) ms</strong>。如果额外假设正态总体，则可用 t(49) 的 0.975 分位数约 2.010，得到约 (12.29431, 12.30569) ms；两者依据不同。</p>
+<h2 id="exercise-11">第 11 题：已知 σ 与样本量</h2>
+<ol>
+<li>σ=3 已知：28.5±1.96×3/√40，得 <strong>(27.5703, 29.4297) ms</strong>。</li>
+<li>要求区间半宽不超过 1，解 1.96×3/√n≤1，得到 n≥34.5744，所以最少 <strong>35 次</strong>。已有 40 次观测，已经达到这个精度要求。</li>
+</ol>
+<h2 id="exercise-12">第 12 题：两独立正态总体均值之差</h2>
+<p>两组均值分别为 0.14125、0.14000，样本方差分别约 0.00000825、0.00001000。题设共同方差未知，合并估计 sₚ²=[3s₁²+4s₂²]/7=0.00000925，sₚ≈0.0030414。自由度为 4+5−2=7，t₀.₉₇₅≈2.365，误差为 2.365sₚ√(1/4+1/5)≈0.004825。</p>
+<p>所以 μ₁−μ₂ 的 95% 置信区间约为 <strong>(−0.00358, 0.00608) Ω</strong>。包含 0 表示这些数据与均值相等仍相容，不能据此断言两均值必然相等。</p>
+<h2 id="exercise-13">第 13 题：标准差区间</h2>
+<p>n=9，s=11，自由度 8；(n−1)s²=968。χ² 分布自由度 8 的 0.025 和 0.975 下侧分位数约为 2.180、17.535。先求方差区间 (968/17.535, 968/2.180)，再对两端分别开平方，得 <strong>σ 的区间约 (7.43, 21.07) m/s</strong>。</p>
+<h2 id="exercise-14">第 14 题：方差比区间</h2>
+<p>两组独立正态样本，各 n=10，方差比点估计 r=0.5149/0.6065≈0.8490。对 F(9,9)，下侧 0.975 分位数约 4.026，下侧 0.025 分位数约为其倒数；区间为 (r/4.026, r×4.026)，即 <strong>约 (0.211, 3.418)</strong>。两组自由度相等才有这里的简洁倒数形式；一般要交换 F 分布的两个自由度。</p>
+<h2 id="exercise-15">核对说明</h2>
+<p>本页按教材扫描页题目独立整理；涉及统计表取值时，末位差异可能来自四舍五入。第 2、3、10 题特别标明了边界或模型条件，避免把额外假设当成题目已知条件。</p>
+<nav><a href="chapter7.html">返回第七章</a> · <a href="chapter8.html">继续第八章</a></nav></main></body></html>

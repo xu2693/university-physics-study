@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>磁介质、磁化与磁滞</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="13.1.html">返回 13.1</a> · <a href="13.2.html">13.2 磁场</a> · <a href="13.3.html">13.3 铁磁质</a></nav><h1>磁介质中的磁场：B、H 和磁化</h1>
+<p>本篇配合第 13 章，解释材料磁化、磁场强度和铁磁现象。例题为新编；扫描教材正文仍待逐页核对。</p>
+<h2>一、为什么材料会改变磁场？</h2>
+<p>物质内部电子运动和自旋等微观机制会产生磁矩。外磁场作用下，材料的微观磁矩分布或取向可能改变，材料呈现磁化；磁化又会影响空间中的总磁场。微观解释要依据具体材料模型，不能把所有材料看作相同的小磁针。</p>
+<p>磁化强度 M 是单位体积内磁矩的宏观平均，单位 A/m，是矢量。M 可能随外场、温度和材料历史改变。</p>
+<h2>二、抗磁、顺磁与铁磁</h2>
+<ul>
+<li>抗磁：在线性弱场近似下，诱导磁化方向与外加磁场方向相反，磁化率通常为很小的负值。</li>
+<li>顺磁：微观磁矩在外场下呈现一定顺向排列，线性弱场近似下磁化率通常为小的正值。</li>
+<li>铁磁：磁畴和磁矩之间的相互作用可产生很强的磁化，具有饱和、磁滞等现象；其响应一般是非线性的，并依赖历史。</li>
+</ul>
+<p>这只是常见分类的入门图景。不能据此说所有顺磁或铁磁物质都在任意强场、任意温度下满足同一个线性公式。</p>
+<h2>三、B、H、M 是什么关系？</h2>
+<p>在 SI 制中，磁感应强度 B、磁场强度 H 和磁化强度 M 的关系为 <strong>B=μ₀(H+M)</strong>。这是矢量关系；B 的单位为 T，H、M 的单位均为 A/m。</p>
+<p>如果材料是线性、各向同性的，并且处于该模型适用范围，可写 M=χₘH，从而 B=μ₀(1+χₘ)H=μH。这里 μ 为该模型中的磁导率。铁磁质通常存在非线性、饱和和磁滞，因此不能无条件用一个固定 μ 表示整个磁化过程。</p>
+<p><strong>例 1</strong>：在均匀线性各向同性材料模型中，χₘ=2，H=100 A/m，方向向右。则 M=200 A/m，方向向右；B=μ₀×300 A/m，大小约为 3.77×10⁻⁴ T，方向向右。注意先判断线性模型适用，且 H 与 M 在此例同向。</p>
+<h2>四、为什么引入 H？</h2>
+<p>稳恒情形的 H 环路定理可以写为 ∮H·dl=I自由穿过，右侧只计穿过所选环面的自由电流，正负按环路方向的右手关系确定。磁化效应被吸收到 H 和 M 的关系中。</p>
+<p>定理给出闭合路径上的积分；要据此直接算某点 H，还要利用电流和介质分布的对称性。例如理想长直系统或理想长螺线管，在满足相应近似条件时可能选到使 H 在相关路径上大小恒定、方向已知的环路。不能只因画了一个圆就断言 H 处处相同。</p>
+<p>自由电流为零只说明所选闭合环路的 H 环流为零，不能推出环路上每处 H=0；与电通量为零不能直接推出每处电场为零的逻辑相似。</p>
+<h2>五、铁磁质的磁滞</h2>
+<p>将铁磁材料放在变化的外场中，B 与 H 的关系可能不仅取决于当前 H，还取决于此前的磁化过程。H 往返变化时得到的 B-H 曲线可能形成磁滞回线。</p>
+<p>外场降为零后仍可能存在的磁感应强度称为剩磁；使磁感应强度回到零所需的反向场强与矫顽力有关。软磁材料一般容易磁化与退磁，硬磁材料更适合保持磁化；具体性能还取决于温度、频率和材料结构。</p>
+<p>磁滞回线所围面积对应单位体积、一个完整循环中的磁滞损耗（在相应 B-H 表述和准静态条件下），它不是某个时刻储存能量的简单读数。</p>
+<h2>六、自测与解答</h2>
+<p><strong>1.</strong> 铁磁材料在不同磁化历史下，当前 H 相同，B 一定相同吗？</p>
+<p>解：不一定。存在磁滞时，B 还可能取决于此前磁化路径，因此不能只给一个当前 H 就确定 B。</p>
+<p><strong>2.</strong> 若某闭合路径包围的自由电流为零，是否必有路径每点 H=0？</p>
+<p>解：不能这样推出。环路定理只给出沿整个闭合路径的线积分为零，各段贡献可能抵消。</p>
+<p><strong>3.</strong> 在线性各向同性模型中，H=50 A/m、χₘ=0.1，且 M 与 H 同向，求 M 的大小。</p>
+<p>解：M=χₘH=5 A/m。该计算依赖题设的线性模型，不能随意用于有磁滞的铁磁体全部工作范围。</p>
+<h2>学完自检</h2>
+<p>能说出 B、H、M 的单位和矢量关系；知道 D、H 的辅助场公式仍需要边界条件和对称性；知道固定磁导率是模型条件；能解释磁滞、剩磁和磁化历史的关系。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；依据现有第 13 章网站内容，教材扫描正文待逐页核对。</li>
+<li>OpenStax, University Physics Volume 2, Magnetism in Matter: <a href="https://openstax.org/books/university-physics-volume-2/pages/12-7-magnetism-in-matter">https://openstax.org/books/university-physics-volume-2/pages/12-7-magnetism-in-matter</a></li>
+</ul>
+<nav><a href="13.1.html">返回章节 →</a></nav></main></body></html>

@@ -1,0 +1,45 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>期望方差与协方差</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}img{display:block;max-width:100%;height:auto}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="chapter4.html">← 返回第四章</a></nav><h1>期望、方差与协方差：数字特征怎么理解</h1>
+<p>本篇配合第四章学习，讨论平均水平、波动大小和线性共同变化。例题与练习为新编；教材扫描正文仍需逐页核对。</p>
+<h2>一、期望不是“最可能的值”</h2>
+<p>期望 E(X) 把每个可能值按其概率加权，描述分布的平均水平。如果独立重复试验并满足适当条件，样本平均值会逐渐接近期望。期望不一定是 X 可以取到的值，也不一定是最可能的值。</p>
+<p>离散型 X 取 xᵢ 的概率为 pᵢ 时，E(X)=Σxᵢpᵢ，前提是相应期望存在。连续型则在期望存在时用积分 E(X)=∫x f(x)dx，积分范围为 X 的支持范围。</p>
+<p><strong>例 1</strong>：公平骰子点数 X 的期望是 (1+2+3+4+5+6)/6=3.5。一次掷骰子不可能出现 3.5，但许多次独立掷骰的平均点数可以接近 3.5。六个点数一样可能，没有一个比其他点数更可能；这并不妨碍期望为 3.5。</p>
+<h2>二、随机变量函数的期望</h2>
+<p>先明确要计算的是 E[g(X)]，不是先求 E(X) 再套函数。离散情形 E[g(X)]=Σg(xᵢ)pᵢ，连续情形 E[g(X)]=∫g(x)f(x)dx，均需期望存在。</p>
+<p><strong>例 2</strong>：公平骰子 X，求 E(X²)。将点数分别平方后加权，E(X²)=(1²+2²+3²+4²+5²+6²)/6=91/6。另一方面 [E(X)]²=3.5²=49/4。两者不同；通常 E(X²)≠[E(X)]²。</p>
+<h2>三、线性性质</h2>
+<p>只要相关期望存在，E(aX+bY+c)=aE(X)+bE(Y)+c。这里<strong>不要求 X、Y 独立</strong>。但乘积的情况不同：通常不能直接把 E(XY) 写成 E(X)E(Y)；若 X、Y 独立且相应期望存在，则可以。</p>
+<p><strong>例 3</strong>：若 E(X)=2、E(Y)=−1，则 E(3X−2Y+4)=3×2−2×(−1)+4=12。不必知道两变量是否独立。</p>
+<h2>四、方差衡量相对均值的波动</h2>
+<p><img src="moments-comparison.svg" alt="均值相同但标准差不同的两条概率密度曲线"></p>
+<p>两条曲线均以 0 为中心，蓝线标准差为 1、橙色虚线标准差为 2。标准差较大意味着分布更分散；密度峰值更高不代表“某个精确值的概率更大”，连续变量的单点概率均为 0。图中仅展示有限横轴范围，曲线完整面积各为 1。</p>
+<p>方差 D(X)=E[(X−E(X))²]。先看偏离均值多少，再平方并取平均。平方使正负偏差不会互相抵消；代价是单位变成原单位的平方。标准差 σ(X)=√D(X)，单位与 X 相同。</p>
+<p>计算时常用 D(X)=E(X²)−[E(X)]²，前提是二阶矩存在。利用上一节骰子结果：D(X)=91/6−49/4=35/12，标准差约为 1.708。</p>
+<p>方差不可能为负；若算出明显负数，应检查运算或模型。不同量的单位不同时，不宜直接比较方差数值。</p>
+<h2>五、平移与缩放为什么影响不同？</h2>
+<p>D(aX+b)=a²D(X)。加上常数 b，只改变中心，不改变每个值相对中心的偏差；乘以 a 时，偏差也乘以 a，平方后得到 a²。</p>
+<p><strong>例 4</strong>：某温度变量方差是 4（摄氏度平方），定义 Y=2X+3，则 D(Y)=2²×4=16。常数 3 不影响方差。</p>
+<h2>六、两个变量之和的方差</h2>
+<p>协方差定义为 Cov(X,Y)=E[(X−E(X))(Y−E(Y))]，也可写成 E(XY)−E(X)E(Y)，假设相应期望存在。它描述两者相对于各自均值的线性共同变化方向：正值表示同向变化倾向，负值表示反向变化倾向。</p>
+<p>一般公式：D(X+Y)=D(X)+D(Y)+2Cov(X,Y)；D(X−Y)=D(X)+D(Y)−2Cov(X,Y)。只有协方差为零时，和的方差才可直接相加。独立且二阶矩存在可推出协方差为零，但协方差为零并不一定独立。</p>
+<p><strong>例 5</strong>：D(X)=4、D(Y)=9、Cov(X,Y)=1，则 D(X+Y)=4+9+2=15，D(X−Y)=4+9−2=11。若误以为所有情形都能直接相加，会漏掉共同变化的影响。</p>
+<h2>七、相关系数与独立</h2>
+<p>当两个变量标准差均非零时，相关系数 ρ=Cov(X,Y)/[σ(X)σ(Y)]，取值在 −1 到 1 之间。它是无量纲的线性相关程度指标；相关系数接近 0 不代表没有任何非线性关系。若某个变量方差为零，则上述相关系数分母为零，不能按此公式定义。</p>
+<p><strong>例 6：不相关但不独立。</strong> X 以相同概率取 −1、0、1，Y=X²。E(X)=0，E(Y)=2/3，E(XY)=E(X³)=0，因此 Cov(X,Y)=0。但知道 X=0 就确定 Y=0；例如 P(X=0,Y=0)=1/3，而 P(X=0)P(Y=0)=1/9，乘积关系不成立，所以不独立。</p>
+<h2>八、自测与解答</h2>
+<p><strong>1.</strong> X 以 1/4、1/2、1/4 的概率分别取 0、1、2。求 E(X) 与 D(X)。</p>
+<p>解：E(X)=0×1/4+1×1/2+2×1/4=1。E(X²)=0+1/2+4/4=3/2，所以 D(X)=3/2−1²=1/2。</p>
+<p><strong>2.</strong> 若 D(X)=3，求 D(−2X+5)。</p>
+<p>解：方差按系数的平方变化，D(−2X+5)=4×3=12。负号平方后消失，平移常数不影响方差。</p>
+<p><strong>3.</strong> 若 D(X)=2、D(Y)=3，且二者独立，求 D(X+Y)。</p>
+<p>解：独立且方差存在时协方差为零，故 D(X+Y)=2+3=5。若只知道各自方差而不知道共同关系，不能必然得到 5。</p>
+<p><strong>4.</strong> 正确还是错误：“两个变量不相关，所以一定独立。”</p>
+<p>解：错误。上文例 6 就给出协方差为零却不独立的情况。</p>
+<h2>学完自检</h2>
+<p>能解释期望未必是实际可能值；能分别计算 E(X²) 和 [E(X)]²；知道期望线性不要求独立，方差相加需考虑协方差；知道不相关不能反推独立。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《概率论与数理统计》，王丽主编，科学出版社，2026 年第一版；按既有第四章讲义组织，教材正文仍待逐页核对。</li>
+<li>OpenStax, Introductory Statistics 2e, Mean or Expected Value and Standard Deviation: <a href="https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation">https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation</a></li>
+</ul>
+<nav><a href="chapter4.html">返回第四章 →</a></nav></main></body></html>

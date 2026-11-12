@@ -1,0 +1,38 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>连续条件分布自学补充</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}img{max-width:100%;height:auto}nav{padding:14px;background:#eaf3fa;border-radius:10px}table{border-collapse:collapse;width:100%;font-size:.92em}td,th{border:1px solid #ccd9e2;padding:6px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="chapter3.html#s34">← 返回第三章</a></nav><h1>二维连续分布：边缘密度与条件密度</h1>
+<p>本篇补充第 3 章 3.2—3.4 节。重点是画出积分区域、确定范围，再计算边缘密度和条件密度。例题为新编；扫描教材正文仍待逐页核对。</p>
+<h2>一、为什么不能用 P(Y=y) 作分母？</h2>
+<p>离散型变量满足 P(X=x|Y=y)=P(X=x,Y=y)/P(Y=y)，前提是 P(Y=y)&gt;0。对连续型 Y，单点概率 P(Y=y)=0，因此不能直接把该式分子分母当作普通概率相除。</p>
+<p>当联合密度 f(x,y) 和边缘密度 f_Y(y)&gt;0 存在时，可以定义条件密度 f_(X|Y)(x|y)=f(x,y)/f_Y(y)，具体在边缘密度非零且定义适用的点上使用。条件密度不是单点条件概率；给定 y 后，某区间的条件概率仍要对 x 积分。</p>
+<h2>二、完整例题：三角形支持区域</h2>
+<p>设联合密度 f(x,y)=2，条件是 0&lt;y&lt;x&lt;1；其他位置为 0。求两个边缘密度、给定 Y=y 时 X 的条件密度，并判断独立性。</p>
+<h3>第一步：确认它是不是概率密度</h3>
+<p>区域是单位正方形中 y&lt;x 的三角形，面积为 1/2；密度 2 乘面积得到总概率 1，且密度非负。因此满足联合密度的基本要求。边界线上的赋值不影响这些积分概率。</p>
+<h3>第二步：求 X 的边缘密度</h3>
+<p>固定 x，图中允许的 y 从 0 到 x，且 0&lt;x&lt;1。因此 f_X(x)=∫₀ˣ2dy=2x；x 不在该区间时为 0。检查：∫₀¹2x dx=1。</p>
+<h3>第三步：求 Y 的边缘密度</h3>
+<p>固定 y，满足 y&lt;x&lt;1，所以当 0&lt;y&lt;1，f_Y(y)=∫ᵧ¹2dx=2(1−y)；其他位置为 0。检查：∫₀¹2(1−y)dy=1。</p>
+<h3>第四步：固定 Y=y，求 X 的条件密度</h3>
+<p>当 0&lt;y&lt;1 时 f_Y(y)&gt;0，且 x 的允许范围是 y&lt;x&lt;1，因此 f_(X|Y)(x|y)=2/[2(1−y)]=1/(1−y)。该范围外条件密度为 0。对 x 从 y 积分到 1，得到 1；这说明在固定给定 y 的条件下，X 的密度在区间 (y,1) 上均匀。</p>
+<p><strong>例：</strong> 给定 Y=1/2，求 X&gt;3/4 的条件概率。条件密度在 (1/2,1) 上为 2，因此 ∫_(3/4)¹2dx=1/2。它不是直接用无条件概率代替条件概率。</p>
+<h3>第五步：判断独立性</h3>
+<p>如果独立，联合密度在适当意义下应等于两个边缘密度乘积。比如 x=1/4、y=3/4 在支持区域外，联合密度为 0，但 f_X(1/4)f_Y(3/4)=(1/2)(1/2)=1/4。在该点附近存在正面积的不相等区域，因此不独立。</p>
+<p>仅凭某一个点的密度数值不同并不总能证明分布不独立，因为连续密度可在单个零测度点任意修改而不改变分布；这里差异存在于一片正面积区域，足以说明不独立。</p>
+<h2>三、对比：独立的矩形区域</h2>
+<p>若 X、Y 独立且都在 [0,1] 均匀分布，联合密度在单位正方形内为 1。给定 0&lt;y&lt;1，f_Y(y)=1，条件密度 f_(X|Y)(x|y)=1（0&lt;x&lt;1）。知道 Y 的取值后，X 的分布不变，体现独立性。</p>
+<h2>四、自测与解答</h2>
+<p><strong>1.</strong> 在三角形例题中，固定 x=0.3 时允许的 y 范围是什么？</p>
+<p>解：由 0&lt;y&lt;x&lt;1，得到 0&lt;y&lt;0.3。计算 f_X(0.3) 时应在这个范围对 y 积分。</p>
+<p><strong>2.</strong> 在三角形例题中，固定 y=0.2 时允许的 x 范围是什么？</p>
+<p>解：0.2&lt;x&lt;1；f_Y(0.2)=2(1−0.2)=1.6。密度可以大于 1，它不是单点概率。</p>
+<p><strong>3.</strong> 给定 Y=0.2，求 X&gt;0.6 的条件概率。</p>
+<p>解：条件密度为 1/(1−0.2)=1.25，适用范围 0.2&lt;x&lt;1；所求为 1.25×(1−0.6)=0.5。</p>
+<p><strong>4.</strong> 连续型 Y 满足 P(Y=0.2)=0，是否意味着无法讨论条件密度？</p>
+<p>解：不能直接使用离散型的单点概率相除；在联合密度和相应边缘密度满足条件时，仍可以用条件密度作适当定义。不能把分母的密度误认为 P(Y=0.2)。</p>
+<h2>学完自检</h2>
+<p>会先画支持区域；能根据固定变量改变积分范围；知道密度与点概率的区别；条件密度在允许范围内积分为 1；判断独立性时注意连续密度是几乎处处相等。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《概率论与数理统计》，王丽主编，科学出版社，2026 年第一版；依据现有第三章内容组织，教材扫描正文待逐页核对。</li>
+<li>Penn State STAT 414, Conditional Probability: <a href="https://online.stat.psu.edu/stat414/Lesson04">https://online.stat.psu.edu/stat414/Lesson04</a> （用于核对条件概率基本关系；连续条件密度部分按课程公式重新推导）。</li>
+</ul>
+<nav><a href="chapter3.html">返回第三章 →</a></nav></main></body></html>

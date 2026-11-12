@@ -1,0 +1,47 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>稳恒磁场分步典型题</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}details.answer{margin:1em 0;padding:0 1em;background:#f2f7fb;border:1px solid #d5e5f0;border-radius:10px}details.answer summary{cursor:pointer;padding:.65em 0;color:#145e96;font-weight:700}details.answer p{margin-top:.2em}details.answer summary:focus-visible{outline:3px solid #226b9a;outline-offset:2px}</style></head><body><main><nav><a href="12.1.html">返回 12.1</a> · <a href="12.4.html">12.4 磁场</a> · <a href="12.8.html">12.8 洛伦兹力</a></nav><h1>稳恒磁场典型题：方向、环路与运动</h1><!-- 练习答案折叠 --><p>建议先独立完成每道题，再点开“查看解答”，对照思路和易错点。</p>
+<p>本篇配合第 12 章，以新编题目练习场的方向、安培环路定理、磁力及粒子轨迹。若无特别说明，磁场在真空中，使用非相对论模型，取 μ₀≈4π×10⁻⁷ N/A²。扫描教材正文尚待逐页核对。</p>
+<h2>通用检查</h2>
+<ol>
+<li>先画电流、磁场、速度和受力方向，注明观察角度。</li>
+<li>分清“求由电流产生的 B”和“已知 B 求磁力”是两个步骤。</li>
+<li>磁场、速度和力都是矢量；叉乘顺序与电荷符号会影响方向。</li>
+<li>确认是无限长导线、匀强场等理想模型，单位统一后再代入。</li>
+</ol>
+<h2>题 1：长直导线的磁场</h2>
+<p>无限长直导线电流 I=5 A。P 点距导线 0.10 m，求 B 大小；若导线竖直向上通电、P 在导线右侧，从纸面正面观察，方向是入纸面还是出纸面？</p>
+<details class="answer"><summary>查看解答</summary><p> B=μ₀I/(2πr)=(4π×10⁻⁷×5)/(2π×0.10)=1.0×10⁻⁵ T。方向用右手握导线：拇指向上，P 点在右侧，四指方向指向纸面内。</p></details>
+<p><strong>检查：</strong> 把距离增大两倍，B 减半。公式不适用于任意长度导线的端点附近。</p>
+<h2>题 2：两导线中点的磁场</h2>
+<p>两条相距 0.20 m 的平行无限长直导线垂直纸面，电流均为 2 A 且都指向纸外。求连线中点的合磁场。</p>
+<details class="answer"><summary>查看解答</summary><p> 中点离两导线均为 0.10 m，两个场强大小相等。按右手规则，左导线在中点产生向上的场，右导线在中点产生向下的场，因此合场为零。场强相消发生在该对称点，不能说整个空间 B=0。</p></details>
+<p>若右侧导线电流改为指向纸内而大小不变，则中点两个场都向上。每个大小为 μ₀×2/(2π×0.10)=4×10⁻⁶ T，合场为 8×10⁻⁶ T，向上。</p>
+<h2>题 3：长螺线管内部</h2>
+<p>理想无限长、密绕螺线管每米匝数 n=1000 m⁻¹，电流 I=0.50 A，求内部磁场大小。</p>
+<details class="answer"><summary>查看解答</summary><p> 理想模型内部 B≈μ₀nI=(4π×10⁻⁷)(1000)(0.50)=2π×10⁻⁴ T≈6.28×10⁻⁴ T。方向由手指沿绕组传统电流方向弯曲时，拇指方向判断。有限线圈端部和外部的实际磁场与此理想模型不同。</p></details>
+<h2>题 4：正负电荷的磁力方向</h2>
+<p>匀强磁场 B 垂直纸面向外。粒子速度 v 向右，分别判断正电荷与电子所受磁力方向。</p>
+<details class="answer"><summary>查看解答</summary><p> 取右为 x 正、上为 y 正、出纸面为 z 正。v×B 的方向是 x×z=−y，即向下；正电荷受力向下，电子电荷为负，受力向上。若速度与 B 平行，叉积为零，磁力为零。</p></details>
+<h2>题 5：磁场中的圆周运动</h2>
+<p>电荷量大小 |q|=1.0×10⁻⁶ C、质量 m=2.0×10⁻⁶ kg 的粒子，以 v=10 m/s 垂直进入匀强磁场 B=0.20 T；只考虑磁力，求圆周半径。</p>
+<details class="answer"><summary>查看解答</summary><p> 磁力提供向心力：|q|vB=mv²/r，故 r=mv/(|q|B)=(2.0×10⁻⁶×10)/(1.0×10⁻⁶×0.20)=100 m。磁力不做功，速率维持 10 m/s；圆周转向则还要由电荷正负判断。题目参数为方便计算的理想示例。</p></details>
+<h2>题 6：磁通量为零不代表无磁场</h2>
+<p>把一个任意闭合曲面放在匀强磁场中，它包围的磁通量净值是多少？面上的 B 是否一定为零？</p>
+<details class="answer"><summary>查看解答</summary><p> 磁场高斯定理给净通量为零；但匀强 B 在曲面上并不为零。穿入贡献与穿出贡献按向外法线取符号后相抵。</p></details>
+<h2>自测</h2>
+<ol>
+<li>题 1 中电流减半、距离不变，磁场大小如何变化？</li>
+<li>题 5 中质量和电荷量大小不变，若速度增为两倍，半径如何变化？</li>
+<li>只受磁力的粒子，动能是否因磁力而改变？</li>
+</ol>
+<h3>答案</h3>
+<ol>
+<li>B 正比于 I，因此减半。</li>
+<li>在同一垂直入射与非相对论模型中 r 正比于 v，因此加倍。</li>
+<li>不改变，因为磁力垂直于速度，瞬时功率 F·v=0；若还有电场或其他做功力则不能这样断言总动能不变。</li>
+</ol>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；题目为新编，依据第 12 章网站内容组织，扫描正文待逐页核对。</li>
+<li>OpenStax, University Physics Volume 2, Magnetic Fields and Lines: <a href="https://openstax.org/books/university-physics-volume-2/pages/11-2-magnetic-fields-and-lines">https://openstax.org/books/university-physics-volume-2/pages/11-2-magnetic-fields-and-lines</a></li>
+</ul>
+<nav><a href="12.1.html">返回章节 →</a></nav></main></body></html>

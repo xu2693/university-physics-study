@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>衍射、光栅与分辨率</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="15.1.html">返回 15.1</a> · <a href="15.3.html">15.3 双缝干涉</a> · <a href="15.11.html">15.11 偏振</a></nav><h1>衍射、光栅和分辨率：图像与计算</h1>
+<p>本篇补充第 15 章的衍射与分辨，帮助区分单缝、光栅和圆孔模型。例题为新编；扫描教材正文待逐页核对。</p>
+<h2>一、为什么开孔后光不会严格沿直线前进？</h2>
+<p>光具有波动性。波通过有限孔径时，孔内不同位置发出的波在观察点叠加，可能相长或相消，形成亮暗分布。这种偏离简单几何光线预测的分布称为衍射。波长与孔径尺寸的比例越不可忽略，衍射效应通常越显著。</p>
+<p>夫琅禾费衍射是观察波在远场或借助透镜形成相应远场图样的近似模型；近场菲涅耳衍射的几何与计算不同。看到“狭缝”不代表可以无条件使用远场公式。</p>
+<h2>二、单缝暗纹从哪里来？</h2>
+<p>设单缝宽 a，垂直入射单色光，观察方向与中央方向夹角 θ。远场中缝两端对应的光程差约为 a sinθ。把缝分成两半，若光程差为 λ，则上半部分每个小区域都能与下半部分相距半个缝宽的位置配对，两者相差半个波长而相消，于是出现第一级暗纹。</p>
+<p>更一般的暗纹条件是 <strong>a sinθ=mλ，m=±1、±2、…</strong>。m=0 是中央主极大方向，不能把它当暗纹。这里 λ 是相应传播介质中的波长。</p>
+<p>当屏距 D 远大于缝宽、且角度小，一级暗纹距中心约 y₁≈λD/a，中央明纹总宽度约 2λD/a。不同级次之间不等于所有明纹同亮：单缝衍射的中央极大最宽、通常也最亮。</p>
+<p><strong>例 1</strong>：λ=600 nm、a=0.30 mm、D=1 m。在小角和远场近似下，y₁≈600×10⁻⁹×1/(0.30×10⁻³)=0.002 m=2 mm。中央明纹宽约 4 mm；2 mm 是中心到一侧一级暗纹的距离。</p>
+<h2>三、光栅：多缝干涉与单缝包络</h2>
+<p>光栅由周期性排列的许多缝或刻线构成。正入射、间距为 d 的透射光栅，相邻缝对应方向的光程差为 d sinθ，主极大满足 d sinθ=mλ，m 为整数。满足 |mλ/d|≤1 才有对应方向。</p>
+<p>光栅主极大通常更窄、更易分辨相近波长，但其强度还受单缝衍射包络影响；如果某个干涉主极大恰逢单缝暗纹，可能发生缺级。光栅常数 d 是相邻缝中心距，不一定等于透光缝宽。</p>
+<p><strong>例 2</strong>：光栅常数 d=2 μm，波长 λ=500 nm。一级主极大满足 sinθ=λ/d=0.25，因此 θ≈14.5°。若 m=5，则 mλ/d=1.25&gt;1，没有实数衍射角，所以不存在该级主极大。</p>
+<h2>四、X 射线与布拉格条件</h2>
+<p>晶体周期性晶面可以产生 X 射线衍射。简单布拉格条件写作 2d sinθ=mλ，其中 d 是晶面间距，θ 是入射射线与晶面的夹角，m 为正整数。注意这里 θ 常按晶面来量，与前面一些以法线或中央方向量角的定义不同。</p>
+<p>满足布拉格条件是出现相长散射的常见几何条件；真实晶体的结构因子等还可能使某些反射缺失。不能仅靠该式断定任何满足角度的衍射峰都一定有可观测强度。</p>
+<h2>五、圆孔和分辨率</h2>
+<p>点光源经过有限圆孔形成衍射图样，而非无限小的点。理想圆孔、非相干点源及适用的瑞利判据下，刚可分辨的角距离近似 θ_min≈1.22λ/D，D 是孔径直径、θ 用弧度。</p>
+<p><strong>例 3</strong>：λ=500 nm、D=0.10 m，则 θ_min≈1.22×500×10⁻⁹/0.10≈6.1×10⁻⁶ rad。若孔径增为两倍、其他条件相同，该角度减半，理论分辨能力提高。实际成像还受像差、噪声、介质扰动等影响。</p>
+<h2>六、三种公式如何选？</h2>
+<ul>
+<li>单缝暗纹：看缝宽 a，a sinθ=mλ（m≠0）。</li>
+<li>光栅主极大：看相邻周期 d，d sinθ=mλ，并检查允许级次。</li>
+<li>理想圆孔分辨：看孔径直径 D，θ_min≈1.22λ/D。</li>
+</ul>
+<p>三种字母都是长度，但代表不同物理对象。先画模型和角度，再选择公式，比单纯记住表达式更可靠。</p>
+<h2>七、练习与解答</h2>
+<p><strong>1.</strong> 单缝宽度减半、其他条件和近轴近似不变，中央明纹宽度如何变化？</p>
+<p>解：2λD/a 与 a 成反比，宽度变为两倍。</p>
+<p><strong>2.</strong> 正入射光栅，d=1.5 μm，λ=0.5 μm，最多可能存在几级非零主极大？</p>
+<p>解：|m|≤d/λ=3，因此在理想几何条件下每侧最高可到 |m|=3；极限 θ=90° 的掠射方向在实际装置中未必可观测，且缺级与强度还需另行检查。</p>
+<p><strong>3.</strong> 两个相同理想圆孔系统，波长相同，第二个孔径为第一个的两倍。按瑞利判据，其最小可分辨角度如何变化？</p>
+<p>解：角度与孔径成反比，变为原来一半。</p>
+<h2>学完自检</h2>
+<p>能说明单缝暗纹是不同缝元叠加相消；会区分光栅周期与单缝宽度；知道布拉格角的定义；能说明瑞利判据和其理想化条件。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；依据现有第 15 章网站内容，扫描正文待逐页核对。</li>
+<li>OpenStax, University Physics Volume 3, Circular Apertures and Resolution: <a href="https://openstax.org/books/university-physics-volume-3/pages/4-5-circular-apertures-and-resolution">https://openstax.org/books/university-physics-volume-3/pages/4-5-circular-apertures-and-resolution</a></li>
+</ul>
+<nav><a href="15.1.html">返回章节 →</a></nav></main></body></html>

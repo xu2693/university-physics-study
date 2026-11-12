@@ -1,0 +1,39 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>复数、模平方和波函数基础</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="17.1.html">返回 17.1</a> · <a href="17.4.html">17.4 薛定谔方程</a> · <a href="17.11.html">17.11 变分法</a></nav><h1>量子力学需要的数学：复数、模平方和归一化</h1>
+<p>本篇为第 17 章补充必要数学，不要求先系统学完整的复变函数或线性代数。例题为新编。</p>
+<h2>一、复数和虚数单位</h2>
+<p>虚数单位 i 定义为 i²=−1。复数 z=a+ib，其中 a、b 是实数；a 是实部，b 是虚部。共轭复数记为 z*=a−ib，模平方为 |z|²=z*z=a²+b²，是非负实数。</p>
+<p><strong>例 1</strong>：z=3+4i，则 z*=3−4i，|z|²=(3−4i)(3+4i)=9+16=25，|z|=5。模平方不是简单地把复数自身直接平方。</p>
+<p>当波函数 Ψ 可以为复数时，位置概率密度写为 |Ψ|²=Ψ*Ψ，因此为非负实数；区间概率还要对密度积分。</p>
+<h2>二、复指数与相位</h2>
+<p>欧拉公式 e^(iθ)=cosθ+i sinθ，因此 |e^(iθ)|²=1。乘以一个模为 1 的复指数会改变相位，但不会单独改变该数的模。</p>
+<p><strong>例 2</strong>：Ψ(x,t)=φ(x)e^(−iEt/ℏ)，则 |Ψ|²=|φ|²·|e^(−iEt/ℏ)|²=|φ|²。若 E 为实数，定态的概率密度不随时间变化。不同能量定态叠加时，交叉项可能随时间变化，不能把单个定态的结论直接推广到任意叠加态。</p>
+<h2>三、函数、导数与算符</h2>
+<p>函数把输入位置 x 对应到输出值 ψ(x)。导数 dψ/dx 描述函数随 x 的局部变化。算符是作用在函数上的规则：位置算符给出 xψ(x)，一维动量算符形式上给出 −iℏ dψ/dx。</p>
+<p><strong>例 3</strong>：若 ψ(x)=x²，则 dψ/dx=2x，一维动量算符形式作用结果为 −2iℏx。这只是演示运算；要作为物理态，还需要考虑空间范围、归一化及算符定义域等条件。</p>
+<h2>四、积分与概率密度</h2>
+<p>积分可以理解为把一系列极小区间的贡献累加。一维位置分布中，区间 [a,b] 的概率为 ∫ₐᵇ|Ψ(x)|²dx。整个空间的总概率为 1，即归一化条件 ∫|Ψ(x)|²dx=1。</p>
+<p>概率密度有单位（若 x 单位是米，一维密度单位是 1/m），可以大于 1；乘上长度并积分得到无单位概率。不能把密度在某一点的数值直接当作该点概率。</p>
+<p><strong>例 4</strong>：数学示例中，Ψ 在 0&lt;x&lt;L 为常数 C，其他地方为 0。要求归一化：∫₀ᴸ|C|²dx=|C|²L=1，所以 |C|=1/√L。若选择 C 为正实数，则 C=1/√L。左半段概率为 ∫₀^(L/2)(1/L)dx=1/2。它不自动是无限深势阱的能量本征态，因为还要检查阱壁边界条件。</p>
+<h2>五、归一化后怎样求期望位置？</h2>
+<p>对归一化的一维位置态，⟨x⟩=∫x|Ψ(x)|²dx。它是重复测量位置的平均，不是粒子每次都位于该点。</p>
+<p>对例 4 的均匀概率密度，⟨x⟩=∫₀ᴸx(1/L)dx=(1/L)[x²/2]₀ᴸ=L/2。这里的中点也可由左右对称性看出，但推导能展示计算规则。</p>
+<h2>六、叠加：先加幅度还是先加概率？</h2>
+<p>若两条相干路径对同一结果的概率幅分别为 a₁、a₂，合概率与 |a₁+a₂|² 有关，展开后除 |a₁|²+|a₂|² 外还可能有干涉交叉项。若是互斥且不相干的经典随机情形，才按相应规则相加概率。能否观察干涉取决于实验与相干条件。</p>
+<p><strong>例 5</strong>：a₁=a₂=1/2 时，|a₁+a₂|²=1；若 a₁=1/2、a₂=−1/2，合幅为 0、概率为 0。这里只是某一结果的幅度示例，完整量子过程仍需满足整体归一化。</p>
+<h2>七、自测与解答</h2>
+<p><strong>1.</strong> z=1+i，求 z* 和 |z|²。</p>
+<p>解：z*=1−i，|z|²=(1−i)(1+i)=2。</p>
+<p><strong>2.</strong> |e^(iπ/3)|² 是多少？</p>
+<p>解：为 1，因为 e^(iθ) 的模为 1。</p>
+<p><strong>3.</strong> 均匀概率密度在长度为 4 m 的区间上分布，总概率为 1；密度是多少？长度为 1 m 的子区间概率是多少？</p>
+<p>解：密度为 1/4 m⁻¹；该子区间概率为 (1/4 m⁻¹)×1 m=1/4。</p>
+<p><strong>4.</strong> 测量值只可能为 −1、+1，概率各为 1/2。期望为 0 是否代表某次一定可以测到 0？</p>
+<p>解：不代表。0 是加权平均，单次测量只会得到题目给定的 −1 或 +1。</p>
+<h2>学完自检</h2>
+<p>能计算复数共轭与模平方；知道相位可影响叠加；能区分波函数、密度和区间概率；能用积分做归一化并解释期望值。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；本篇为配套数学基础补充。</li>
+<li>OpenStax, University Physics Volume 3, Wave Functions: <a href="https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions">https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions</a></li>
+</ul>
+<nav><a href="17.1.html">返回章节 →</a></nav></main></body></html>

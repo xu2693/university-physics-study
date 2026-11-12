@@ -1,0 +1,72 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教材习题2逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="chapter2.html">← 返回概率论第二章</a></nav><h1>教材习题 2：逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">1｜判断分布函数</a></li><li><a href="#exercise-2">2｜离散概率的归一化</a></li><li><a href="#exercise-3">3｜从分布列求分布函数</a></li><li><a href="#exercise-4">4｜三个球的最大编号</a></li><li><a href="#exercise-5">5｜放回与不放回</a></li><li><a href="#exercise-6">6｜三次独立命中至少两次</a></li><li><a href="#exercise-7">7｜首次成功次数与偶数</a></li><li><a href="#exercise-8">8｜最多投五次</a></li><li><a href="#exercise-9">9｜两人的命中次数</a></li><li><a href="#exercise-10">10｜泊松近似</a></li><li><a href="#exercise-11">11｜库存数量</a></li><li><a href="#exercise-12">12｜呼叫次数大于 3</a></li><li><a href="#exercise-13">13｜由分布函数求密度与重复试验</a></li><li><a href="#exercise-14">14｜分段密度积分</a></li><li><a href="#exercise-15">15｜把有实根翻译成事件</a></li><li><a href="#exercise-16">16｜三角函数密度归一化</a></li><li><a href="#exercise-17">17｜标准正态双尾</a></li><li><a href="#exercise-18">18｜正态标准化</a></li><li><a href="#exercise-19">19｜由尾概率反推标准差</a></li><li><a href="#exercise-20">20｜先核对数量级</a></li><li><a href="#exercise-21">21｜比较准时概率</a></li><li><a href="#exercise-22">22｜指数变量的函数分布</a></li><li><a href="#exercise-23">23｜正态变量的指数与平方</a></li><li><a href="#exercise-24">24｜等待后离开的次数</a></li><li><a href="#exercise-25">25｜三角形密度与指数变换</a></li><li><a href="#exercise-26">核对与范围</a></li></ol></details>
+<p>本页对应王丽主编《概率论与数理统计》（科学出版社，2026 年第一版）第 39—42 页习题 2。请结合教材原题阅读；以下是重新推导的解答，不是出版社官方答案。Φ 表示标准正态分布函数。</p>
+<h2 id="exercise-1">1｜判断分布函数</h2>
+<p>选 B。B 在 x→+∞ 时趋于 0，分布函数却必须趋于 1；它还不是全程不减。A、C、D 均满足相应的不减、右连续和两端极限要求。</p>
+<h2 id="exercise-2">2｜离散概率的归一化</h2>
+<p>1/[k(k+1)]=1/k−1/(k+1)。从 k=1 加到 n 时中间项相消，和为 1−1/(n+1)，极限为 1。因此 b×1=1，b=1。</p>
+<h2 id="exercise-3">3｜从分布列求分布函数</h2>
+<p>按取值从小到大累加：x&lt;−1 时 F(x)=0；−1≤x&lt;1 时为 1/6；1≤x&lt;2 时为 1/2；2≤x&lt;3 时为 3/4；x≥3 时为 1。</p>
+<p>P(X&lt;1)=1/6；P(1&lt;X≤2)=P(X=2)=1/4。注意第二问是严格小于，不能把 X=1 算进去。</p>
+<h2 id="exercise-4">4｜三个球的最大编号</h2>
+<p>等可能的三球组合共 C(5,3)=10 个。最大编号分别只能为 3、4、5，对应组合数 C(2,2)=1、C(3,2)=3、C(4,2)=6，概率分别为 1/10、3/10、6/10。三项相加为 1。</p>
+<h2 id="exercise-5">5｜放回与不放回</h2>
+<p>以 X 记三次抽取中的次品数。（1）放回并充分混匀、独立抽取时，X∼B(3,0.2)，X=0、1、2、3 的概率依次为 0.512、0.384、0.096、0.008。</p>
+<p>（2）不放回时最多取到 2 件次品：P(X=k)=C(2,k)C(8,3−k)/C(10,3)。k=0、1、2 的概率分别为 7/15、7/15、1/15；P(X=3)=0。两种抽样条件不同，分布不同。</p>
+<h2 id="exercise-6">6｜三次独立命中至少两次</h2>
+<p>X∼B(3,0.8)，P(X≥2)=C(3,2)0.8²·0.2+0.8³=0.384+0.512=0.896。</p>
+<h2 id="exercise-7">7｜首次成功次数与偶数</h2>
+<p>P(X=k)=(3/4)^(k−1)(1/4)，k=1,2,…。偶数项求和：P(X为偶数)=Σ_{j≥1}(3/4)^(2j−1)(1/4)=(3/16)/(1−9/16)=3/7。这里 X 从 1 起算，表示首次发生的试验次数。</p>
+<h2 id="exercise-8">8｜最多投五次</h2>
+<p>按每次独立且命中率保持 0.9 的模型，前四次在第 k 次停止的概率为 0.1^(k−1)×0.9，k=1、2、3、4。投篮次数为 5 的概率是前四次都未中，即 0.1⁴；第五次无论中与否都已投了五次。五项概率总和为 1。</p>
+<h2 id="exercise-9">9｜两人的命中次数</h2>
+<p>在各次投篮独立、两人之间也独立的假设下，X∼B(3,0.6)，Y∼B(3,0.7)。相等的概率 Σ_{k=0}³P(X=k)P(Y=k)=0.32076；甲多于乙的概率 Σ_{i&gt;j}P(X=i)P(Y=j)=0.243。</p>
+<p>仅给出各自命中率并不能自动保证全部独立；如果存在相关性，需要联合分布才能确定答案。</p>
+<h2 id="exercise-10">10｜泊松近似</h2>
+<p>按独立事故模型，n=1000、p=0.0001，λ=np=0.1。用泊松近似 P(X≥2)≈1−e^(−0.1)(1+0.1)≈0.004679。该值为近似，不是二项分布的精确值；独立性是使用该近似的条件之一。</p>
+<h2 id="exercise-11">11｜库存数量</h2>
+<p>若月销售量 X∼Pois(5)，要使不脱销概率至少 0.999，求最小整数 m 使 P(X≤m)≥0.999。逐项求和得到 P(X≤12)≈0.99798，P(X≤13)≈0.999302，因此最小库存是 13 件。这里将“不脱销”解释为需求不超过库存。</p>
+<h2 id="exercise-12">12｜呼叫次数大于 3</h2>
+<p>X∼Pois(4)，P(X&gt;3)=1−P(X≤3)=1−e^(−4)(1+4+4²/2!+4³/3!)≈0.56653。</p>
+<h2 id="exercise-13">13｜由分布函数求密度与重复试验</h2>
+<p>连续分布要求在 x=1 处衔接，故 k=1。P(1/3&lt;X≤1/2)=F(1/2)−F(1/3)=1/4−1/9=5/36。</p>
+<p>在 0&lt;x&lt;1，f(x)=F′(x)=2x，其余位置可取 0。独立试验 4 次中恰好 3 次落在该区间的概率为 C(4,3)(5/36)³(31/36)=3875/419904≈0.00923。连续分布下是否包括端点不改变此题概率。</p>
+<h2 id="exercise-14">14｜分段密度积分</h2>
+<p>x&lt;0 时 F(x)=0；0≤x&lt;1 时 F(x)=∫₀ˣt dt=x²/2；1≤x&lt;2 时 F(x)=1/2+∫₁ˣ(2−t)dt=1−(2−x)²/2；x≥2 时 F(x)=1。检查 x=1 处两段都为 1/2。</p>
+<h2 id="exercise-15">15｜把有实根翻译成事件</h2>
+<p>对变量 t 的二次方程，判别式 Δ=(4X)²−16(X+2)=16(X−2)(X+1)。在 X∈(0,5) 内，X+1&gt;0，因此有实根等价于 X≥2。均匀分布下概率为 (5−2)/5=3/5；端点是否包含不影响连续分布概率。</p>
+<h2 id="exercise-16">16｜三角函数密度归一化</h2>
+<p>∫_(−π/2)^(π/2)A cos x dx=2A=1，故 A=1/2。P(0&lt;X&lt;π/2)=(1/2)∫₀^(π/2)cos x dx=1/2。</p>
+<h2 id="exercise-17">17｜标准正态双尾</h2>
+<p>P(X&gt;1.96)=1−Φ(1.96)≈0.025；由对称性，P(|X|&gt;1.96)=2[1−Φ(1.96)]≈0.05。</p>
+<h2 id="exercise-18">18｜正态标准化</h2>
+<p>X∼N(1.5,4)，标准差为 2，令 Z=(X−1.5)/2。各项依次为：</p>
+<ol>
+<li>P(X&gt;1.35)=Φ(0.075)≈0.5299。</li>
+<li>P(X&lt;−1.6)=Φ(−1.55)≈0.0606。</li>
+<li>P(X&gt;3)=1−Φ(0.75)≈0.2266。</li>
+<li>P(|X|&lt;3)=Φ(0.75)−Φ(−2.25)≈0.7611。</li>
+<li>P(|X−1.5|&gt;2)=2[1−Φ(1)]≈0.3173。</li>
+</ol>
+<p>注意 4 是围绕 0 的区间，5 才围绕均值 1.5。</p>
+<h2 id="exercise-19">19｜由尾概率反推标准差</h2>
+<p>题设 P(X&gt;96)=0.023，μ=72。令 z=(96−72)/σ，则 Φ(z)=0.977；查表 z≈2.00，故 σ≈12。区间 60 到 84 约为 μ±σ，概率约 Φ(1)−Φ(−1)=0.6827。因题目给的是约 2.3%，结果也为近似。</p>
+<h2 id="exercise-20">20｜先核对数量级</h2>
+<p>扫描页所示均值为 2000、标准差为 18，而两个阈值为 180 和 150。严格按这一文字：z₁=(180−2000)/18≈−101.11，z₂=(150−2000)/18≈−102.78；两项不低于阈值的概率均极其接近 1，第二项符合至少 99% 的要求。</p>
+<p>这些阈值与均值数量级相差很大，可能与出题意图或排版有关，但仅凭本页不能断言有误；不能擅自把 2000 改成 200。若教材勘误或课堂另有说明，应按确认后的数字重算。</p>
+<h2 id="exercise-21">21｜比较准时概率</h2>
+<p>第一条路线标准差为 10，第二条为 4。70 分钟时，分别为 Φ((70−50)/10)=Φ(2)≈0.9772 和 Φ((70−60)/4)=Φ(2.5)≈0.9938，因此按准时概率选第二条。</p>
+<p>65 分钟时，分别为 Φ(1.5)≈0.9332 和 Φ(1.25)≈0.8944，因此按准时概率选第一条。这里假设题目的目标是最大化规定时间内到达的概率。</p>
+<h2 id="exercise-22">22｜指数变量的函数分布</h2>
+<p>X 的密度为 e^(−x)，x&gt;0。（1）Y=2X+1，支持范围 y&gt;1，逆变换 x=(y−1)/2，故 f_Y(y)=(1/2)e^{−(y−1)/2}。</p>
+<p>（2）Y=|X−1|。当 0&lt;y&lt;1，逆分支为 x=1−y 与 1+y，密度为 e^{−(1−y)}+e^{−(1+y)}；当 y≥1，仅 x=1+y 有效，密度为 e^{−(1+y)}；y&lt;0 时为 0。单点处的密度取值不影响分布。</p>
+<h2 id="exercise-23">23｜正态变量的指数与平方</h2>
+<p>X∼N(0,1)。（1）Y=eˣ，y&gt;0，逆变换 x=ln y，因此 f_Y(y)=e^{−(ln y)²/2}/(y√(2π))；y≤0 时为 0。</p>
+<p>（2）Y=X²。y&gt;0 时有 x=±√y 两个分支，f_Y(y)=e^(−y/2)/√(2πy)；y≤0 可取密度为 0。这也是自由度为 1 的 χ² 分布。</p>
+<h2 id="exercise-24">24｜等待后离开的次数</h2>
+<p>单次等待超过 5 分钟的概率 p=P(X&gt;5)=e^(−0.2×5)=e⁻¹。若四次等待相互独立且分布相同，则 Y∼B(4,e⁻¹)，P(Y=k)=C(4,k)(e⁻¹)ᵏ(1−e⁻¹)⁴⁻ᵏ，k=0,…,4。题目未明确写四次独立；若存在相关性，仅有单次分布不能确定 Y 的分布。</p>
+<h2 id="exercise-25">25｜三角形密度与指数变换</h2>
+<p>F(x) 分段为：x≤−1 时 0；−1&lt;x&lt;0 时 (x+1)²/2；0≤x&lt;1 时 1−(1−x)²/2；x≥1 时 1。</p>
+<p>Y=e^(X+1)，支持范围 1&lt;y&lt;e²，逆变换 x=ln y−1。因此 f_Y(y)=[1−|ln y−1|]/y，在该范围外为 0。Y&gt;e 等价于 X&gt;0，由密度对称得 P(Y&gt;e)=1/2。</p>
+<h2 id="exercise-26">核对与范围</h2>
+<p>第 9、10、24 题明确列出独立性假设；第 20 题按扫描页显示的数值计算，并指出数量级疑点。部分正态表值为近似；本页为独立推导，未声称全部教材和答案已经全面审校。</p>
+<nav><a href="chapter2.html">返回第二章</a> · <a href="chapter3.html">继续第三章</a></nav></main></body></html>

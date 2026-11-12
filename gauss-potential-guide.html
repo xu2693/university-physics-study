@@ -1,0 +1,52 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>通量、高斯定理与电势</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="10.3.html">返回 10.3</a> · <a href="10.4.html">10.4 电势</a> · <a href="10.5.html">10.5 等势面</a></nav><h1>从零理解电通量、高斯定理和电势</h1>
+<p>本篇配合第 10 章 10.3—10.5 节阅读，例题与练习为新编。前提是已了解场强是有方向的量，以及点电荷场强与距离平方成反比。</p>
+<h2>一、电通量：穿过面的电场如何计量？</h2>
+<p>先想象风穿过一扇窗：同样大小的风迎面吹过窗户，与沿窗户表面吹过，穿过窗户的效果不同。电通量也要同时考虑场强、面积和方向。这个类比只用于理解方向关系，电场不是流过窗户的物质。</p>
+<p>对均匀电场中的平面，电通量 Φ=EAcosθ。E 是场强大小，A 是面积，θ 是电场方向与所选面积法线方向的夹角。法线是垂直于面的方向；一张开放的面可自行规定法线正方向，反向规定会使通量变号。</p>
+<p>电场垂直穿出面且与正法线同向时，θ=0，Φ=EA；平行于面时 θ=90°，Φ=0；反向穿入时通量为负。对于闭合曲面，通常规定法线向外。一般不均匀场和曲面要将各小块的 E·dA 积分。</p>
+<p><strong>例 1</strong>：均匀场 E=200 N/C，平面面积 A=0.03 m²，场与正法线夹角 60°，求通量。</p>
+<p>Φ=200×0.03×cos60°=3 N·m²/C。若题目给的是场与平面的夹角，要先换算成与法线的夹角，不能直接套用。</p>
+<h2>二、高斯定理说了什么？</h2>
+<p>静电场中，任意闭合曲面的净电通量 Φ=Q内/ε₀，其中 Q内 是曲面包围的净电荷（正负要代数相加），ε₀ 为真空介电常量。闭合曲面可以是假想的数学曲面，不一定有真实外壳。</p>
+<p>定理适用于任意闭合面，但<strong>能用它直接求某处场强，还需要足够的对称性</strong>。原因是高斯定理给的是整张闭合面的通量；若场强在表面各处大小和方向不同，就不能直接把 E 提出积分号。</p>
+<h3>三个容易混淆的判断</h3>
+<ol>
+<li>曲面内净电荷为零，只能推出净通量为零，不能推出表面每一点场强为零。例如均匀电场中没有包围电荷的闭合面，进入和穿出的通量相抵，场依然存在。</li>
+<li>外部电荷不改变高斯定理右侧的包围净电荷，但会影响闭合面上各点的<strong>总场强</strong>。不能说外部电荷在表面没有电场。</li>
+<li>通量可以为负：若面内净电荷为负，总通量为负，表示按向外法线计的净通量向内。</li>
+</ol>
+<h2>三、什么时候能把积分化成简单乘法？</h2>
+<p>先看电荷<strong>分布</strong>是否具有球、柱或平面对称，再选与对称性匹配的高斯面。物体外形看上去是球形，不保证电荷分布具有球对称。</p>
+<p><strong>球对称例子</strong>：真空中孤立点电荷 Q 位于球心，以球心为中心取半径 r 的球面。根据对称性，球面各点场强大小相同，方向沿半径；因此 Φ=E·4πr²（当 Q&gt;0 时场向外）。代入高斯定理：E=Q/(4πε₀r²)。如果 Q&lt;0，场强大小写为 |Q|/(4πε₀r²)，方向指向球心。</p>
+<p>这个推导中的 E 能提出积分号，是因为已经利用对称性确定它在球面大小相同且与法线平行；仅仅画一个球面并不能自动得到这个条件。</p>
+<h3>例 2：均匀带电绝缘实心球</h3>
+<p>半径为 R 的绝缘球，电荷均匀分布，总电荷 Q&gt;0。求距球心 r 处的场强。假设给定电荷分布保持不变。</p>
+<ul>
+<li>r≥R：包围全部 Q，E=Q/(4πε₀r²)，方向向外。</li>
+<li>0&lt;r&lt;R：包围电荷占总体积的比例 r³/R³，所以 Q内=Q(r³/R³)。由 E·4πr²=Q内/ε₀，得 E=Qr/(4πε₀R³)。</li>
+<li>r=0：由球对称性，E=0。</li>
+</ul>
+<p>球内结果随 r 增大而增大，不能把整颗球的电荷都当作集中在球心。r=R 时内外两式一致，可作为检查。这个结论是均匀带电<strong>绝缘实心球</strong>的模型，不能直接当作静电平衡导体内部的结论。</p>
+<h2>四、电势：从能量角度描述电场</h2>
+<p>场强侧重回答“电荷受到多大、什么方向的力”；电势侧重回答“单位电荷的电势能如何随位置变化”。若电荷 q 在某处的电势能为 U，则 U=qV；V 是电势，是标量，单位为伏特 V，1 V=1 J/C。</p>
+<p>电势的零点可选；比较两点的电势差通常更有物理意义。静电场中，从 A 移动到 B，电场力做功 W_AB=q(V_A−V_B)，电势能变化 ΔU=U_B−U_A=−W_AB。公式中 q 要带电荷正负号。</p>
+<p><strong>例 3</strong>：正电荷 q=2 μC 从电势 12 V 的 A 点移至电势 5 V 的 B 点，求电场力做功。</p>
+<p>V_A−V_B=7 V，W_AB=2×10⁻⁶×7=1.4×10⁻⁵ J。电场力做正功，电势能减少同样多。如果换成负电荷且运动方向不变，功的符号会反过来。</p>
+<p>真空中点电荷 Q 若选无穷远处电势为零，则距它 r 处 V=kQ/r。Q 的正负必须保留；多个点电荷的电势按代数和叠加，不像场强需要按矢量方向叠加。</p>
+<h2>五、电势与场强的方向关系</h2>
+<p>电场方向指向电势在空间中下降最快的方向。在一维情形 Eₓ=−dV/dx；如果 V(x) 是直线函数、场强恒定，Eₓ 等于电势斜率的负值。沿电场方向移动时电势降低；但负电荷的电势能 U=qV 如何变化，还要考虑 q 的符号。</p>
+<p>等势面上各点电势相等，静电场中沿等势面移动电荷，电场力做功为零。场强在有定义且非零处垂直于等势面。不能由“电势为零”直接推出“场强为零”：电势零点可任意选取，而场强取决于电势随位置的变化。</p>
+<h2>六、自测与解答</h2>
+<p><strong>1.</strong> 一个闭合面包围 +3 nC 和 −3 nC 两个电荷。净通量多少？表面电场是否一定为零？</p>
+<p>解：净包围电荷为零，所以净通量为零。表面电场不一定为零，两个电荷在不同位置产生的场一般不会在表面每一点都抵消。</p>
+<p><strong>2.</strong> 某空间区域 V(x)=10−2x（V，x 以 m 为单位）。求 Eₓ。</p>
+<p>解：dV/dx=−2 V/m，所以 Eₓ=−dV/dx=+2 V/m，沿 x 正方向。结果单位也可写成 2 N/C。</p>
+<p><strong>3.</strong> 在上述区域中，一个 −1 μC 电荷从 x=0 移到 x=1 m。求电场力做功。</p>
+<p>解：V_A=10 V，V_B=8 V，因此 W=q(V_A−V_B)=−1×10⁻⁶×2=−2×10⁻⁶ J。负功意味着电势能增加 2×10⁻⁶ J。不能因为电势降低，就断定任何电荷的电势能都降低。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；本篇按既有第 10 章页面编写，教材正文待继续逐页核对。</li>
+<li>OpenStax, University Physics Volume 2, Applying Gauss’s Law: <a href="https://openstax.org/books/university-physics-volume-2/pages/6-3-applying-gausss-law">https://openstax.org/books/university-physics-volume-2/pages/6-3-applying-gausss-law</a></li>
+<li>OpenStax, University Physics Volume 2, Electric Potential and Potential Difference: <a href="https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference">https://openstax.org/books/university-physics-volume-2/pages/7-2-electric-potential-and-potential-difference</a></li>
+</ul>
+<nav><a href="10.3.html">返回章节 →</a></nav></main></body></html>

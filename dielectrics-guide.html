@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>电介质中的电场</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="11.1.html">返回 11.1</a> · <a href="11.2.html">11.2 电容器</a> · <a href="11.5.html">11.5 储能</a></nav><h1>电介质中的电场：E、D、P 与高斯定理</h1>
+<p>本篇补充第 11 章 11.3—11.4 节，特别区分总电荷、自由电荷与极化电荷。例题为新编；扫描教材正文仍待逐页核对。</p>
+<h2>一、同一问题中的三种量</h2>
+<p>电场强度 E 描述电场对试探电荷的作用；电极化强度 P 描述材料中单位体积的宏观电偶极矩；电位移 D 在 SI 制中定义为 D=ε₀E+P。三者都是矢量。</p>
+<p>常用单位：E 为 V/m 或 N/C；P 和 D 为 C/m²。定义式本身不要求所有材料都线性；但如果把它进一步化为 D=εE，就已经引入了相应材料关系。</p>
+<h2>二、自由电荷与束缚电荷</h2>
+<p>分析介质时，常把电荷分成自由电荷和与极化相关的束缚电荷。它们产生的电场共同构成总电场 E。分类取决于问题和模型，不能理解成束缚电荷“不是真电荷”或“不会产生电场”。</p>
+<p>对电场 E 的高斯定理，闭合曲面通量对应包围的<strong>总电荷</strong>；对电位移 D，闭合曲面通量对应包围的<strong>自由电荷</strong>。这是两种不同写法，若把总电荷错当成自由电荷，可能重复计算极化贡献。</p>
+<p>若已知极化矢量 P，理想宏观模型中体束缚电荷密度 ρ束=−∇·P；表面束缚电荷密度 σ束=P·n，其中 n 是从介质表面指向外侧的单位法线。边界和分布不连续时要结合具体界面处理。</p>
+<h2>三、线性各向同性介质</h2>
+<p>在线性各向同性介质模型中，P=ε₀χₑE，于是 D=ε₀(1+χₑ)E=εE，其中 ε=ε₀εᵣ。χₑ、εᵣ 的具体取值及是否为常数取决于材料、频率和模型。非线性、各向异性、非均匀介质中不能不加检查地把 D 与 E 当作处处同向且比例固定。</p>
+<p><strong>例 1</strong>：若某均匀线性介质 εᵣ=4，某点 E=100 V/m，则 D=4ε₀×100，大小约 3.54×10⁻⁹ C/m²，方向同 E。这里使用 ε₀≈8.85×10⁻¹² F/m，且已假设线性各向同性。</p>
+<h2>四、理想平行板：断电与恒压</h2>
+<p>两块大平行导体板间完全填充均匀线性介质，忽略边缘效应，板面积 S、间距 d，自由电荷面密度大小 σ自由。对适当高斯面，D 的大小为 σ自由；所以 E=D/ε=σ自由/ε。</p>
+<p>如果电容器与电源断开且极板绝缘，板上自由电荷量 Q保持不变，插入介质后 C 增至 εᵣ 倍，电压和理想匀强场的大小降为原来的 1/εᵣ。若始终接恒压电源，电压 U 不变，E=U/d 在理想几何不变的模型下不变，电源使极板自由电荷随电容增大。两种情形的源不同，不能把结论混在一起。</p>
+<p><strong>例 2</strong>：真空平行板充电后断开电源、保持绝缘，再完全填入 εᵣ=2 的线性介质。板面积与间距不变时，C 变为 2 倍、Q 不变、U 和 E 变为一半，电场储能 Q²/(2C) 变为一半。若插入过程需要机械作用，能量交换需把外界一起计入。</p>
+<h2>五、不同材料的界面</h2>
+<p>静电条件下，电场沿界面的切向分量满足适当的连续性关系；D 的法向分量跳变与界面自由面电荷有关。使用边界条件前要规定法线方向，并明确界面是否有自由电荷。不能把某一均匀平行板例题中的数值结论推广到任意曲面和任意分布。</p>
+<h2>六、自测与解答</h2>
+<p><strong>1.</strong> D=εE 是否对所有介质都无条件成立？</p>
+<p>解：不是。这个简单标量比例式依赖线性、各向同性等模型；一般定义仍为 D=ε₀E+P。</p>
+<p><strong>2.</strong> D 的闭合面通量对应包围的总电荷还是自由电荷？</p>
+<p>解：对应包围的自由电荷。E 的高斯定理对应总电荷；两式的电荷口径不同。</p>
+<p><strong>3.</strong> 平行板电容器始终接理想恒压电源，板间距不变，填满线性介质后电压与理想匀强场如何变化？</p>
+<p>解：电源使电压不变；在该理想几何下 E=U/d 也不变。极板自由电荷量增加；不能把断电绝缘时的电场降低结论照搬。</p>
+<h2>学完自检</h2>
+<p>能用自己的话区分 E、P、D；明确两种高斯定理对应的电荷；知道线性介质公式的条件；能先判断电容器是断电还是恒压，再分析场与电荷的变化。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；依据现有第 11 章内容组织，扫描正文待逐页核对。</li>
+<li>OpenStax, University Physics Volume 2, Molecular Model of a Dielectric: <a href="https://openstax.org/books/university-physics-volume-2/pages/8-5-molecular-model-of-a-dielectric">https://openstax.org/books/university-physics-volume-2/pages/8-5-molecular-model-of-a-dielectric</a></li>
+</ul>
+<nav><a href="11.1.html">返回章节 →</a></nav></main></body></html>

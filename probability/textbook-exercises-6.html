@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教材习题6逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="chapter6.html">← 返回概率论第六章</a></nav><h1>教材习题 6：逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">1｜伯努利样本和统计量</a></li><li><a href="#exercise-2">2｜经验分布函数</a></li><li><a href="#exercise-3">3｜样本方差的等价式</a></li><li><a href="#exercise-4">4｜正态总体的样本均值</a></li><li><a href="#exercise-5">5｜确定样本量</a></li><li><a href="#exercise-6">6｜使用上侧分位数</a></li><li><a href="#exercise-7">7｜伯努利样本均值与方差</a></li><li><a href="#exercise-8">8｜新观测与原样本均值之差</a></li><li><a href="#exercise-9">9｜t 分布平方</a></li><li><a href="#exercise-10">10｜正态样本和差之比</a></li><li><a href="#exercise-11">11｜两个样本方差之比</a></li><li><a href="#exercise-12">核对说明</a></li></ol></details>
+<p>对应王丽主编《概率论与数理统计》（科学出版社，2026 年第一版）第 113—114 页习题 6。以下根据扫描原题重新推导，不是出版社官方答案。样本默认按教材通常约定独立同分布，S² 以 n−1 为分母。</p>
+<h2 id="exercise-1">1｜伯努利样本和统计量</h2>
+<p>（1）独立样本 Xᵢ∼B(1,p)，对每个 xᵢ∈{0,1}，联合概率 P(X₁=x₁,…,X₅=x₅)=p^(Σxᵢ)(1−p)^(5−Σxᵢ)。这是 32 个有序取值的统一表达。</p>
+<p>（2）X₁+X₃、min(X₁,…,X₅)、(X₅−X₁)² 都是只由样本构成的统计量。X₁/p 含未知参数 p，不是统计量；p=0 时这个式子还无定义。</p>
+<p>（3）样本 0、1、0、1、1 的均值为 3/5=0.6；样本方差 S²=[2×0.6²+3×0.4²]/4=0.3。注意分母是 5−1=4。</p>
+<h2 id="exercise-2">2｜经验分布函数</h2>
+<p>样本依次为 −2.8、−1、1.5、2.1、13.4。经验分布函数 F₅(x) 等于不大于 x 的观测值所占比例：</p>
+<ul>
+<li>x&lt;−2.8：0；</li>
+<li>−2.8≤x&lt;−1：1/5；</li>
+<li>−1≤x&lt;1.5：2/5；</li>
+<li>1.5≤x&lt;2.1：3/5；</li>
+<li>2.1≤x&lt;13.4：4/5；</li>
+<li>x≥13.4：1。</li>
+</ul>
+<p>图形是右连续阶梯：每经过一个样本值向上跳 1/5；每段左端画实心点，右端画空心点。注意 13.4 相距较远，横轴应按数值比例标刻或明确使用断轴。</p>
+<h2 id="exercise-3">3｜样本方差的等价式</h2>
+<p>展开 Σ(Xᵢ−X̄)²=ΣXᵢ²−2X̄ΣXᵢ+nX̄²。因为 ΣXᵢ=nX̄，后两项合为 −nX̄²=−(ΣXᵢ)²/n。整体再除以 n−1，即得题中表达式，n≥2。</p>
+<h2 id="exercise-4">4｜正态总体的样本均值</h2>
+<p>总体为 N(52,6.3²)，n=36，故 X̄∼N(52,6.3²/36)，标准差为 1.05。所求概率为 Φ((53.8−52)/1.05)−Φ((50.8−52)/1.05)=Φ(1.7143)−Φ(−1.1429)≈0.8302。</p>
+<p>这里标准化使用标准差 1.05，不是方差 1.05²；总体正态使结果是精确的正态分布计算。</p>
+<h2 id="exercise-5">5｜确定样本量</h2>
+<p>总体标准差为 5，X̄−μ 的标准差为 5/√n。要求 P(|X̄−μ|&lt;1)=2Φ(√n/5)−1≥0.95，因此 √n/5≥z₀.₉₇₅≈1.959964。</p>
+<p>n≥(5×1.959964)²≈96.0365，最小整数为 97。检验 n=96 时概率约 0.94996，略低于 0.95；如果提前把临界值粗略取 1.96，再对边界整数取整，也应小心核对。</p>
+<h2 id="exercise-6">6｜使用上侧分位数</h2>
+<p>因为总体均值 μ 已知且 20 个正态样本独立，Σ(Xᵢ−μ)²/σ²∼χ²(20)，自由度是 20，不是 19。</p>
+<p>按教材上侧分位数定义，P(χ²(20)&gt;10)=0.968，P(χ²(20)&gt;30)=0.07。故 P(10≤χ²≤30)=0.968−0.07=0.898。题给分位数为近似值，所得概率也按题给数值计算。</p>
+<h2 id="exercise-7">7｜伯努利样本均值与方差</h2>
+<p>单个 Xᵢ 的均值为 p、方差为 p(1−p)。因此 E(X̄)=p，D(X̄)=p(1−p)/n。通常定义的样本方差是总体方差的无偏估计，所以 E(S²)=p(1−p)，要求 n≥2。</p>
+<h2 id="exercise-8">8｜新观测与原样本均值之差</h2>
+<p>Xₙ₊₁ 独立于前 n 个样本，X̄∼N(μ,σ²/n)。因此 Xₙ₊₁−X̄∼N(0,σ²(1+1/n))，标准化得到标准正态变量 Z=(Xₙ₊₁−X̄)/[σ√(1+1/n)]。</p>
+<p>正态样本的 X̄ 与 S² 独立，且新观测独立于前 n 个样本，所以 Z 与 S² 独立；(n−1)S²/σ²∼χ²(n−1)。由 t 分布定义，Z/(S/σ)=((Xₙ₊₁−X̄)/S)√[n/(n+1)]∼t(n−1)。</p>
+<h2 id="exercise-9">9｜t 分布平方</h2>
+<p>若 T=Z/√(U/n)，其中 Z∼N(0,1)、U∼χ²(n) 且相互独立，则 T²=(Z²/1)/(U/n)。Z²∼χ²(1)，故按 F 分布定义 T²∼F(1,n)。</p>
+<h2 id="exercise-10">10｜正态样本和差之比</h2>
+<p>令 U=(X₁+X₂)/(√2σ)、V=(X₁−X₂)/(√2σ)。独立同分布正态样本使 U、V 均为标准正态且协方差为零；联合正态下二者独立。因此 U/V∼t(1)，原式 Y=(U/V)²∼F(1,1)。假设 σ&gt;0；分母为零的概率为 0。</p>
+<h2 id="exercise-11">11｜两个样本方差之比</h2>
+<p>两组独立正态总体方差相等时，S₁²/S₂²∼F(9,4)：分子自由度为 10−1，分母自由度为 5−1。所求 P(F(9,4)&gt;6)≈0.04998，约为 0.05；具体查表值会随分位数精度略有变化。</p>
+<h2 id="exercise-12">核对说明</h2>
+<p>题 5 检查了 n=96 和 n=97 的边界，题 6 使用教材的上侧分位数记号，题 8 明确了正态性和独立性。第 11 题数值由 F 分布尾概率计算；这些均为重新推导而非官方答案。</p>
+<nav><a href="chapter6.html">返回第六章</a> · <a href="chapter7.html">继续第七章</a></nav></main></body></html>

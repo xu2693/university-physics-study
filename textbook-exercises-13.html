@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学物理教材习题13逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="13.1.html">← 返回第十三章</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>大学物理教材习题 13：介质中的磁场</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">13-1 螺线环与磁介质</a></li><li><a href="#exercise-2">13-2 铜线外包磁介质</a></li><li><a href="#exercise-3">13-3 有反向回流的同轴电缆</a></li><li><a href="#exercise-4">13-4 测量磁导率</a></li><li><a href="#exercise-5">13-5 环形铁芯的磁化强度</a></li><li><a href="#exercise-6">13-6 带空气隙的磁路</a></li><li><a href="#exercise-7">13-7 有无气隙时的电流</a></li><li><a href="#exercise-8">参考资料</a></li></ol></details>
+<p>对应教材下册第 120 页。H 与自由电流相联系；B 描述总磁感应强度；线性各向同性介质中 B=μ₀μᵣH、M=(μᵣ−1)H。铁磁体的 μᵣ 往往随工作状态变化，题目给定时按指定工作点计算。</p>
+<h2 id="exercise-1">13-1 螺线环与磁介质</h2>
+<p>中心线长 L=0.10 m，N=20，I=0.1 A。细环近似下 H₀=NI/L=<strong>20 A/m</strong>，B₀=μ₀H₀≈<strong>2.51×10⁻⁵ T</strong>。</p>
+<p>充满 μᵣ=4200 的介质且电流不变时，自由电流不变，H 仍约 <strong>20 A/m</strong>，B=μ₀μᵣH≈<strong>0.10556 T</strong>。按线性叠加解释，导线自由电流贡献仍为 B₀≈2.51×10⁻⁵ T，磁化电流贡献 <strong>B′=B−B₀≈0.10553 T</strong>，方向与 B₀ 相同。这里使用理想均匀磁环近似。</p>
+<h2 id="exercise-2">13-2 铜线外包磁介质</h2>
+<p>假设铜线截面电流均匀、磁介质线性且各区域圆柱对称。取环向为正，安培定理给 H(r)=I包/(2πr)：</p>
+<ul>
+<li>r&lt;R₁：<strong>H=Ir/(2πR₁²)</strong>，铜的磁化忽略时 B=μ₀H。</li>
+<li>R₁&lt;r&lt;R₂：<strong>H=I/(2πr)</strong>，<strong>B=μ₀μᵣI/(2πr)</strong>。</li>
+<li>r&gt;R₂：<strong>H=I/(2πr)</strong>，<strong>B=μ₀I/(2πr)</strong>。</li>
+</ul>
+<p>因此 H 在 R₁、R₂ 连续；B 的切向分量会因介质磁导率变化而跳变。</p>
+<p>外面再套 R₂ 至 R₃ 的金属管后，仅知道“加了金属管”还不足以确定其中是否有回流。若补充常见同轴电缆条件：管内均匀流过 −I，则 R₂&lt;r&lt;R₃ 时 <strong>H=I(R₃²−r²)/[2πr(R₃²−R₂²)]</strong>，r&gt;R₃ 时 H=0，金属的 B≈μ₀H；前两区不变。若金属管没有净电流，则 r&gt;R₂ 仍为 I/(2πr)，不能擅自当成回流。</p>
+<h2 id="exercise-3">13-3 有反向回流的同轴电缆</h2>
+<p>若内实心导体与外圆环导体的电流分别在各自截面均匀分布，H 的分段表达与 13-2 的同轴回流情形相同。由 B=μH 得：导体内 B≈μ₀H；R₁&lt;r&lt;R₂ 的介质中 <strong>B=μ₀μᵣI/(2πr)</strong>；r&gt;R₃ 为零。</p>
+<p>介质内 <strong>M⃗=(μᵣ−1)I/(2πr) φ̂</strong>，其余区域按题意磁化忽略。题给 μᵣ&lt;1，故 M 与 H 方向相反。若电流分布不是均匀的，导体内部公式需由实际包围电流重新计算。</p>
+<h2 id="exercise-4">13-4 测量磁导率</h2>
+<p>平均磁路长 L=0.01 m，横截面积 S=0.05×10⁻⁴ m²=5×10⁻⁶ m²。按截面场均匀近似，B=Φ/S=6×10⁻⁵/(5×10⁻⁶)=<strong>12 T</strong>；H=NI/L=200×0.01/0.01=<strong>200 A/m</strong>。故 μᵣ=B/(μ₀H)≈<strong>4.77×10⁴</strong>。这个数值是按扫描页给定数据计算的工作点结果；实际材料能否达到 12 T 不能仅凭线性模型保证。</p>
+<h2 id="exercise-5">13-5 环形铁芯的磁化强度</h2>
+<p>细环近似下 H≈NI/(2πr)。若给定绝对磁导率 μ，B=μH；由 B=μ₀(H+M)，得 <strong>M=(μ/μ₀−1)NI/(2πr)</strong>，方向沿磁场（当 μ&gt;μ₀）。对截面不够细的磁环，H 在不同半径处随 1/r 变化，题中结果应理解为平均半径处近似。</p>
+<h2 id="exercise-6">13-6 带空气隙的磁路</h2>
+<p>设铁芯磁路实际长度为 ℓ铁、气隙宽 b，忽略漏磁和边缘扩散，并取气隙与铁芯有效截面相同，则两处 B 近似相等。安培定理给 NI=H铁ℓ铁+H气b=Bℓ铁/(μ₀μᵣ)+Bb/μ₀，故 <strong>B气≈μ₀NI/[b+ℓ铁/μᵣ]</strong>。若题目给的 4l 表示完整平均磁路周长，则 ℓ铁≈4l−b；若 4l 已指铁芯材料本身的平均长度，则 ℓ铁=4l。面积 S 在这个等截面积模型中相消；求总磁通时 Φ≈BS。</p>
+<h2 id="exercise-7">13-7 有无气隙时的电流</h2>
+<p>目标 B=1.0 T，μᵣ=796，L=0.500 m，N=1000。无气隙时 H铁=B/(μ₀μᵣ)，I=H铁L/N≈<strong>0.500 A</strong>。</p>
+<p>开宽 d=0.002 m 的气隙，按磁通连续且忽略漏磁、边缘扩散，铁芯长度近似 L−d：I=B[(L−d)/μᵣ+d]/(μ₀N)≈<strong>2.09 A</strong>。很短的空气隙也需要较大磁势，因为空气的磁导率远低于给定工作点的铁芯；截面面积若两处相同，在计算 B 与 I 的关系时相消。</p>
+<h2 id="exercise-8">参考资料</h2>
+<ul>
+<li><a href="https://openstax.org/books/university-physics-volume-2/pages/12-7-magnetism-in-matter">OpenStax：磁性材料</a>：用于核对磁化与磁介质概念。</li>
+<li><a href="https://openstax.org/books/university-physics-volume-2/pages/12-5-amperes-law">OpenStax：安培环路定律</a>：用于核对环路与包围电流的关系。</li>
+</ul>
+<p>第 13-2 题的金属外筒是否有回流会改变结果；第 13-6 题的铁芯长度记号可能有两种约定，已分别说明。本页为独立推导，不是官方参考答案。</p>
+<nav><a href="13.1.html">返回第十三章</a> · <a href="study-resources.html">自学资料目录</a></nav></main></body></html>

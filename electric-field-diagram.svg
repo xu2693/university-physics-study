@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350" role="img" aria-labelledby="title desc">
+<title id="title">正负点电荷的电场方向</title><desc id="desc">正电荷的电场箭头远离电荷，负电荷的电场箭头指向电荷。</desc>
+<defs><marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3.5" orient="auto" markerUnits="strokeWidth"><path d="M0 0 L7 3.5 L0 7 Z" fill="#145e96"/></marker></defs>
+<rect width="400" height="350" rx="14" fill="#f0f7fb"/><g font-family="Microsoft YaHei, sans-serif" fill="#173f63" text-anchor="middle"><text x="200" y="30" font-size="20" font-weight="bold">源电荷决定电场方向</text><text x="200" y="169" font-size="19">正源电荷：电场向外</text><text x="200" y="334" font-size="19">负源电荷：电场向内</text></g>
+<g fill="none" stroke="#145e96" stroke-width="4" marker-end="url(#arrow)"><path d="M178 105 H100"/><path d="M222 105 H300"/><path d="M200 83 V48"/><path d="M200 127 V144"/><path d="M100 255 H178"/><path d="M300 255 H222"/><path d="M200 198 V233"/><path d="M200 310 V277"/></g>
+<circle cx="200" cy="105" r="20" fill="#d9634c"/><circle cx="200" cy="255" r="20" fill="#317caf"/><g text-anchor="middle" font-family="sans-serif" fill="#fff" font-weight="bold" font-size="30"><text x="200" y="115">+</text><text x="200" y="265">−</text></g></svg>

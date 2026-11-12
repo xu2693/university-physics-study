@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>教材习题5逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="chapter5.html">← 返回概率论第五章</a></nav><h1>教材习题 5：逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">1｜十段长度之和</a></li><li><a href="#exercise-2">2｜泊松变量和与正态近似</a></li><li><a href="#exercise-3">3｜控制漏接收概率</a></li><li><a href="#exercise-4">4｜20 个均匀噪声的和</a></li><li><a href="#exercise-5">5｜次品数不超过 70</a></li><li><a href="#exercise-6">6｜亮灯数量的区间概率</a></li><li><a href="#exercise-7">7｜至少多少个部件</a></li><li><a href="#exercise-8">8｜座位数</a></li><li><a href="#exercise-9">9｜赔付“最多”与实际利润</a></li><li><a href="#exercise-10">核对说明</a></li></ol></details>
+<p>对应王丽主编《概率论与数理统计》（科学出版社，2026 年第一版）第 97 页习题 5。以下结合原题重新推导，区分精确结果、正态近似和题目未给出的假设；不是出版社官方答案。Φ 表示标准正态分布函数。</p>
+<h2 id="exercise-1">1｜十段长度之和</h2>
+<p>按题中“均方差 0.05 mm”理解为标准差 0.05 mm。十段独立同分布，和 S 的均值为 20 mm，方差为 10×0.05²=0.025 mm²，标准差为 0.05√10 mm。</p>
+<p>若额外假定长度服从正态分布，或接受正态近似，则合格概率为 P(19.9≤S≤20.1)≈2Φ(0.1/(0.05√10))−1≈0.4729。</p>
+<p>但仅有均值、标准差、独立同分布并不能唯一确定该概率；n=10 时中心极限定理近似的精度也无法仅凭这些数据保证。如果总体正态，上式是精确结果；否则应明确标注为近似。</p>
+<h2 id="exercise-2">2｜泊松变量和与正态近似</h2>
+<p>50 个独立 Pois(0.03) 的和精确服从 Pois(1.5)。因此 P(X≥3)=1−e^(−1.5)(1+1.5+1.5²/2)≈0.19115。</p>
+<p>题目要求用中心极限定理：X 的均值和方差均为 1.5；用连续性修正，P(X≥3)≈1−Φ((2.5−1.5)/√1.5)≈0.2071。由于均值较小，正态近似与精确值有明显差别；结果不应被当成精确值。</p>
+<h2 id="exercise-3">3｜控制漏接收概率</h2>
+<p>假设每件产品是否为次品独立且次品概率恒为 0.1，X∼B(n,0.1)。批次不被接收对应 X&gt;10，即 X≥11。若把题目“达到 0.9”理解为至少 0.9，可计算二项尾概率并寻找最小整数 n。</p>
+<p>精确累加：n=151 时 P(X≥11)≈0.89863；n=152 时约 0.90305，故至少检查 152 件。这里是独立伯努利模型；有限批次不放回抽样且总体大小已知时，可能应改用超几何分布。</p>
+<h2 id="exercise-4">4｜20 个均匀噪声的和</h2>
+<p>每个 Xᵢ∼U(0,10)，均值 5、方差 100/12。独立时 S 的均值 100，方差 20×100/12。按中心极限定理，P(S≥105)≈1−Φ(5/√(20×100/12))≈0.3493。</p>
+<p>S 为连续变量，不使用整数计数问题的 0.5 连续性修正。按独立均匀分布求精确卷积，结果约 0.3503，可见本例近似较接近。</p>
+<h2 id="exercise-5">5｜次品数不超过 70</h2>
+<p>在每件独立、次品率恒为 0.005 的模型下，X∼B(10000,0.005)，所求为 Σ_{k=0}^{70}C(10000,k)0.005ᵏ0.995^(10000−k)≈0.99710。正态近似应使用均值 50、方差 49.75，并可对 X≤70 使用边界 70.5。</p>
+<p>题目未明确说明产品之间是否独立；只知道每件的边缘次品概率不足以唯一确定总次品数分布，因此上述二项结果依赖额外独立性假设。</p>
+<h2 id="exercise-6">6｜亮灯数量的区间概率</h2>
+<p>若各灯开关状态独立且开灯概率均为 0.8，X∼B(100,0.8)。P(70≤X≤86)=Σ_{k=70}^{86}C(100,k)0.8ᵏ0.2^(100−k)≈0.94703。</p>
+<p>正态近似使用均值 80、标准差 4，连续性修正后为 Φ((86.5−80)/4)−Φ((69.5−80)/4)。题目未说明各灯独立；有共同作息等相关性时，不能仅由每盏灯概率求出唯一答案。</p>
+<h2 id="exercise-7">7｜至少多少个部件</h2>
+<p>题中“80%以上”按“至少 80%”解释。若 n 个部件独立且每个正常概率 0.9，正常数 X∼B(n,0.9)，系统正常需 X≥ceil(0.8n)。</p>
+<p>逐个检查正整数 n 的二项尾概率，最小满足 P(X≥ceil(0.8n))≥0.95 的 n 为 20；此时 P(X≥16)≈0.95683。由于整数门槛随 n 跳变，成功概率不必随每次增加 n 都单调增加，找“最小值”不能只解连续近似公式而不核对整数。</p>
+<p>若把“80%以上”严格理解为“大于 80%”，门槛变为 floor(0.8n)+1，精确计算的最小 n 为 26。题干也写“概率为 0.95”，一般按不低于 0.95 的设计要求解释；恰好等于 0.95 是不同要求。</p>
+<h2 id="exercise-8">8｜座位数</h2>
+<p>若 4900 名学生是否到场相互独立、每人概率均为 0.1，到场人数 X∼B(4900,0.1)。求最小整数 m，使 P(X≤m)≥0.99。</p>
+<p>二项分布精确累加给 P(X≤538)≈0.98879，P(X≤539)≈0.99008，故至少准备 539 个座位。正态近似可用均值 490、标准差 21 和连续性修正作估计，再用精确值确认整数。</p>
+<p>题目未明确给出学生之间独立性；若到场行为相关，仅有每人的 0.1 不能确定上述分布和座位数。</p>
+<h2 id="exercise-9">9｜赔付“最多”与实际利润</h2>
+<p>总保费为 500×800=400000 元。题干说每次事故<strong>最多</strong>赔付 50000 元，并未给出实际赔付金额的分布，也没有说明事故是否相互独立或其他成本。因此亏本和利润至少 200000 元的精确概率不能仅凭题目唯一确定。</p>
+<p>如果另外假设各车事故独立、每起事故恰好赔 50000 元、没有其他费用，X∼B(500,0.006)，利润为 400000−50000X。亏本对应 X≥9，概率约 0.00368；利润不少于 200000 元对应 X≤4，概率约 0.81577。这是明确额外假设后的示例结果，不是“最多赔付”自动推出的结果。</p>
+<p>若仅知道每次实际赔付不超过 50000 元、无其他费用，则 X≤8 时不可能亏本，X≤4 时利润至少为 200000 元；在上述独立事故模型下，0.00368 是亏本概率的上界，0.81577 是利润至少 200000 元概率的下界，而不是精确概率。</p>
+<h2 id="exercise-10">核对说明</h2>
+<p>本页根据扫描原题重新推导；题 1 区分精确和近似，题 3、5、6、8、9 写明独立性或抽样条件，题 7 处理整数门槛，题 9 不把赔付上限当成固定赔付。数值由二项概率累加或正态分布计算；不是出版社官方答案。</p>
+<nav><a href="chapter5.html">返回第五章</a> · <a href="chapter6.html">继续第六章</a></nav></main></body></html>

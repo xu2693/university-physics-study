@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>光学与近代物理综合练习</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}details.answer{margin:1em 0;padding:0 1em;background:#f2f7fb;border:1px solid #d5e5f0;border-radius:10px}details.answer summary{cursor:pointer;padding:.65em 0;color:#145e96;font-weight:700}details.answer p{margin-top:.2em}details.answer summary:focus-visible{outline:3px solid #226b9a;outline-offset:2px}</style></head><body><main><nav><a href="index.html">← 返回物理课程目录</a></nav><h1>光学与近代物理综合练习</h1><!-- 练习答案折叠 --><p>建议先独立完成每道题，再点开“查看解答”，对照思路和易错点。</p>
+<p>本篇串联第 15—20 章部分基础概念。题目为新编，先独立判断模型和单位，再看解答；它不能代替对教材每一节的详细学习。</p>
+<h2>题 1：双缝条纹间距</h2>
+<p>杨氏双缝实验中，缝距 d=0.50 mm，屏距 D=1.5 m，单色光波长 λ=600 nm。满足远场与小角近似时，相邻明纹间距约多少？</p>
+<details class="answer"><summary>查看解答</summary><p> Δy≈λD/d=(600×10⁻⁹×1.5)/(0.50×10⁻³)=1.8×10⁻³ m=1.8 mm。先把 nm 和 mm 换成 m；若介质变化，要使用传播介质中的波长。</p></details>
+<h2>题 2：单缝中央明纹</h2>
+<p>单缝宽 a=0.20 mm，波长 λ=500 nm，屏距 D=1 m。小角和远场条件下中央明纹宽度约多少？</p>
+<details class="answer"><summary>查看解答</summary><p> 中央两侧一级暗纹间宽度约 2λD/a=2×500×10⁻⁹×1/(0.20×10⁻³)=5×10⁻³ m=5 mm。中心到一侧一级暗纹是 2.5 mm，不是中央明纹总宽。</p></details>
+<h2>题 3：偏振片</h2>
+<p>强度为 80 的自然光通过一片理想偏振片，再通过与第一片透振轴成 60° 的理想偏振片。求最终强度。</p>
+<details class="answer"><summary>查看解答</summary><p> 第一片后为 80/2=40；第二片后为 40cos²60°=10。第一步用自然光平均结果，第二步对已经线偏振的光用马吕斯定律。</p></details>
+<h2>题 4：光电效应</h2>
+<p>材料逸出功 W=2.2 eV，入射单光子能量为 3.0 eV。单光子光电效应模型下最大初动能是多少？</p>
+<details class="answer"><summary>查看解答</summary><p> K最大=hν−W=3.0−2.2=0.8 eV。若频率不变而光强增加，单个光子能量不因此改变；实际电子数等还受实验条件影响。</p></details>
+<h2>题 5：能级跃迁</h2>
+<p>理想氢原子从 n=2 跃迁到 n=1，已知 Eₙ=−13.6/n² eV，求发射光子能量。</p>
+<details class="answer"><summary>查看解答</summary><p> E₂=−3.4 eV，E₁=−13.6 eV；光子能量 E₂−E₁=10.2 eV。是从高能级到低能级发射，反向跃迁需吸收同样的能级差。</p></details>
+<h2>题 6：波函数归一化</h2>
+<p>数学示例中，一维波函数在 0&lt;x&lt;L 为正实常数 C，其余为零。若总概率为 1，求 C 和粒子位于左半区间的概率。</p>
+<details class="answer"><summary>查看解答</summary><p> ∫₀ᴸC²dx=C²L=1，所以 C=1/√L；左半区间概率为 C²(L/2)=1/2。该示例说明归一化，不自动构成满足无限深势阱边界条件的能量本征态。</p></details>
+<h2>题 7：不确定性</h2>
+<p>某量子态位置标准差 Δx=1.0×10⁻¹⁰ m，取 ℏ=1.055×10⁻³⁴ J·s，求动量标准差下界。</p>
+<details class="answer"><summary>查看解答</summary><p> Δpₓ≥ℏ/(2Δx)=1.055×10⁻³⁴/(2×10⁻¹⁰)≈5.28×10⁻²⁵ kg·m/s。这是标准差的下界，不是每次测量误差恰等于该数。</p></details>
+<h2>题 8：量子比特测量</h2>
+<p>一个量子比特处于 (√3/2)|0⟩+(1/2)|1⟩，按计算基测量，得到 1 的概率是多少？</p>
+<details class="answer"><summary>查看解答</summary><p> 对 |1⟩ 的幅度取模平方：(1/2)²=1/4。幅度和概率不能直接等同。</p></details>
+<h2>题 9：半导体</h2>
+<p>n 型半导体的多数载流子通常是什么？它是否意味着整块材料一定带净负电，或不存在空穴？</p>
+<details class="answer"><summary>查看解答</summary><p> 多数载流子通常是电子；这不表示材料整体必然带大量净负电，也不意味着空穴绝对不存在。杂质离化等共同决定电荷平衡。</p></details>
+<h2>题 10：核衰变</h2>
+<p>某大量放射性核样本半衰期为 4 小时，经过 12 小时平均剩余初始数量的多少？</p>
+<details class="answer"><summary>查看解答</summary><p> 12 小时为 3 个半衰期，平均剩余 (1/2)³=1/8。对于少量原子核，实际剩余数具有明显随机性。</p></details>
+<h2>复盘</h2>
+<p>本组题刻意跨章节，但各题仍须检查模型：远场小角、理想偏振片、单光子光电模型、波函数边界条件和统计衰变条件都不能省略。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《大学物理（下册）》第七版，郝玉英等主编，科学出版社，2026 年；题目为新编，扫描教材正文及习题仍待逐页核对。</li>
+<li>OpenStax, University Physics Volume 3, Young’s Double-Slit Interference: <a href="https://openstax.org/books/university-physics-volume-3/pages/3-1-youngs-double-slit-interference">https://openstax.org/books/university-physics-volume-3/pages/3-1-youngs-double-slit-interference</a></li>
+<li>OpenStax, University Physics Volume 3, Wave Functions: <a href="https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions">https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions</a></li>
+</ul>
+<nav><a href="index.html">返回课程目录 →</a></nav></main></body></html>

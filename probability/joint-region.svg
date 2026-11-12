@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 380" role="img" aria-labelledby="title desc">
+<title id="title">二维密度的三角形区域</title><desc id="desc">单位正方形中直线 y=x 下方的三角形，表示零小于 y 小于 x 小于一。</desc>
+<rect width="400" height="380" rx="14" fill="#f4f9fc"/><text x="30" y="32" font-family="Microsoft YaHei,sans-serif" fill="#173f63" font-size="19" font-weight="bold">支持区域：0 &lt; y &lt; x &lt; 1</text>
+<path d="M72 300 L320 300 L320 64 Z" fill="#8bc4e4" fill-opacity=".55"/><g stroke="#315b75" stroke-width="3" fill="none"><path d="M72 300 H345"/><path d="M72 300 V49"/><path d="M72 64 H320 V300" stroke="#b4cbd9" stroke-width="2"/><path d="M72 300 L320 64" stroke="#247caa" stroke-width="3"/></g>
+<g font-family="Microsoft YaHei,sans-serif" fill="#173f63" font-size="18"><text x="347" y="307">x</text><text x="65" y="43">y</text><text x="57" y="321">0</text><text x="313" y="323">1</text><text x="50" y="70">1</text><text x="198" y="194">y = x</text><text x="180" y="258">f(x,y) = 2</text><text x="30" y="360" font-size="17">边界线概率为 0；图示填色面积为 1/2。</text></g></svg>

@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>随机变量函数与卷积</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}</style></head><body><main><nav><a href="chapter2.html">一维随机变量</a> · <a href="chapter3.html">二维随机变量</a></nav><h1>随机变量函数的分布：求和、最大值与最小值</h1>
+<p>本篇补充第二章和第三章中的函数分布。先确定新变量的取值范围，再把目标事件转换成原变量的事件。例题为新编；教材扫描正文尚待逐页核对。</p>
+<h2>一、先确定新变量可能取什么值</h2>
+<p>已知随机变量 X，定义 Y=g(X)。Y 的分布不是简单把 X 的公式中的 x 替换为 y；一般要先求 F_Y(y)=P(Y≤y)，将不等式转换为关于 X 的事件，然后按 X 的已知分布计算。</p>
+<p><strong>例 1：平方变换。</strong> X 在 [−1,1] 均匀分布，Y=X²。Y 的范围为 [0,1]。当 0≤y≤1，Y≤y 等价于 −√y≤X≤√y，区间长度为 2√y，总长度为 2，所以 F_Y(y)=√y。y&lt;0 时 F_Y(y)=0，y≥1 时 F_Y(y)=1。对 0&lt;y&lt;1 求导，得到密度 f_Y(y)=1/(2√y)。</p>
+<p>为什么不是只看 X≤√y？因为平方不是一一对应：正负两个方向都可能产生同一个 Y。端点处密度表达式发散不妨碍其在区间上的积分为 1；连续随机变量单点概率仍为 0。</p>
+<h2>二、单调变换与雅可比</h2>
+<p>如果 Y=g(X) 在相关区间严格单调、可微，且逆函数满足适当条件，可用 f_Y(y)=f_X(g⁻¹(y)) |d g⁻¹(y)/dy|，并写清 Y 的支持范围。绝对值保证递减变换时密度不因导数为负而变负；多对一变换则须把各个满足条件的逆分支贡献相加。</p>
+<p><strong>例 2：线性变换。</strong> X 在 [0,1] 均匀分布，Y=2X+1。Y 的范围为 [1,3]；逆函数 x=(y−1)/2，导数为 1/2，所以 Y 在 [1,3] 的密度为 1/2，其他位置为 0。总面积 2×1/2=1，可用于检查。</p>
+<h2>三、离散变量相加：逐项求和</h2>
+<p>设 Z=X+Y。离散情形下，P(Z=z) 是所有满足 x+y=z 的联合概率之和。如果 X、Y 独立，才可以把联合概率改写为 P(X=x)P(Y=y)。</p>
+<p><strong>例 3</strong>：独立公平硬币各掷一次，X、Y 分别是对应的正面指示变量。Z=X+Y 表示正面总数。Z=0、1、2 的概率依次为 1/4、1/2、1/4：其中 Z=1 有 (0,1) 和 (1,0) 两种互斥情况。</p>
+<h2>四、连续变量相加：卷积与范围</h2>
+<p>若 X、Y 独立且有密度，Z=X+Y 的密度为 f_Z(z)=∫f_X(x)f_Y(z−x)dx。积分只在两个密度同时非零的位置有贡献；遇到分段区间要先确定范围，不能随意把常数积分到整个实数轴。</p>
+<p><strong>例 4</strong>：X、Y 独立且都在 [0,1] 均匀分布。Z=X+Y 的范围是 [0,2]。给定 z 时需同时满足 0≤x≤1 和 0≤z−x≤1。</p>
+<ul>
+<li>0&lt;z&lt;1：x 从 0 到 z，密度为 ∫₀ᶻ1dx=z。</li>
+<li>1≤z&lt;2：x 从 z−1 到 1，密度为 ∫_(z−1)¹1dx=2−z。</li>
+<li>其他位置密度为 0。</li>
+</ul>
+<p>结果是三角形密度，总面积为 1/2+1/2=1。若 X、Y 不独立，不能把联合密度直接换成边缘密度的乘积，需要从联合分布出发。</p>
+<h2>五、最大值和最小值</h2>
+<p>令 M=max(X,Y)、m=min(X,Y)。最大值不超过 z，等价于两个变量都不超过 z，因此 F_M(z)=P(X≤z,Y≤z)。若独立，F_M(z)=F_X(z)F_Y(z)。</p>
+<p>最小值大于 z，等价于两个变量都大于 z。独立时 P(m&gt;z)=[1−F_X(z)][1−F_Y(z)]，所以 F_m(z)=1−[1−F_X(z)][1−F_Y(z)]。这里的公式使用严格大于与分布函数中的不大于互补；即使有点概率也保持一致。</p>
+<p><strong>例 5</strong>：X、Y 独立且都在 [0,1] 均匀分布。0≤z≤1 时，F_M(z)=z²，F_m(z)=1−(1−z)²。于是 P(M≤1/2)=1/4，而 P(m≤1/2)=3/4。一个是“两者都小于等于 1/2”，另一个是“至少一个小于等于 1/2”。</p>
+<h2>六、练习与解答</h2>
+<p><strong>1.</strong> X 在 [0,1] 均匀分布，Y=3X，求 Y 的范围和密度。</p>
+<p>解：范围 [0,3]，逆变换 x=y/3，密度为 1/3；区间外为 0。</p>
+<p><strong>2.</strong> 例 4 的两个独立均匀变量之和 Z，求 P(Z≤1)。</p>
+<p>解：密度在 0 到 1 为 z，积分 ∫₀¹z dz=1/2；也可由单位正方形中 x+y≤1 的三角形面积得到 1/2。</p>
+<p><strong>3.</strong> 两个独立均匀 [0,1] 变量的最大值 M，求 P(M≤0.8)。</p>
+<p>解：F_M(0.8)=0.8²=0.64。若变量不独立，仅知各自边缘分布就不能直接用这个乘法。</p>
+<h2>学完自检</h2>
+<p>能先写新变量取值范围；平方变换时考虑两个分支；使用卷积前检查独立性并确定积分区间；能把最大值和最小值事件翻译成原变量事件。</p>
+<h2>参考资料</h2>
+<ul>
+<li>用户提供的《概率论与数理统计》，王丽主编，科学出版社，2026 年第一版；依据既有第二、三章讲义组织，扫描正文待逐页核对。</li>
+<li>OpenStax, Introductory Statistics 2e, Two Basic Rules of Probability: <a href="https://openstax.org/books/introductory-statistics-2e/pages/3-3-two-basic-rules-of-probability">https://openstax.org/books/introductory-statistics-2e/pages/3-3-two-basic-rules-of-probability</a> （核对事件交、并与独立性的基本关系）。</li>
+</ul>
+<nav><a href="chapter2.html">返回第二章</a> · <a href="chapter3.html">返回第三章</a></nav></main></body></html>

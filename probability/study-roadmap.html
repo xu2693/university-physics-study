@@ -1,0 +1,26 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>概率论自学路线</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:white;padding:22px 20px 80px}h1,h2{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}li{margin:.8em 0}nav{padding:14px;background:#eaf3fa;border-radius:10px}</style></head><body><main><nav><a href="index.html">← 返回课程</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>概率论与数理统计：从哪里开始，怎么自学</h1>
+<p>这套讲义以你提供的教材为主线，从随机事件到统计推断。可以直接读文字、自己做题，不必依赖视频。下面的路线强调知识之间的联系，而不是要求一次背完所有公式。</p>
+<h2>建议顺序</h2>
+<ol>
+<li><strong>随机事件与概率（第一章）</strong>：先学事件运算、计数、条件概率和独立性。做题先写清样本空间，再判断是有放回还是无放回。<a href="index.html">第一章讲义</a> · <a href="conditional-guide.html">条件概率与贝叶斯</a> · <a href="textbook-exercises-1.html">教材习题</a></li>
+<li><strong>一维随机变量（第二章）</strong>：理解分布函数、分布列和概率密度各自回答什么问题，再学二项、泊松、均匀、指数和正态分布。<a href="chapter2.html">第二章</a> · <a href="common-distributions-guide.html">常见分布</a> · <a href="textbook-exercises-2.html">习题</a></li>
+<li><strong>多维随机变量（第三章）</strong>：先看联合分布，再通过求和或积分得到边缘分布和条件分布。连续题目优先画出支持区域，避免积分上下限出错。<a href="chapter3.html">第三章</a> · <a href="conditional-density-guide.html">条件密度与区域</a></li>
+<li><strong>期望与方差（第四章）</strong>：分清平均水平、波动大小和协方差。线性期望不要求独立，乘积期望和方差展开中的交叉项需要另行判断。<a href="chapter4.html">第四章</a> · <a href="moments-guide.html">期望方差图解</a></li>
+<li><strong>大数定律与中心极限定理（第五章）</strong>：前者讨论平均值趋于哪里，后者讨论标准化后的近似分布。使用近似之前检查独立性、方差和样本量等条件。<a href="chapter5.html">第五章</a> · <a href="limit-theorems-guide.html">极限定理导引</a></li>
+<li><strong>统计量及其分布（第六章）</strong>：区分总体参数、样本统计量、样本均值与样本方差；练习正态、χ²、t、F 分布的来源和自由度。<a href="chapter6.html">第六章</a> · <a href="sampling-guide.html">抽样分布</a></li>
+<li><strong>参数估计与假设检验（第七、八章）</strong>：先确定对象是均值、比例还是方差，以及样本是否配对，再选择置信区间或检验方法。<a href="chapter7.html">第七章</a> · <a href="chapter8.html">第八章</a> · <a href="inference-choice-guide.html">统计方法怎么选</a></li>
+</ol>
+<h2>每次学习用同一套流程</h2>
+<p><strong>先理解问题</strong>：读一段讲义后，合上公式回答“随机性来自哪里、X 表示什么、需要求概率还是参数”。常用符号不熟悉时查<a href="notation-guide.html">符号速查</a>。</p>
+<p><strong>再画图或列表</strong>：计数题列出可能情况；条件概率题用树状图或列出条件；联合密度题先画区域；假设检验题写 H₀、H₁ 和方向。</p>
+<p><strong>自己做一遍</strong>：先遮住解答。写明分布及条件，再计算；检查概率是否在 0 到 1 之间、密度是否积分为 1、单位是否合理。习题页顶部可展开题号目录。</p>
+<p><strong>整理错因</strong>：区别概念不清、题意误读、公式条件不符和运算错误。隔一段时间不看答案再做一次，才能知道是否真的掌握。</p>
+<h2>四个常见卡点</h2>
+<ul>
+<li>看到“至少一次”不知怎么数：考虑先算一次都没有，再取反面；但仍要检查试验是否独立。</li>
+<li>看到密度 f(x) 就当作概率：连续变量在区间内的概率要对密度积分；单点概率通常为 0。</li>
+<li>看到条件概率就认为独立：P(A|B) 一般不同于 P(A)，只有满足独立性等条件时才相等。</li>
+<li>得到 p 值后说“原假设为真的概率”：这不是 p 值的定义；先把它解释为原假设和模型成立时数据的极端程度。</li>
+</ul>
+<p><a href="study-resources.html">查看按章整理的全部补充与练习</a>。本站教材习题讲解为独立推导，仍需对照原题条件；遇到疑似排版问题时页面会注明，不把猜测当成确定结论。</p>
+</main></body></html>
