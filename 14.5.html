@@ -1,6 +1,31 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>14.5 自感磁能和磁场能量</title></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><nav class="nav" aria-label="第14章导航"><a href="index.html">首页</a><a href="14.1.html">14.1</a><a href="14.2.html">14.2</a><a href="14.3.html">14.3</a><a href="14.4.html">14.4</a><a href="14.5.html" aria-current="page">14.5</a><a href="14.6.html">14.6</a><a href="14.7.html">14.7</a></nav><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>14.5 自感磁能和磁场能量</h1><div class="intro"><strong>学习与练习</strong><ul><li><a href="induction-practice-guide.html">电磁感应分步典型题：分步讲解和练习</a></li></ul></div><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、RL 电路的暂态过程</a></li><li><a href="#s2">二、电感储能</a></li><li><a href="#s3">三、磁场能量密度</a></li></ul></div><h2 id="s1">一、RL 电路的暂态过程</h2><p>一个电阻 R、电感 L 和理想直流电源 ℰ 串联，t=0 接通，初始电流为零。由回路方程 ℰ=L dI/dt+RI。电感抵抗电流突变，因此 I 不是瞬间达到最终值，而是：</p><div class="formula">I(t)=(ℰ/R)[1−e^(−t/τ)]，　τ=L/R</div><p>τ 是时间常数，单位秒；经过一个 τ，电流达到最终值的约 63.2%。若电源被移除但电感和电阻仍构成闭合放电回路，初始电流 I₀，则 I(t)=I₀e^(−t/τ)。若直接断开且没有放电通路，实际过程可能出现高电压或电弧，不能直接套用上述理想闭合回路模型。</p><h2 id="s2">二、电感储能</h2><p>在固定 L 的线性电感中，外界建立电流时需要克服自感。微小储能增量 dW=LI dI；从零积分到 I，得到磁能 W=½LI²。L 单位 H，I 单位 A，W 单位 J。改变电感结构或介质时，需要考虑额外机械功和材料条件。</p><h2 id="s3">三、磁场能量密度</h2><p>对线性、各向同性介质，磁能密度 w=½<b>B</b>·<b>H</b>=B²/(2μ)=½μH²，单位 J/m³。真空时 μ=μ₀；非均匀磁场总能量 W=∫w dV。铁磁材料有非线性和磁滞时，不能把固定 μ 的简式无条件用于任意磁化过程。</p><div class="example"><b>例1｜电感储能与时间常数（新编）</b><p>电感 0.40 H、电阻 20 Ω、理想电源 10 V，初始电流为零，求时间常数、稳态电流和稳态磁能。</p><p>τ=L/R=0.40/20=0.020 s；稳态时 dI/dt=0，I∞=ℰ/R=0.50 A。W=½LI∞²=0.5×0.40×0.50²。</p><p class="answer">答案：τ=0.020 s，稳态电流 0.50 A，稳态磁能 0.050 J。</p><p>检查：电阻消耗的能量与电感储存的能量不是同一项。</p></div>
-<!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>磁场能量与 RL 电路时间常量</h2>
-<p>理想电感中储存的磁场能量为 W＝½LI²。在线性、各向同性介质中，磁场能量密度可写 w＝½BH；在真空中 B＝μ₀H，所以 w＝B²/(2μ₀)。非线性或有磁滞的材料不能不加条件直接套用相同的能量密度表达式。</p>
-<p>恒压电源 ε、R、L 串联接通时，电流 I(t)＝(ε/R)(1−e⁻ᵗ/τ)，时间常量 <strong>τ＝L/R</strong>。在 t＝τ 时，电流约达到最终值的 1−e⁻¹≈63.2%；断开电源并形成无源闭合回路时，电流可按 I(t)＝I₀e⁻ᵗ/τ 衰减。这里的断开方式必须允许电流形成回路，否则还要考虑开关、寄生元件等。</p>
-<p><strong>新编例题</strong>：L＝0.50 H、R＝5.0 Ω，则 τ＝0.10 s；若电流为 2.0 A，电感储能 W＝½×0.50×2.0²＝<strong>1.0 J</strong>。L/R 的单位为秒，而 R/L 的单位为每秒，量纲可帮助发现公式抄反。</p>
-</section><!-- 自学深化内容结束 --></main><div class="switch"><a href="14.4.html">← 上一节</a><a href="14.6.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第14章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-2/pages/13-1-faradays-law">OpenStax 法拉第定律</a>、<a href="https://openstax.org/books/university-physics-volume-2/pages/16-1-maxwells-equations-and-electromagnetic-waves">麦克斯韦方程</a>。粗体表示矢量。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>14.5 自感磁能和磁场能量</title></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><nav class="nav" aria-label="第14章导航"><a href="index.html">首页</a><a href="14.1.html">14.1</a><a href="14.2.html">14.2</a><a href="14.3.html">14.3</a><a href="14.4.html">14.4</a><a href="14.5.html" aria-current="page">14.5</a><a href="14.6.html">14.6</a><a href="14.7.html">14.7</a></nav><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>14.5 自感磁能和磁场能量</h1>
+<p class="intro">正文对照教材纸页141—143。先用RL暂态说明能量怎样进入磁场，再从能量密度计算非均匀场。例14-10按教材题面独立推导；以下没有使用出版社习题答案。</p>
+<div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、RL暂态及其推导</a></li><li><a href="#s2">二、自感磁能从哪里来</a></li><li><a href="#s3">三、磁场能量密度</a></li><li><a href="#ex1410">例14-10：导线内部磁能</a></li><li><a href="#review">自测与回顾</a></li></ul></div>
+<h2 id="s1">一、RL暂态：电流需要时间建立</h2>
+<p>恒定理想电源 ε₀、电阻 R&gt;0、恒定电感 L 串联，t=0接通，初始I(0)=0。R包括线圈电阻及其他串联电阻。选电源驱动方向为电流正方向，回路方程为：</p>
+<div class="formula">ε₀−L dI/dt=RI，　即 L dI/dt+RI=ε₀</div>
+<p>令稳态电流 I∞=ε₀/R，移项得 dI/(I∞−I)=(R/L)dt。从0积分至I、从0积分至t，左边为 −ln[(I∞−I)/I∞]。取指数并解出：</p>
+<div class="formula">I(t)=I∞[1−e<sup>−t/τ</sup>]，　τ=L/R</div>
+<p>检查：t=0时I=0；刚接通时dI/dt=ε₀/L，电流不会跳变；t很大时I趋近ε₀/R。τ的单位是H/Ω=s。经过一个τ，I约为终值的63.2%；5τ后约99.3%。R/L是每秒，不能把它误当τ。</p>
+<p><strong>无源衰减：</strong>先移除电源，同时让L、R仍构成闭合回路，设初值为I₀。方程L dI/dt+RI=0，分离变量 dI/I=−dt/τ，得 I(t)=I₀e<sup>−t/τ</sup>。经过τ，电流剩36.8%，磁能剩e⁻²≈13.5%，两者衰减比例不同。</p>
+<p>更一般的恒定电源接通后，有 I(t)=I∞+[I(0)−I∞]e<sup>−t/τ</sup>。直接把导线断成开路时不存在上述理想放电回路，可能出现开关高电压、寄生电容充电或电弧，不能照搬指数衰减。教材图14-22与随后“断开”的文字需要补上这一模型条件。</p>
+<h2 id="s2">二、自感磁能：用功率分账</h2>
+<p>将回路方程乘以I，得到电源功率=发热功率+储能功率：</p>
+<div class="formula">ε₀I=RI²+LI dI/dt<br>dW磁=LI dI，　W磁=∫[0→I] LI′ dI′=½LI²</div>
+<p>这里是固定几何、线性且L恒定的电感。I′只是积分用的变量，积分终点才是实际电流I。不能把电源总功ε₀∫I dt全部写成½LI²，因为电阻同时发热。稳态时I仍可很大，但dI/dt=0，磁能不再增加，电源的持续供能全部转成焦耳热。</p>
+<p>在无源闭合衰减中，dW磁/dt=−RI²；从0到∞积分，电阻产生的总热量等于原磁能½LI₀²。固定L时电流反向不改变同样大小电流的储能。非线性、磁滞或机械结构改变时，应回到功与磁通链的关系处理，不能无条件套½LI²。</p>
+<h2 id="s3">三、磁场能量密度：把能量分到空间</h2>
+<p>长螺线管内B≈μnI，L≈μn²V。代入½LI²，可得W≈B²V/(2μ)。这提示能量储存在磁场中，而不只是“在线圈导线里”。线性、各向同性、无磁滞的介质中：</p>
+<div class="formula">w磁=½<b>B</b>·<b>H</b>=B²/(2μ)=½μH²，单位 J/m³<br>W磁=∫ w磁 dV</div>
+<p>真空取μ₀。非均匀场要逐点算B(r)，再作体积分；只有w均匀时才能用wV。薄圆柱壳体积元为2πrl dr，球壳为4πr²dr，必须按几何选。铁磁材料有磁滞时，一个B或H值不足以决定能量及损耗，应结合磁化过程，不能取任意“相对磁导率”硬套。</p>
+<div class="example" id="ex1410"><h3>教材例14-10｜均匀载流实心长导线内部磁能</h3>
+<p>导线半径R，电流I在截面均匀分布，按教材取磁导率μ₀。只求<strong>单位长度、导线内部</strong>的磁能。</p>
+<ol><li>半径r≤R的安培回路包围电流I内=Ir²/R²，所以 B(r)·2πr=μ₀Ir²/R²，得B(r)=μ₀Ir/(2πR²)。</li><li>w(r)=B²/(2μ₀)=μ₀I²r²/(8π²R⁴)。对长度l的薄圆柱壳，dV=2πrl dr。</li><li>先求整段再除长度：W内/l=∫[0→R]w(r)2πr dr。</li></ol>
+<div class="formula">W′内=μ₀I²/(4πR⁴)∫[0→R]r³ dr<br>=μ₀I²/(16π)，单位 J/m</div>
+<p>核查：中心B=0，不能把表面B(R)当作整个截面的均匀磁场，否则会把能量算成2倍。结果在该理想模型下与R无关，是积分中的R⁴与分母抵消；前提“电流均匀”很关键。用W′=½L′内I²反求，L′内=μ₀/(8π)=5.0×10⁻⁸ H/m。</p>
+<p>这不包括导线外部磁能。外部若要积分，必须给出回流路径或有限场区；把孤立无限长导线的1/r场直接积到无限远，总能量会出现对数发散，不能冒称本题给出了全部能量。</p></div>
+<div class="example"><h3>新编例｜时间常数与磁能</h3><p>L=0.40 H、R=20 Ω、ε₀=10 V、初始电流零。τ=0.020 s，I∞=0.50 A，W∞=½×0.40×0.50²=0.050 J。在t=τ时，I≈0.316 A，W≈0.0200 J，只有稳态磁能的39.96%，不是63.2%。</p></div>
+<h2 id="review">自测与回顾</h2>
+<details class="answer"><summary>自测1：L=0.50 H、R=5.0 Ω，初始电流2.0 A，接无源闭合放电回路。求τ和放出的总热量。</summary><p>τ=0.10 s；总热量Q=½LI₀²=1.0 J。经过τ时电流2/e≈0.736 A，剩磁能e⁻²×1≈0.135 J。电感不是耗能电阻，热量来自原来储存的磁能。</p></details>
+<details class="answer"><summary>自测2：例14-10中若只将I加倍，内部磁能变几倍？</summary><p>B变2倍，w变4倍，内部总磁能也变4倍；单位长度电感在该线性模型中不变。</p></details>
+<p>复习时抓住三条线：回路方程决定I(t)；功率平衡说明能量去向；空间积分处理非均匀场。下一节将用位移电流把变化的电场和磁场统一起来。</p></main><div class="switch"><a href="14.4.html">← 上一节</a><a href="14.6.html">下一节 →</a></div><p class="footer">依据：用户提供的《大学物理（下册）》第七版第14章扫描教材；教材例题解答为独立整理，新编题另行标注，未与出版社答案核对。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
