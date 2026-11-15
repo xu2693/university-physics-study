@@ -1,23 +1,50 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.2 波函数及其物理意义</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.2）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html" aria-current="page">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.2 波函数及其物理意义</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、概率幅</a></li><li><a href="#s2">二、归一化与叠加</a></li></ul></div><h2 id="s1">一、概率幅</h2><p>波函数 ψ(x,t) 一般是复数，不能直接当作概率。对一维单粒子，|ψ(x,t)|² 是位置概率密度；在小区间 dx 内发现粒子的概率约为 |ψ|²dx，在区间 [a,b] 的概率为 ∫ₐᵇ|ψ|²dx。三维情形以 dV 积分。概率密度具有长度倒数单位，概率本身无单位。</p><h2 id="s2">二、归一化与叠加</h2><p>若粒子必定在所考虑的整个空间中被找到，∫|ψ|²dx=1。给定未归一化函数 φ，设 A=∫|φ|²dx 有限且非零，则 ψ=φ/√A 已归一化；乘以模为 1 的整体相位 eⁱᵅ 不改变任何位置概率。理想平面波在无限空间不可按普通积分归一化，常用广义归一化或波包描述。</p><p>量子叠加先加概率幅：ψ=c₁ψ₁+c₂ψ₂，概率密度 |ψ|² 一般包含交叉项；当存在相干性时不能先把两路概率直接相加。可接受的束缚态通常要求单值、有限、可归一化和适当连续；具体导数边界条件取决于势能是否含奇异项。</p><div class="example"><b>例1｜常数波函数归一化（新编）</b><p>ψ(x)=A（0&lt;x&lt;a），其他位置为零；A 取正实数，求 A 和粒子出现在前半区间的概率。</p><p>归一化：∫₀ᵃA²dx=A²a=1，得 A=1/√a。前半区间概率为 A²(a/2)。</p><p class="answer">答案：A=1/√a；前半区间概率为 1/2。</p><p>这是积分归一化的数学例子；它在边界不连续，不是有限势能下具有有限动能的合格定态，也不满足无限深势阱的边界条件。</p></div>
-
-<!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>怎样从波函数算出可检验的概率</h2>
-<p>一维波函数 ψ(x) 可以是复数；先取模平方得到概率密度 ρ(x)＝|ψ(x)|²，再对位置区间积分。概率密度的单位是一维长度的倒数，密度本身可以大于 1；落在一个区间的概率才必须介于 0 和 1。</p>
-<p><strong>新编例题</strong>：设 ψ(x)＝A（0≤x≤L），区间外为 0。先用 ∫₀ᴸ|A|²dx＝1，得 |A|＝1/√L；取 A 为正时，粒子在左半区间的概率为 ∫₀ᴸᐟ²(1/L)dx＝<strong>1/2</strong>。这是说明归一化的数学模型，边界处突变时不一定满足某个具体势能下哈密顿量的定义域条件，不能直接当作无限深势阱定态。</p>
-<p>平均位置 ⟨x⟩＝∫x|ψ|²dx 是许多同态实验结果的平均；概率密度最大处与平均位置不一定相同。三维时 dV 必须与坐标系匹配，例如球坐标 dV＝r²sinθ dr dθ dφ，不能漏掉 r²。</p>
-<p><strong>自测</strong>：若把归一化 ψ 整体乘以 eⁱᵅ，概率密度是否改变？答案：不改变，因为 |eⁱᵅψ|²＝|ψ|²；不同分量之间的相对相位则可能改变干涉。</p>
-</section><!-- 自学深化内容结束 --><!-- 教材小节整合 --><section class="integrated-section"><h2>例题与重点理解</h2><div class="integrated-reading"><h3>题 1：归一化常数</h3><p>在 0&lt;x&lt;L 内，波函数为 ψ(x)=C sin(πx/L)，其他位置为零。取 C 为正实数，求归一化常数。</p>
-<details class="answer"><summary>查看解答</summary><p> 归一化要求 ∫₀ᴸ|ψ|²dx=C²∫₀ᴸsin²(πx/L)dx=1。一个半周期内 sin² 的积分为 L/2，所以 C²L/2=1，C=√(2/L)。ψ 在 x=0、L 为零，与无限深方势阱常见的壁面边界条件一致。</p></details></div><div class="integrated-reading"><h3>题 2：区间概率</h3><p>沿用题 1 的状态，求粒子在左半区间 0&lt;x&lt;L/2 的概率。</p>
-<details class="answer"><summary>查看解答</summary><p> P=∫₀^(L/2)(2/L)sin²(πx/L)dx。由于概率密度关于 L/2 左右对称，且总概率为 1，左半概率是 1/2。左半和右半各占 1/2，不意味着粒子在每个位置的密度相同。</p></details></div></section><!-- 教材小节整合结束 --><!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>积分与概率密度</summary><p>积分可以理解为把一系列极小区间的贡献累加。一维位置分布中，区间 [a,b] 的概率为 ∫ₐᵇ|Ψ(x)|²dx。整个空间的总概率为 1，即归一化条件 ∫|Ψ(x)|²dx=1。</p>
-<p>概率密度有单位（若 x 单位是米，一维密度单位是 1/m），可以大于 1；乘上长度并积分得到无单位概率。不能把密度在某一点的数值直接当作该点概率。</p>
-<p><strong>例 4</strong>：数学示例中，Ψ 在 0&lt;x&lt;L 为常数 C，其他地方为 0。要求归一化：∫₀ᴸ|C|²dx=|C|²L=1，所以 |C|=1/√L。若选择 C 为正实数，则 C=1/√L。左半段概率为 ∫₀^(L/2)(1/L)dx=1/2。它不自动是无限深势阱的能量本征态，因为还要检查阱壁边界条件。</p></details><details class="lesson-detail"><summary>归一化后怎样求期望位置？</summary><p>对归一化的一维位置态，⟨x⟩=∫x|Ψ(x)|²dx。它是重复测量位置的平均，不是粒子每次都位于该点。</p>
-<p>对例 4 的均匀概率密度，⟨x⟩=∫₀ᴸx(1/L)dx=(1/L)[x²/2]₀ᴸ=L/2。这里的中点也可由左右对称性看出，但推导能展示计算规则。</p></details><details class="lesson-detail"><summary>叠加：先加幅度还是先加概率？</summary><p>若两条相干路径对同一结果的概率幅分别为 a₁、a₂，合概率与 |a₁+a₂|² 有关，展开后除 |a₁|²+|a₂|² 外还可能有干涉交叉项。若是互斥且不相干的经典随机情形，才按相应规则相加概率。能否观察干涉取决于实验与相干条件。</p>
-<p><strong>例 5</strong>：a₁=a₂=1/2 时，|a₁+a₂|²=1；若 a₁=1/2、a₂=−1/2，合幅为 0、概率为 0。这里只是某一结果的幅度示例，完整量子过程仍需满足整体归一化。</p></details><details class="lesson-detail"><summary>自测与解答</summary><p><strong>1.</strong> z=1+i，求 z* 和 |z|²。</p>
-<p>解：z*=1−i，|z|²=(1−i)(1+i)=2。</p>
-<p><strong>2.</strong> |e^(iπ/3)|² 是多少？</p>
-<p>解：为 1，因为 e^(iθ) 的模为 1。</p>
-<p><strong>3.</strong> 均匀概率密度在长度为 4 m 的区间上分布，总概率为 1；密度是多少？长度为 1 m 的子区间概率是多少？</p>
-<p>解：密度为 1/4 m⁻¹；该子区间概率为 (1/4 m⁻¹)×1 m=1/4。</p>
-<p><strong>4.</strong> 测量值只可能为 −1、+1，概率各为 1/2。期望为 0 是否代表某次一定可以测到 0？</p>
-<p>解：不代表。0 是加权平均，单次测量只会得到题目给定的 −1 或 +1。</p></details><details class="lesson-detail"><summary>波函数与概率</summary><p>一维波函数 Ψ(x,t) 描述量子态的一种位置表示，通常可以是复数。按照玻恩概率解释，|Ψ(x,t)|² 是位置概率密度；在区间 [a,b] 找到粒子的概率是 ∫ₐᵇ|Ψ|²dx，而不是波函数本身或某点密度值。</p>
-<p>一个归一化的单粒子态满足 ∫|Ψ|²dx=1，积分覆盖全部可能位置。概率密度可大于 1，因为密度有单位，而积分后的概率不超过 1。可接受波函数的具体连续性、可积性等条件需结合势能模型判断。</p>
-<p><strong>例 2</strong>：某一维态在 0&lt;x&lt;L 内 Ψ=C、其他位置为零，并把它当作数学示例。归一化要求 |C|²L=1；若选 C 为正实数，则 C=1/√L。粒子在左半区间的概率为 |C|²(L/2)=1/2。该示例只说明归一化，不必假定它是某个无限深势阱的能量本征态。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.1.html">← 上一节</a><a href="17.3.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.2 波函数及其物理意义</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}table{border-collapse:collapse;width:100%;font-size:.88em}th,td{border:1px solid #dce7ef;padding:6px 4px;text-align:center}figure{margin:1em 0}figcaption{font-size:.85em;color:#637489}details:not(.toc){margin:.8em 0}details summary{cursor:pointer}.formula{text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.2）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html" aria-current="page">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">本节已对照扫描教材 · 例题独立推算</span></p><main><h1>17.2 波函数及其物理意义</h1>
+<p class="intro">对应教材纸263—267。沿着“复数记号 → 自由粒子平面波 → 概率密度 → 归一化 → 教材例17-3 → 叠加”学习。目标是自己算出一个区间的概率，并分清概率幅、密度和概率。</p>
+<div class="toc"><strong>本节目录</strong><ul><li><a href="#complex">先补复数和相位</a></li><li><a href="#plane-wave">自由粒子的平面波</a></li><li><a href="#s1">概率幅与概率密度</a></li><li><a href="#s2">归一化、整体相位与标准条件</a></li><li><a href="#example17-3">例17-3：正弦波函数完整三问</a></li><li><a href="#superposition">叠加与干涉</a></li><li><a href="#review">自测与回顾</a></li></ul></div>
+<h2 id="complex">一、复数和相位：只需先掌握这几步</h2>
+<p>i²＝−1，z＝a＋ib 的复共轭 z*＝a−ib，模平方是 <strong>|z|²＝z*z＝a²＋b²</strong>。例如3＋4i的模平方为25；1＋i的模平方为2。不要把 z² 当作 |z|²，前者可能是复数。</p>
+<div class="formula">e<sup>iθ</sup>＝cosθ＋i sinθ；<br>|e<sup>iθ</sup>|²＝cos²θ＋sin²θ＝1。</div>
+<p>θ 称为相位。乘 e<sup>iθ</sup> 改变复数在复平面上的方向，不改变模。例如 e<sup>iπ/3</sup> 的模平方为1。复数记号把两个实数分量放在一起，后面用它既能记录幅度，也能保留干涉所需的相位。</p>
+<h2 id="plane-wave">二、自由粒子平面波怎样写</h2>
+<p>由上一节 p＝ℏk、E＝ℏω，沿＋x方向的确定动量态可写为：</p>
+<div class="formula">Ψ(x,t)＝A e<sup>i(kx−ωt)</sup>＝A e<sup>i(px−Et)/ℏ</sup>；<br>三维：Ψ(r,t)＝A e<sup>i(p·r−Et)/ℏ</sup>。</div>
+<p>教材先从简谐波的余弦形式引入复指数。经典实振动可以取复表达式的实部；<strong>量子波函数本身是复概率幅，求概率时不能只保留实部</strong>。k和ω分别记录空间、时间相位变化，指数必须无单位：px和Et都是能量乘时间。</p>
+<p>这里精确说的是自由粒子的<strong>确定动量平面波态</strong>，不是所有自由粒子都只能有此形式。自由粒子也可由多个动量的平面波叠加成波包，概率密度可以不均匀。教材关于自由粒子E、p为常量的讨论针对这种理想单色态。</p>
+<p>本章进入非相对论薛定谔理论时，将能量零点选在不含静能的位置，自由粒子 E＝p²/(2m)。若使用相对论总能量，相位还含统一的静能时间因子；对同一粒子的各分量须使用一致约定。</p>
+<h2 id="s1">三、从波函数到概率：先取模平方，再积分</h2>
+<p>玻恩解释把波函数看作概率幅。对归一化的一维单粒子态，位置概率密度为 ρ(x,t)＝|Ψ(x,t)|²。它不是电子的质量或电荷被摊开的密度，也不是某个点的概率。</p>
+<div class="formula">ρ＝Ψ*Ψ≥0；<br>P(a≤x≤b)＝∫<sub>a</sub><sup>b</sup> |Ψ(x,t)|² dx。</div>
+<p>若密度在小区间Δx内变化很小，才可估算 P≈ρ(x,t)Δx；通常需积分。对连续位置分布，单个点的概率为0，比较“哪里最可能”通常指比较<strong>等长小区间内的概率</strong>，即密度大小。</p>
+<p>一维中 ρ 的单位为 m⁻¹，Ψ 为 m⁻¹ᐟ²；三维中分别为 m⁻³、m⁻³ᐟ²。概率无单位，在0与1之间；密度有单位，数值可以大于1。例如均匀分布在4 m长区间，ρ＝1/(4 m)，其中1 m子区间的概率为1/4。</p>
+<p>三维需 P(区域Ω)＝∭<sub>Ω</sub>|Ψ|²dV；球坐标的 dV＝r²sinθ dr dθ dφ，不能漏掉几何因子。由同样制备的大量粒子的落点频率检验这个统计规律；一次局域探测事件不会单独画出整套条纹。</p>
+<h2 id="s2">四、归一化：把总概率定为1</h2>
+<p>单粒子在全空间被找到的总概率为1，要求 ∫|Ψ|²dx＝1（三维用体积分）。给定未归一化函数 f，若 N＝∫|f|²dx 是<strong>有限且非零</strong>的数，则：</p>
+<div class="formula">Ψ＝f/√N；<br>∫|f/√N|²dx＝(1/N)∫|f|²dx＝1。</div>
+<p>整体乘非零常数后，重新归一化表示同一物理态；已经归一化的波函数若仍要保持归一化，只能乘模为1的常数 e<sup>iα</sup>。α须与位置无关；位置相关相位可能改变动量等物理量。整体相位不改变状态，各叠加分量的<strong>相对相位</strong>却可能改变干涉。</p>
+<h3>平面波与标准条件的使用范围</h3>
+<p>理想平面波的 |Ψ|²＝|A|²在无限空间恒定，积分发散，无法令非零A满足普通总概率归一化。可采用有限盒归一化（长度L内 |A|＝1/√L）、可积波包，或教材提到的δ函数广义归一化；不要把广义归一化常数硬代入普通全空间概率积分。</p>
+<p>教材标准条件为单值、有限、连续。入门的常规有限势能定态通常还需在势的分段边界匹配 Ψ 和导数；无限高势壁、δ势等理想模型的条件要另行处理。<strong>“积分能归一化”本身不足以证明它是某个势能模型的合格定态</strong>。</p>
+<div class="example"><b>保留的数学例：常数幅度</b><p>设 Ψ＝C（0&lt;x&lt;a），其他处为0。归一化得 |C|²a＝1，选 C＝1/√a；左半区间概率＝|C|²(a/2)＝1/2，平均位置 ⟨x⟩＝∫₀ᵃx/a dx＝a/2。这只是积分示例；边界突变，不是有限势能下具有有限动能的合格定态，也不满足无限深势阱壁面Ψ＝0的条件。</p></div>
+<h2 id="example17-3">五、教材例17-3：正弦波函数的完整三问</h2>
+<p><strong>题设：</strong>粒子约束在0&lt;x&lt;a，Ψ(x)＝A sin(πx/a)，区间外为0。求归一化因子、左半区间概率、最可能位置。下面把三问连起来计算，注意区分密度和区间概率。</p>
+<h3>（1）求A：不要漏掉平方</h3>
+<div class="formula">1＝|A|²∫₀ᵃsin²(πx/a)dx；<br>sin²u＝(1−cos2u)/2；<br>∫₀ᵃsin²(πx/a)dx＝[x/2−a sin(2πx/a)/(4π)]₀ᵃ＝a/2。</div>
+<p>故 |A|²＝2/a；取A正实数，得 <strong>A＝√(2/a)</strong>。还可乘任意整体相位，但所有概率不变。A的单位是长度的负二分之一次方，和Ψ一致。</p>
+<h3>（2）左半概率：用积分或对称性互检</h3>
+<div class="formula">P(0&lt;x&lt;a/2)＝(2/a)∫₀<sup>a/2</sup>sin²(πx/a)dx<br>＝[x/a−sin(2πx/a)/(2π)]₀<sup>a/2</sup>＝<strong>1/2</strong>。</div>
+<p>ρ＝(2/a)sin²(πx/a) 关于a/2左右对称，总积分为1，所以左半为1/2也可直接看出。但密度不是均匀的，不能推出“任意等长区间概率相同”。</p>
+<h3>（3）最可能位置：比较密度，而非单点概率</h3>
+<p>dρ/dx＝(2π/a²)sin(2πx/a)。令其为0，0&lt;x&lt;a 内只有 x＝a/2；该点 sin²＝1，而端点密度为0，故 <strong>ρ在a/2最大</strong>。教材“概率最大的位置”应理解为等小区间比较下的密度最大。</p>
+<figure><img src="wavefunction-density.svg" alt="归一化正弦波函数的概率密度曲线，左半面积等于二分之一，峰值位于x等于a的一半" style="width:100%;height:auto"><figcaption>自制计算图：横轴x/a，纵轴aρ；全曲线下面积为1，蓝色左半面积为1/2。图中峰值2是无量纲化密度，不是概率2。</figcaption></figure>
+<p><strong>延伸并保留原练习：</strong>若只说长度L，替换a为L即可；⟨x⟩＝∫₀ᵃxρdx＝a/2，由对称性或积分可得。本例平均位置恰好等于密度峰，但一般分布不一定如此。区间(0,a/4)的概率为1/4−1/(2π)≈0.09085，可以用它检查自己是否误当均匀分布。</p>
+<h2 id="superposition">六、叠加先加概率幅</h2>
+<p>同一体系的可叠加状态可组成 Ψ＝c₁Ψ₁＋c₂Ψ₂。只要组合不为零且可归一化，它也表示可能状态；仍要检查总归一化，不能随意选系数后就说概率总和为1。</p>
+<div class="formula">|c₁Ψ₁＋c₂Ψ₂|²＝|c₁Ψ₁|²＋|c₂Ψ₂|²<br>＋2Re(c₁*c₂Ψ₁*Ψ₂)。</div>
+<p>最后一项是干涉交叉项。某个结果的两路幅度若为1/2与1/2，合模平方为1；若为1/2与−1/2，则为0。这只演示一个结果，完整装置各结果概率仍需总和为1。若路径信息可区分或相位随机平均使交叉项消失，才按相应的不相干概率相加。</p>
+<p>若Ψ₁、Ψ₂归一且<strong>正交</strong>（∫Ψ₁*Ψ₂dx＝0），整个态的归一化给 |c₁|²＋|c₂|²＝1；若不正交，积分后的交叉项也需保留。正交使全空间交叉积分为0，不等于每个位置的局部交叉项都为0。</p>
+<p>单一能量定态 Ψ(x,t)＝φ(x)e<sup>−iEt/ℏ</sup> 的密度为|φ|²，不随时间变；不同能量态叠加时，相对时间相位一般使密度变化。定态的结论不能直接套给任意状态。</p>
+<h2 id="review">七、自测与回顾</h2>
+<details><summary>1. 若Ψ是复数，能用Ψ²代替|Ψ|²吗？密度大于1是否错误？</summary><p>不能。|Ψ|²＝Ψ*Ψ为非负实数；Ψ²一般不同。密度有单位，数值可大于1，必须检查区间积分才是0至1的概率。</p></details>
+<details><summary>2. 本例左半概率1/2，是否每次都在中点？平均值是否一定是可测到的结果？</summary><p>不是。位置按密度分布；平均值是重复实验的加权平均。比如结果只可能−1、＋1且各半，平均为0，也不代表能测到0。</p></details>
+<details><summary>3. 将Ψ整体乘以i，与只把一个叠加分量乘以i有何不同？</summary><p>整体乘i是统一相位，任何位置密度不变。只改一个分量会改变相对相位，交叉项和干涉可能改变。</p></details>
+<p class="note">做概率题按“写支持区间 → 取模平方 → 全空间归一化 → 所求区间积分 → 检查单位与0到1”完成。下一节用波动与概率分布理解<a href="17.3.html">位置和动量的不确定性</a>，不要把它当成仪器粗糙造成的误差。</p></main><div class="switch"><a href="17.1.html">← 上一节</a><a href="17.3.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章，纸263—267。教材例题已对照并独立推算；其余例题标为新编或数学示例。图为自制。原理补充核验：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-1-wave-functions">OpenStax：波函数与概率</a>。未见出版社习题答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
