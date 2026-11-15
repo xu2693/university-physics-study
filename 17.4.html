@@ -1,7 +1,37 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.4 薛定谔方程</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.4）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html" aria-current="page">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.4 薛定谔方程</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、含时方程</a></li><li><a href="#s2">二、定态方程</a></li></ul></div><h2 id="s1">一、含时方程</h2><p>非相对论单粒子的量子态随时间演化，满足 iħ∂ψ/∂t=Ĥψ。若粒子质量 m、势能 V(x,t)，一维坐标表示为：</p><div class="formula">iħ∂ψ/∂t=−(ħ²/2m)∂²ψ/∂x²+Vψ</div><p>i²=−1，ħ=h/(2π)，Ĥ 是哈密顿算符；右侧分别代表动能算符与势能作用。三维时二阶空间导数换成拉普拉斯算符 ∇²。该方程是非相对论模型，不适用于任意高能粒子的完整相对论描述。</p><h2 id="s2">二、定态方程</h2><p>若势能不显含时间，可尝试 ψ(x,t)=φ(x)e^(−iEt/ħ)。代入含时方程并约去时间因子，得 Ĥφ=Eφ，即 −(ħ²/2m)φ″+Vφ=Eφ。定态的概率密度 |ψ|²=|φ|² 与时间无关，但这不表示粒子静止；不同能量定态的叠加一般具有随时间变化的概率分布。</p><p>解题要给出势能分段、连续性和边界条件，再解微分方程、筛选物理解并归一化；形式解不一定是可接受的物理态。</p>
-<!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>把方程当作解题流程</h2>
-<p>含时方程决定状态怎样随时间变化；对于不随时间变化的势能，求定态可以先解空间本征方程 Ĥφₙ＝Eₙφₙ。每一个能量本征态仅带有整体时间因子 e⁻ⁱᴱⁿᵗ/ħ，因此该单一定态的概率密度不随时间变。</p>
-<p><strong>新编例题</strong>：若 φ₁、φ₂ 为两个正交归一化定态，初态为 (φ₁＋φ₂)/√2，则后续 ψ＝[φ₁e⁻ⁱᴱ¹ᵗ/ħ＋φ₂e⁻ⁱᴱ²ᵗ/ħ]/√2。两项相对相位随 (E₂−E₁)t/ħ 变化；|ψ|² 一般有随时间变化的交叉项。所以“势能不变”并不意味着所有初态的概率密度都不变。</p>
-<p>做题顺序：①按区域写 V；②分别解微分方程；③施加可归一化、边界与匹配条件；④归一化并解释所得能级或散射系数。有限跳变势能通常要求波函数及一阶导数连续；无限壁或 δ 型奇异势的边界处理要单独判断。</p>
-</section><!-- 自学深化内容结束 --><!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>薛定谔方程和定态</summary><p>非相对论单粒子的含时薛定谔方程用哈密顿算符控制波函数的时间演化。势能不显含时间时，可寻找可分离的定态，空间部分满足定态方程 Ĥψ=Eψ。</p>
-<p>定态中空间概率密度不随时间变化，不代表粒子静止或速度一定为零；E 是该定态的能量本征值。一般量子态可以由不同能量本征态叠加，概率密度可能随时间变化。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.3.html">← 上一节</a><a href="17.5.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.4 薛定谔方程</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}table{border-collapse:collapse;width:100%;font-size:.88em}th,td{border:1px solid #dce7ef;padding:6px 4px;text-align:center}details:not(.toc){margin:.8em 0}details summary{cursor:pointer}.formula{text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.4）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html" aria-current="page">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">本节已对照扫描教材 · 推导独立复核</span></p><main><h1>17.4 薛定谔方程</h1><p class="intro">对应教材纸270—273。前两节告诉我们怎样用波函数描述状态和求概率；本节回答它怎样随时间变化。跟着求导和分离变量的步骤，把“方程长什么样”变成“为什么这样写、怎样用来做题”。</p>
+<div class="toc"><strong>本节目录</strong><ul><li><a href="#motivation">从自由平面波看求导关系</a></li><li><a href="#s1">含时方程、符号与条件</a></li><li><a href="#s2">分离变量得到定态方程</a></li><li><a href="#superposition">定态、叠加和时间变化</a></li><li><a href="#workflow">解题流程与边界条件</a></li><li><a href="#review">结果检查与自测</a></li></ul></div>
+<h2 id="motivation">一、从平面波看方程的来路</h2>
+<p>对不计自旋的非相对论单粒子，先看V＝0的确定动量平面波 Ψ＝A exp[i(px−Et)/ℏ]。这里E＝p²/(2m)不含静能，m为静质量。偏导数∂表示对一个变量求导时，暂把另一个变量固定。</p>
+<div class="formula">∂Ψ/∂x＝(ip/ℏ)Ψ；<br>∂²Ψ/∂x²＝(ip/ℏ)²Ψ＝−(p²/ℏ²)Ψ；<br>∂Ψ/∂t＝−(iE/ℏ)Ψ。</div>
+<p>所以 −iℏ∂Ψ/∂x＝pΨ，iℏ∂Ψ/∂t＝EΨ。用E＝p²/(2m)连接时间与空间导数：</p>
+<div class="formula">iℏ∂Ψ/∂t＝−(ℏ²/2m)∂²Ψ/∂x²。</div>
+<p>空间二阶导数前的负号来自i²＝−1，不能漏。这个过程展示自由平面波与低速能量关系的相容性。<strong>推广为任意势能、任意态的动力学方程，是量子理论的基本假设</strong>，不是单凭一个平面波就能从经典力学严格证明的定理。教材也明确强调应由实验检验。</p>
+<h2 id="s1">二、含时方程：求状态的时间演化</h2>
+<p>一维标量势能V(x,t)的通常模型写为：</p>
+<div class="formula"><strong>iℏ∂Ψ/∂t＝ĤΨ<br>＝−(ℏ²/2m)∂²Ψ/∂x²＋V(x,t)Ψ。</strong></div>
+<p>教材把势能记U，本页用V以免与前面加速电压混淆；两者在这里都指<strong>能量</strong>，单位J。Ĥ称哈密顿算符，可理解为“对波函数执行动能求导和势能相乘的规则”，不是另一个随意相乘的常数。m是常质量，ℏ＝h/(2π)，i²＝−1。</p>
+<p>三维空间用拉普拉斯算符：</p>
+<div class="formula">∇²＝∂²/∂x²＋∂²/∂y²＋∂²/∂z²；<br>iℏ∂Ψ(r,t)/∂t＝[−ℏ²∇²/(2m)＋V(r,t)]Ψ(r,t)。</div>
+<p><strong>适用条件：</strong>本式是低速、单粒子、标量势能模型，不包含相对论完整修正、自旋耦合或任意电磁矢势。带电粒子处于磁场时，动能算符需要包含矢势，不能只把磁场随便塞进一个V。给定初始波函数与合适边界条件后，含时方程决定后续状态。</p>
+<p><strong>单位检查：</strong>左侧ℏ×时间导数的单位为J·Ψ；右侧ℏ²/(m·长度²)也是能量，VΨ同样为J·Ψ。方程含Ψ而不是只含|Ψ|²，相位信息参与演化。</p>
+<h2 id="s2">三、势能不随时间变时，逐步分离变量</h2>
+<p>若V＝V(x)不显含t，可以寻找乘积形式的解 Ψ(x,t)＝φ(x)f(t)，不是先断言所有初态都只有一个乘积形式。代入含时方程：</p>
+<div class="formula">iℏφ(x)f′(t)＝[−ℏ²φ″(x)/(2m)＋V(x)φ(x)]f(t)。</div>
+<p>在φf不为零处除以φf，得：</p>
+<div class="formula">iℏf′(t)/f(t)＝−ℏ²φ″(x)/[2mφ(x)]＋V(x)。</div>
+<p>左边只依赖t，右边只依赖x，独立改变x和t仍要相等，所以两边同为一个常数E，单位为能量。节点φ＝0处不做除法，而以未相除方程及连续性理解结果。</p>
+<ol><li><strong>时间方程：</strong>iℏf′＝Ef，整理 f′/f＝−iE/ℏ，积分 ln f＝−iEt/ℏ＋常数，得 f＝C e<sup>−iEt/ℏ</sup>。C可并入空间幅度。</li><li><strong>空间方程：</strong>−ℏ²φ″/(2m)＋Vφ＝Eφ，即 <strong>Ĥφ＝Eφ</strong>，称定态薛定谔方程。</li></ol>
+<p>三维空间方程只需把φ″改为∇²φ。E不是任意填入的数：边界条件与可接受性会筛选允许的能量，下一节的无限深势阱将展示离散能级怎样出现。</p>
+<h2 id="superposition">四、定态不等于粒子静止</h2>
+<p>若E为实数，定态 Ψₙ＝φₙe<sup>−iEₙt/ℏ</sup> 有 |Ψₙ|²＝|φₙ|²，概率密度不随时间变化；能量是确定值Eₙ。它不表示粒子速度为零，也不表示波函数本身不变，相位仍在演化。</p>
+<p>固定同一个V后，方程对Ψ线性：两个解按常数系数相加仍是解。若初态包含不同能量，时间演化为各分量分别乘自己的时间因子。</p>
+<div class="example"><b>保留的新编例：两个能量态的叠加</b><p>φ₁、φ₂正交归一，Ψ(x,0)＝(φ₁＋φ₂)/√2。则</p><div class="formula">Ψ(x,t)＝[φ₁e<sup>−iE₁t/ℏ</sup>＋φ₂e<sup>−iE₂t/ℏ</sup>]/√2；<br>|Ψ|²＝(|φ₁|²＋|φ₂|²)/2<br>＋Re[φ₁*φ₂e<sup>−i(E₂−E₁)t/ℏ</sup>]。</div><p>若局部交叉项不为零且E₁≠E₂，密度一般随时间变，周期为2πℏ/|E₂−E₁|。两态正交仅使全空间交叉积分为0，保证总概率为1，不会自动消除局部干涉。若同属一个简并能量，叠加仍只有共同时间相位，也可以是定态。</p></div>
+<p>因此“势能不随时间变化”允许寻找定态，但不意味着任意初态都是定态。含时势一般也不能沿用固定的φₙ和e<sup>−iEₙt/ℏ</sup>来直接求解。</p>
+<h2 id="workflow">五、从方程到解题的固定步骤</h2>
+<ol><li>画或写出势能V的各区域，选能量零点，确认低速等模型条件。</li><li>静态势先写各区的 −ℏ²φ″/(2m)＋Vφ＝Eφ；含时问题另外保留初态和时间方程。</li><li>求各区微分方程的通解，不先丢掉尚未由条件排除的项。</li><li>用边界、匹配、远处行为和可归一化条件筛选物理解，确定能量或散射系数。</li><li>对束缚态归一化；求区间概率时用|φ|²积分。散射平面波则按相应通量或广义归一化处理。</li><li>把解代回方程，并检查单位、边界、概率总和及极限。</li></ol>
+<p>为什么有限势能台阶通常匹配φ和φ′？在不含δ项、常质量的模型中，把方程跨边界很小区间积分，右侧∫(V−E)φdx趋于0，因此φ′两侧相同；φ也应连续，否则二阶导数产生该模型未包含的奇异项。无限高壁和δ势不能照搬这个有限台阶论证。</p>
+<h2 id="review">六、自测：把错误说清楚</h2>
+<details><summary>1. 自由平面波代入方程，左右两边各是多少？</summary><p>左边iℏ∂Ψ/∂t＝EΨ；右边−ℏ²∂²Ψ/(2m∂x²)＝p²Ψ/(2m)。两边相等要求E＝p²/(2m)，可检查符号和遗漏的ℏ。</p></details>
+<details><summary>2. 把Ψ整体取实部，是否仍一定是含时方程的解？</summary><p>不一定。时间方程含i，Ψ的实部一般不独立满足同一含时方程；自由行波的余弦实部就不能直接替代完整复指数。量子概率用Ψ*Ψ，不是只取实部再平方。</p></details>
+<details><summary>3. 定态方程为什么没有时间，却仍能恢复完整波函数？</summary><p>分离变量已经单独解出时间因子e<sup>−iEt/ℏ</sup>。空间φ求出后再乘回它；若初态为多个能量态的叠加，则每项各乘相应时间因子。</p></details>
+<p class="note">本节应带走：含时方程管演化，定态方程找能量和空间形状，边界条件筛选物理解。下一节<a href="17.5.html">从无限深势阱开始完整走一遍</a>。</p></main><div class="switch"><a href="17.3.html">← 上一节</a><a href="17.5.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章纸270—273；教材例题与公式已对照并独立推算，保留的新编例已标明。补充原理核验：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-3-the-schrodinger-equation">OpenStax：薛定谔方程</a>。没有见到出版社习题答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
