@@ -1,13 +1,67 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.5 一维定态问题</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.5）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html" aria-current="page">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.5 一维定态问题</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、无限深方势阱</a></li><li><a href="#s2">二、一维谐振子</a></li><li><a href="#s3">三、势垒贯穿</a></li><li><a href="#s4">四、有限矩形势垒的透射率（进阶理解）</a></li></ul></div><h2 id="s1">一、无限深方势阱</h2><p>粒子质量 m，被限制在 0&lt;x&lt;a；阱内 V=0、阱外 V→∞。阱内定态方程为 φ″+k²φ=0，其中 k²=2mE/ħ²。通解 φ=A sin(kx)+B cos(kx)。由于阱外概率为零且边界处波函数连续，φ(0)=φ(a)=0。</p><p>φ(0)=0 得 B=0；非零解要求 sin(ka)=0，即 ka=nπ，n=1,2,3,…；归一化得：</p><div class="formula">φₙ=√(2/a) sin(nπx/a)；　Eₙ=n²π²ħ²/(2ma²)</div><p>n=0 给恒为零的波函数，不能归一化；负 n 不产生新态。基态能量大于零，与粒子被限制在有限范围时动量不确定有关。</p><div class="example"><b>例1｜能级比值（新编）</b><p>同一无限深一维势阱中，求第二激发态与基态的能量比。</p><p>基态 n=1；第一激发态 n=2，第二激发态 n=3。Eₙ∝n²，故 E₃/E₁=9。</p><p class="answer">答案：9。</p><p>“第二激发态”不是 n=2。</p></div><div class="example"><b>图解｜无限深方势阱的最低两态</b><svg viewBox="0 0 320 185" role="img" aria-label="无限深方势阱中基态和第一激发态的波函数示意"><path d="M55 20V165H265V20" fill="none" stroke="#344b68" stroke-width="4"/><path d="M55 135 Q160 40 265 135" fill="none" stroke="#155696" stroke-width="3"/><path d="M55 85 Q105 20 160 85 Q215 150 265 85" fill="none" stroke="#b52323" stroke-width="3"/><text x="46" y="180">0</text><text x="265" y="180">a</text><text x="165" y="51" fill="#155696">n=1</text><text x="205" y="70" fill="#b52323">n=2</text></svg><small>深色线示意势阱边界；蓝线和红线分别示意最低两态波函数。曲线与坐标的竖直偏置为便于辨认，并非同一坐标中的精确函数图。</small></div><h2 id="s2">二、一维谐振子</h2><p>势能 V(x)=½mω²x² 的非相对论量子谐振子具有能级 Eₙ=(n+½)ħω，n=0,1,2,…。基态有零点能 ½ħω，并非粒子完全静止。谐振子模型常近似描述稳定平衡位置附近的小振动；较大振幅时非谐性可能重要。</p><h2 id="s3">三、势垒贯穿</h2><p>粒子遇有限宽、有限高势垒，即使总能量低于势垒高度，势垒内波函数通常指数衰减而不立即为零；如果势垒另一侧仍有允许传播的状态，就有非零透射概率。这称量子隧穿，不表示粒子在势垒内违反能量守恒。</p><p>对于矩形势垒、E&lt;V₀，衰减常量 κ=√[2m(V₀−E)]/ħ；较宽较高的势垒使透射率通常近似按 e^(−2κa) 快速减小。精确系数由两边波函数与导数匹配决定；一般 R+T=1 还需模型无吸收且概率流归一化正确。</p>
-<h2 id="s4">四、有限矩形势垒的透射率（进阶理解）</h2><p>设 V(x)=V₀（0&lt;x&lt;a），两侧 V=0，入射粒子能量满足 0&lt;E&lt;V₀。令 k=√(2mE)/ħ，κ=√[2m(V₀−E)]/ħ。左侧态由入射波和反射波组成，势垒内部是两个指数函数的组合，右侧为透射波：</p><div class="formula">φⅠ=Ae^(ikx)+Be^(−ikx)<br>φⅡ=Ce^(κx)+De^(−κx)<br>φⅢ=Fe^(ikx)</div><p>由于势能在边界有限，φ 与 φ′ 在 x=0 和 x=a 连续。把四个匹配条件联立并用透射概率流除以入射概率流，可得：</p><div class="formula">T=1/[1+V₀²sinh²(κa)/(4E(V₀−E))]</div><p>两侧势能相同，入射与透射波的波数相同，故 T=|F/A|²；若两侧波数不同，还须乘相应速度或波数之比。R+T=1 需要无吸收的定态散射模型。κa≫1 时 sinh(κa)≈e^(κa)/2，故 T 与 e^(−2κa) 成正比，解释了厚势垒对穿透概率的强烈抑制。</p>
-<!-- 教材小节整合 --><section class="integrated-section"><h2>例题与重点理解</h2><div class="integrated-reading"><h3>题 4：无限深势阱能级</h3><p>质量为 m 的粒子位于 0&lt;x&lt;L 的一维无限深势阱。若基态能量 E₁=2 eV，求第二、第三能级与 3→2 跃迁释放的能量。</p>
-<details class="answer"><summary>查看解答</summary><p> Eₙ=n²E₁，因此 E₂=4×2=8 eV，E₃=9×2=18 eV。由 3 跃迁到 2 若通过发射光子完成且满足相关条件，光子能量为 E₃−E₂=10 eV。能量差不是 E₃/E₂，也不是 E₃+E₂。</p></details></div></section><!-- 教材小节整合结束 --><!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>一维无限深势阱</summary><p>理想模型：0&lt;x&lt;L 内势能取零，外部势能无限高。粒子被限制在阱内，阱壁处波函数满足边界条件。允许的能级为 Eₙ=n²h²/(8mL²)，n=1,2,…；对应归一化本征态在阱内与 sin(nπx/L) 成正比。</p>
-<p>n 不能取 0：那会得到处处为零的波函数，无法归一化。基态能量大于零。阱宽 L 加倍，在相同 n 和粒子质量下，能量变为原来的 1/4；能级间隔也随模型参数改变。</p>
-<p>该无限高势垒是理想化模型，有限势阱中波函数可在势垒内衰减，能级条件与穿透现象需要另行处理。</p></details><details class="lesson-detail"><summary>自测与解答</summary><p><strong>1.</strong> Ψ(x) 为复数时，位置概率密度是什么？</p>
-<p>解：|Ψ(x)|²=Ψ*(x)Ψ(x)，不是 Ψ(x) 本身；区间概率需积分。</p>
-<p><strong>2.</strong> 无限深势阱宽度加倍，其他条件和量子数不变，能量如何变化？</p>
-<p>解：Eₙ 正比于 1/L²，所以变为 1/4。</p>
-<p><strong>3.</strong> 定态的概率密度不变，是否说明粒子一定静止？</p>
-<p>解：不是。统计分布不随时间变化，不等于每次测量动量都为零。</p>
-<p><strong>4.</strong> 波函数归一化后，某一点概率密度为 2，是否一定出错？</p>
-<p>解：不一定。密度有单位，可以大于 1；必须看整个区域上的积分是否为 1。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.4.html">← 上一节</a><a href="17.6.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.5 一维定态问题</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}table{border-collapse:collapse;width:100%;font-size:.88em}th,td{border:1px solid #dce7ef;padding:6px 4px;text-align:center}figure{margin:1em 0}figcaption{font-size:.85em;color:#637489}details:not(.toc){margin:.8em 0}details summary{cursor:pointer}.formula{text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.5）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html" aria-current="page">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">本节已对照扫描教材 · 推导和重点数值独立复核</span></p><main><h1>17.5 一维定态问题</h1>
+<p class="intro">对照教材纸273—281，把上一节流程用于三个模型：无限深势阱求离散能级，谐振子理解零点能，有限势垒计算反射与透射。各模型都先写势能和边界，再解释公式的条件。</p>
+<div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">无限深势阱：从边界到能级</a></li><li><a href="#box-properties">节点、概率和经典极限</a></li><li><a href="#s2">谐振子：从方程到零点能</a></li><li><a href="#s3">方势垒：先写三段波函数</a></li><li><a href="#s4">匹配条件与透射率完整计算</a></li><li><a href="#tunnel-check">厚垒近似及教材数值的限制</a></li><li><a href="#review">对照回顾和自测</a></li></ul></div>
+<h2 id="s1">一、无限深方势阱：能级由边界筛出来</h2>
+<p>质量m的粒子限制在0&lt;x&lt;a，阱内V＝0，阱外V→∞；阱壁不可穿透，φ(0)＝φ(a)＝0。这是理想模型，不是有限势阱的精确边界。无限壁处不额外要求φ′与阱外零函数的导数连续，否则会误排除全部非零解。</p>
+<p>阱内定态方程 −ℏ²φ″/(2m)＝Eφ。E＞0时令k＝√(2mE)/ℏ，通解为φ＝A sin kx＋B cos kx。接着逐项代边界：</p>
+<ol><li>φ(0)＝0给B＝0。</li><li>φ(a)＝A sin ka＝0。A不能为0，否则总概率为0；故ka＝nπ。</li><li>n取1,2,…。负n只改变整体符号，不给新态。E＝0时应另解φ″＝0，通解Ax＋B受两个端点条件后只能为0，也没有可归一化态；不能仅把k＝0代入已选的正能量通解作全部论证。</li><li>归一化要求 |A|²∫₀ᵃsin²(nπx/a)dx＝1。积分为a/2，故选A＝√(2/a)。</li></ol>
+<div class="formula"><strong>φₙ(x)＝√(2/a)sin(nπx/a)，0&lt;x&lt;a；</strong><br>阱外φₙ＝0；n＝1,2,…；<br><strong>Eₙ＝n²π²ℏ²/(2ma²)＝n²h²/(8ma²)。</strong></div>
+<p>能量量子化来自边界限制，不是求完连续能量后再人为规定“只能取整数”。从分部积分也可见 E＝[ℏ²/(2m)]∫₀ᵃ|φ′|²dx≥0，且等号只能给不合条件的零函数，所以不存在负能或零能的物理态。</p>
+<div class="example"><b>教材例17-6：用驻波再推一遍</b><p>两端为节点，阱宽a容纳n个半波长：a＝nλₙ/2，λₙ＝2a/n。由p＝h/λₙ和低速E＝p²/(2m)，得Eₙ＝n²h²/(8ma²)。注意这里是两端固定的直线段，和17.1圆环的整波长条件不同。该方法与方程、边界推导相互核验。</p></div>
+<h2 id="box-properties">二、节点、概率与零点能</h2>
+<p>φₙ在阱内有n−1个节点，概率密度ρₙ＝(2/a)sin²(nπx/a)有n个峰。完整定态为Ψₙ＝φₙe<sup>−iEₙt/ℏ</sup>，密度不随时间变。每个能级在这个一维模型中非简并，即同一能级只有一个独立本征态（整体相位不算新态）。</p>
+<figure><img src="well-states.svg" alt="无限深势阱前三态的波函数形状和概率密度，内部节点随量子数增加" style="width:100%;height:auto"><figcaption>自制计算图，各行分别画一态的波函数与概率密度，横轴均为x/a；行间距离不代表能级间隔，实线不是粒子轨迹。</figcaption></figure>
+<p>基态n＝1，E₁＞0，称零点能。若粒子既被限于有限区域又具有严格零动量，会与不确定关系矛盾；这里的精确E₁仍来自方程和边界，不能把不确定关系的粗估直接当作其精确推导。</p>
+<p>区间概率可统一积分：</p>
+<div class="formula">P(u&lt;x&lt;v)＝[(x/a)−sin(2nπx/a)/(2nπ)]<sub>u</sub><sup>v</sup>，<br>0≤u≤v≤a。</div>
+<p>例如左半为1/2，与17.2的n＝1例互通。⟨x⟩＝a/2，⟨x²⟩＝a²[1/3−1/(2n²π²)]，故Δx＝a√[1/12−1/(2n²π²)]；还可由⟨p⟩＝0、⟨p²⟩＝(nπℏ/a)²检验不确定关系。平均动量为0不表示动能为0。</p>
+<h3>“n很大趋近经典”怎样理解才准确</h3>
+<p>教材讲高n时概率近乎均匀、能级可视为连续。精确密度仍在0到2/a间振荡，<strong>并非逐点变为1/a</strong>；当观察区间远大于a/n时，快速振荡在区间积分中平均，才接近经典均匀分布。</p>
+<p>对固定a、m，相邻能级差 Eₙ₊₁−Eₙ＝(2n＋1)E₁反而增大；变小的是<strong>相对间隔</strong>(Eₙ₊₁−Eₙ)/Eₙ＝(2n＋1)/n²。经典近似需结合观察尺度、能量精度或宏观参数，不能把高n说成固定势阱的绝对能级间隔趋零。</p>
+<div class="example"><b>合并保留的两道新编练习</b><p>①第二激发态是n＝3，故与基态能量比E₃/E₁＝9，不是4。②若E₁＝2 eV，则E₂＝8 eV、E₃＝18 eV；若允许通过发光完成3→2，光子能量为10 eV，不是能量比或能量之和。阱宽加倍、n不变时各能量变为原来的1/4。</p></div>
+<h2 id="s2">三、一维谐振子：能级等间隔，基态从n＝0开始</h2>
+<p>稳定平衡点附近，势能展开为V≈V(0)＋Kx²/2，取V(0)＝0、K＝mω²，ω＝√(K/m)。这里K为劲度系数，勿与动能记号混淆。小振动适用；大位移下非谐项可能重要。</p>
+<div class="formula">[−ℏ²d²/(2m dx²)＋mω²x²/2]φ＝Eφ。</div>
+<p>教材略去一般求解过程，给出本征值与厄米多项式。可先用无量纲变量ξ＝αx、α＝√(mω/ℏ)、ε＝E/(ℏω)，把方程变为φ″(ξ)＋(2ε−ξ²)φ＝0。由于|x|→∞时势能上升，可归一化态需衰减。</p>
+<details><summary>补足能级条件：多项式为何必须截断？</summary><p>令φ＝e<sup>−ξ²/2</sup>y(ξ)，代入并整理得 y″−2ξy′＋(2ε−1)y＝0。写y＝Σcᵣξʳ，逐次幂比较：</p><div class="formula">cᵣ₊₂＝[2r＋1−2ε]cᵣ/[(r＋2)(r＋1)]。</div><p>对任意ε，普通级数解在远处通常带导致φ增长的分量；为了两侧都可归一化，级数应在r＝n处截断，即2n＋1−2ε＝0。于是ε＝n＋1/2，留下的多项式为Hₙ。n取0,1,2,…，每一阶有对应的奇偶性。这一条件和阱壁条件一样起到筛选能量的作用。</p></details>
+<div class="formula"><strong>Eₙ＝(n＋1/2)ℏω，n＝0,1,2,…；</strong><br>φₙ(x)＝Aₙe<sup>−α²x²/2</sup>Hₙ(αx)；<br>Aₙ＝√[α/(2ⁿn!√π)]，α＝√(mω/ℏ)。</div>
+<p>H₀＝1，H₁＝2ξ，H₂＝4ξ²−2，H₃＝8ξ³−12ξ；教材的定义为Hₙ＝(−1)ⁿe<sup>ξ²</sup>(dⁿ/dξⁿ)e<sup>−ξ²</sup>。初学先会识别基态，再用公式求能级和间隔即可；不要把谐振子n从1开始。</p>
+<h3>基态可直接代回验证</h3>
+<p>φ₀＝(α²/π)<sup>1/4</sup>e<sup>−α²x²/2</sup>，φ₀″＝(α⁴x²−α²)φ₀。代回方程，x²项相消，剩E₀＝ℏω/2；归一化使用∫e<sup>−α²x²</sup>dx＝√π/α。</p>
+<p>基态有Δx＝√[ℏ/(2mω)]、Δp＝√(mℏω/2)，乘积ℏ/2；平均动能、势能各为ℏω/4。也可由E≥ℏ²/(8m s²)＋mω²s²/2（s＝Δx，平均位置和动量取0）求最小值得E≥ℏω/2，基态高斯恰好达到。</p>
+<p>谐振子相邻间隔为ℏω，与势阱的(2n＋1)E₁不同。经典转折点由V(x)＝E决定，但量子波函数在转折点之外仍可有衰减尾部；零点能不代表粒子有一条固定振幅的经典轨迹。</p>
+<h2 id="s3">四、有限方势垒：束缚态换成散射态</h2>
+<p>设V＝V₀＞0（0&lt;x&lt;a），两侧V＝0；粒子从左入射，能量E＞0，势能不随时间变化且无吸收。两侧允许传播，能量连续；不再要求整个平面波普通归一化，而比较入射、反射、透射的概率流。</p>
+<p>取k＝√(2mE)/ℏ，去掉共同时间因子：</p>
+<div class="formula">φⅠ＝A e<sup>ikx</sup>＋B e<sup>−ikx</sup>；<br>φⅢ＝F e<sup>ikx</sup>。</div>
+<p>右侧不保留e<sup>−ikx</sup>项，是因为边界条件规定<strong>没有从右方来的入射束</strong>。它不是数学通解里永远禁止的一项。常质量、实标量势下，概率流j＝(ℏ/m)Im(φ*φ′)。两侧波数相等，所以R＝|B/A|²、T＝|F/A|²；若两侧势能不同，T还要乘k右/k左。</p>
+<p>E＜V₀时，令κ＝√[2m(V₀−E)]/ℏ，φⅡ＝C e<sup>κx</sup>＋D e<sup>−κx</sup>。势垒只有有限宽，两个指数都有限，<strong>不能因其中一项随x增长就提前删去它</strong>；系数由两端匹配共同决定。E＞V₀时则令q＝√[2m(E−V₀)]/ℏ，φⅡ＝C e<sup>iqx</sup>＋D e<sup>−iqx</sup>。</p>
+<h2 id="s4">五、四个匹配条件怎样给出T</h2>
+<p>先看0＜E＜V₀。有限台阶两侧φ、φ′连续，得到：</p>
+<div class="formula">A＋B＝C＋D；<br>ik(A−B)＝κ(C−D)；<br>C e<sup>κa</sup>＋D e<sup>−κa</sup>＝F e<sup>ika</sup>；<br>κ(C e<sup>κa</sup>−D e<sup>−κa</sup>)＝ikF e<sup>ika</sup>。</div>
+<p>为避免展开很长的分式，可从右边反推：φ(a)＝Fe<sup>ika</sup>，φ′(a)＝ikFe<sup>ika</sup>，把势垒内解写成以x＝a为起点的双曲函数：</p>
+<div class="formula">φⅡ(x)＝F e<sup>ika</sup>[cosh κ(x−a)＋(ik/κ)sinh κ(x−a)]。</div>
+<p>代x＝0得φ(0)和φ′(0)，再用A＝[φ(0)＋φ′(0)/(ik)]/2：</p>
+<div class="formula">A＝F e<sup>ika</sup>[cosh κa＋i(κ²−k²)sinh κa/(2kκ)]。</div>
+<p>取模平方，用cosh²−sinh²＝1，以及k²＋κ²＝2mV₀/ℏ²化简，得与教材式(17.51)等价的能量形式：</p>
+<div class="formula"><strong>T＝{1＋V₀²sinh²(κa)/[4E(V₀−E)]}⁻¹；<br>R＝1−T。</strong></div>
+<p>sinh z＝(eᶻ−e⁻ᶻ)/2，教材写sh，同一个函数。有限宽高势垒有T＞0，这就是隧穿；不表示粒子“临时借能量”越过势顶。定态散射过程中E保持不变，势垒内没有可用经典实速度解释的轨迹。</p>
+<h3>E高于势顶时，也不一定完全透射</h3>
+<p>把指数型匹配换成正弦型，得教材式(17.48)的能量形式：</p>
+<div class="formula">E＞V₀：T＝{1＋V₀²sin²(qa)/[4E(E−V₀)]}⁻¹。</div>
+<p>一般仍有反射；当qa＝nπ（正整数n）时T＝1、R＝0，为共振透射。恰好E＝V₀时不能直接代入上式的0/0，应解势垒内线性函数或取极限：</p>
+<div class="formula">E＝V₀：T＝[1＋mV₀a²/(2ℏ²)]⁻¹。</div>
+<p>检查：a→0时T→1；低于势顶且a→∞时T→0；两侧相同、无吸收的模型中0≤T≤1且R＋T＝1。R、T是概率流比，不能拿振幅比直接当概率。</p>
+<h2 id="tunnel-check">六、厚垒近似与教材数值的限制</h2>
+<p>若κa≫1，sinhκa≈e<sup>κa</sup>/2；且分母中的势垒项远大于1，得到：</p>
+<div class="formula">T≈[16E(V₀−E)/V₀²]e<sup>−2κa</sup>。</div>
+<p>决定指数衰减的是能量差V₀−E、质量和宽度，但<strong>精确T还依赖E与V₀各自的值</strong>。单独给能量差，不能唯一确定精确透射率。</p>
+<p class="note">教材纸281给电子V₀−E＝5 eV时，a＝0.1 nm的T约0.1、a＝1 nm的T约3.0×10⁻¹⁰，但未另外给E或V₀，无法把这两个数作为唯一精确答案核验。独立计算κ≈1.1456×10¹⁰ m⁻¹，仅指数因子e<sup>−2κa</sup>分别约0.101和1.12×10⁻¹⁰；前者κa≈1.15，也不满足很厚的势垒条件。这里保留教材数量级意图，并明确数据不足与近似范围。</p>
+<div class="example"><b>新编补足条件：同样能量差，精确T并不相同</b><p>若另指定E＝1 eV、V₀＝6 eV，a＝0.1 nm时精确T≈0.218，a＝1 nm时T≈2.49×10⁻¹⁰。若E＝5 eV、V₀＝10 eV，同样两种宽度却分别约0.334与4.48×10⁻¹⁰。这些数按上式独立计算，说明缺少条件时不该猜一个确定答案。</p></div>
+<p>隧穿可用于解释α衰变与扫描隧道显微镜等现象；实际原子核势垒不是本节简单矩形，实际器件也需结合具体势能。公式给出方法和依赖关系，不应把理想模型当所有材料的通用数值表。</p>
+<h2 id="review">七、把三个模型放在一起复习</h2>
+<table><thead><tr><th>模型</th><th>条件</th><th>应记结论</th></tr></thead><tbody><tr><td>无限深势阱</td><td>两端φ＝0，n从1起</td><td>E∝n²/a²，节点n−1</td></tr><tr><td>谐振子</td><td>二次势，n从0起</td><td>E＝(n＋1/2)ℏω，等间隔</td></tr><tr><td>有限势垒</td><td>左入射、两端匹配</td><td>比较概率流；E低于势顶仍可透射</td></tr></tbody></table>
+<details><summary>自测1：势阱n＝0与谐振子n＝0为什么不同？</summary><p>势阱的n＝0给零函数，不能归一化；谐振子的n＝0是非零高斯基态，能量ℏω/2。量子数的起点由具体解决定，不能互相套。</p></details>
+<details><summary>自测2：势垒内有波函数尾部，是否一定有穿到无穷远的透射流？</summary><p>不一定。有限宽势垒另一侧允许传播才有本页的透射；若势垒无限延伸且E低于势顶，只有衰减尾部，没有右侧远处传播流。仅凭局部|φ|不为0不能判T。</p></details>
+<details><summary>自测3：定态密度不变、平均动量为0，能否推出动能为0？</summary><p>不能。动能与⟨p²⟩有关，⟨p²⟩一般不等于⟨p⟩²。势阱基态就是明确例子。</p></details>
+<p>前面关于概率密度单位、整体相位和定态含义的练习，可回看<a href="17.2.html#review">17.2自测</a>与<a href="17.4.html#review">17.4自测</a>，这里按本节模型练习，避免重复阅读同一份解释。接着进入<a href="17.6.html">力学量与厄米算符</a>。</p></main><div class="switch"><a href="17.4.html">← 上一节</a><a href="17.6.html">下一节 →</a></div><p class="footer">主要依据：用户提供《大学物理（下册）》第七版纸273—281。教材例17-6与公式已对照、独立推导；补充例为新编，函数图为自制。原理核验：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-4-the-quantum-particle-in-a-box">OpenStax：势阱</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/7-5-the-quantum-harmonic-oscillator">谐振子</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/7-6-the-quantum-tunneling-of-particles-through-potential-barriers">隧穿</a>。未见出版社习题答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
