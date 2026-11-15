@@ -1,4 +1,71 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.8 氢原子</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.8）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html" aria-current="page">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.8 氢原子</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、库仑势下的薛定谔方程</a></li><li><a href="#s2">二、概率密度和自旋</a></li><li><a href="#s3">三、氢原子基态的径向概率（进阶理解）</a></li></ul></div><h2 id="s1">一、库仑势下的薛定谔方程</h2><p>忽略自旋、核反冲及精细修正时，氢原子电子受到 V(r)=−e²/(4πε₀r)。势只依赖到核的距离 r，具有球对称性。球坐标分离变量后，空间本征态可写 ψₙₗₘ(r,θ,φ)=Rₙₗ(r)Yₗₘ(θ,φ)，分别由径向函数与球谐函数描述。</p><p>量子数满足 n=1,2,…；l=0,1,…,n−1；m=−l,…,+l。能量近似只由 n 决定：Eₙ=−13.6 eV/n²。轨道角动量大小为 √[l(l+1)]ħ，其 z 分量为 mħ。l=0、1、2、3 通常对应 s、p、d、f。</p><h2 id="s2">二、概率密度和自旋</h2><p>|ψ|² 给出单位体积概率密度；如果询问半径落在 r 到 r+dr 的概率，须对所有方向积分并包含球坐标体积因子 r²dr dΩ。对已归一化球谐函数，径向概率密度为 r²|Rₙₗ(r)|²。它与沿某方向的 |ψ|² 不是同一个量。</p><p>电子还具有内禀自旋 s=1/2，选定方向的分量 mₛ=±1/2。把自旋考虑在内，一个空间轨道可容纳两个自旋状态；这是电子量子态的组成部分，不应简单解释成经典小球表面自转。</p><div class="example"><b>例1｜n=2 的量子数（新编）</b><p>忽略自旋，氢原子 n=2 时有哪些允许的 (l,m)？共有多少个空间态？</p><p>l=0 或 1；l=0 时 m=0；l=1 时 m=−1、0、1。</p><p class="answer">答案：(0,0)、(1,−1)、(1,0)、(1,1)，共 4 个空间态。</p><p>若再计入两种自旋，得到 8 个状态；是否能量完全简并还依赖所采用的近似。</p></div>
-<h2 id="s3">三、氢原子基态的径向概率（进阶理解）</h2><p>忽略约化质量修正，氢原子基态的空间波函数可写 ψ₁₀₀(r)=e^(−r/a₀)/(√π a₀³ᐟ²)。它是球对称的，所以半径在 r 与 r+dr 之间的概率为 4πr²|ψ|²dr。径向概率密度为：</p><div class="formula">P(r)=4r²e^(−2r/a₀)/a₀³，　r≥0</div><p>求最可能半径时，不能只比较 |ψ|²，因为半径相同的球壳体积会随 r² 增大。对 P(r) 求导，P′(r) 与 r(1−r/a₀)e^(−2r/a₀) 同号；非零极大点为 r=a₀。尽管 |ψ|² 在 r=0 最大，球壳体积趋于零，径向概率密度在那里为零。</p><p>这一结果给出的是重复测量位置时的概率分布，不代表电子沿半径 a₀ 的经典圆轨道运行。</p>
-<!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>氢原子与近似方法</summary><p>氢原子的理想能级、轨道与量子数来自求解相应势能下的量子方程；波函数给出位置概率分布，而不是经典电子沿固定轨道绕行的照片。多电子体系还要考虑电子之间相互作用、自旋和全同粒子要求。</p>
-<p>微扰论在已知可解系统基础上处理足够小的附加作用；非简并版本需要相应能级非简并等条件。变分法通过试探态给出适用条件下基态能量的上界。两种近似方法都要检查适用条件，不能只背公式。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.7.html">← 上一节</a><a href="17.9.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.8 氢原子</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}.table-wrap{overflow-x:auto}table{min-width:570px;border-collapse:collapse;width:100%;font-size:.95em}td,th{padding:.5em;border:1px solid #ccd9df;text-align:left}.formula{text-align:left;overflow-wrap:anywhere}figure{margin:1em 0}figure img{width:100%;height:auto}figcaption{font-size:.9em;color:#516371}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.8）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html" aria-current="page">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.8 氢原子</h1>
+<p class="intro">本节把前面的定态方程、角动量和测量规则用在同一个体系中：先求电子的空间状态，再加入自旋。目标是能说明每个量子数的来历，读懂电子云，并正确计算球壳概率与磁矩。</p>
+<p><strong>核对范围：</strong>已对照教材纸291—299页；下面推导和解答为独立整理，径向与角向归一化、基态概率、例17-12的期望值已独立复算。未见出版社答案。</p>
+<div class="toc"><strong>本节路线</strong><ol><li><a href="#s1">中心势与变量分离</a></li><li><a href="#angular">球谐函数与角动量</a></li><li><a href="#radial">径向方程、能级与量子数</a></li><li><a href="#s3">球壳概率：为什么不能多乘4π</a></li><li><a href="#s2">自旋、磁矩与四个量子数</a></li><li><a href="#ex1712">教材例17-12：叠加态的测量</a></li><li><a href="#review">自测与回顾</a></li></ol></div>
+<h2 id="s1">一、先说清楚采用的模型</h2>
+<p>取质子位置为原点，令 e&gt;0 表示元电荷大小，电子电荷为 −e。忽略核运动、相对论、自旋与轨道的耦合、外场等修正时：</p>
+<div class="formula">V(r)=−κ/r，κ=e²/(4πε₀)，<br>Ĥ=−ℏ²∇²/(2mₑ)−κ/r，　Ĥψ=Eψ。</div>
+<p>这是<strong>非相对论、固定核的库仑模型</strong>。若处理电子和质子的相对运动，先分离质心，再用约化质量 μ=mₑmₚ/(mₑ+mₚ) 替换以下所有 mₑ；不能只在某一条公式中随意替换。真实光谱还有更细的修正，不能把本节的能级简并当成任何精度下都成立。</p>
+<p>势能只依赖 r，因此用球坐标最方便。体积元为 dV=r²dr sinθdθdφ=r²dr dΩ。利用<a href="17.7.html">上一节的球坐标角动量算符</a>：</p>
+<div class="formula">Ĥ=−ℏ²/(2mₑr²) ∂/∂r(r²∂/∂r)+L̂²/(2mₑr²)−κ/r。</div>
+<p>Ĥ、L̂²、L̂z 两两对易，可以选它们的共同本征态。写 ψ(r,θ,φ)=R(r)Y(θ,φ)，先解角向本征方程，再把角动量本征值放进径向方程。一般叠加态不一定同时具有确定的这三个量。</p>
+<h2 id="angular">二、角向部分：l 和 m 从哪里来</h2>
+<div class="formula">L̂²Yₗₘ=l(l+1)ℏ²Yₗₘ，<br>L̂zYₗₘ=−iℏ∂Yₗₘ/∂φ=mℏYₗₘ。</div>
+<p>第二式先给出 φ 方向因子 e<sup>imφ</sup>。绕一周后空间波函数必须单值，即 e<sup>2πim</sup>=1，所以<strong>这里的轨道量子数 m 为整数</strong>。再要求 θ=0、π 两极处规则、全角域可归一，得到 l=0,1,2,…，m=−l,…,l。半整数自旋的两分量态另在后面引入，不是上述标量球谐函数。</p>
+<p>角函数叫球谐函数 Yₗₘ。以下采用常见相位约定，Yₗ,−m=(−1)<sup>m</sup>Y*ₗₘ；单个本征函数的整体相位不影响其位置概率。</p>
+<div class="formula">∫Y*ₗₘYₗ′ₘ′dΩ=δₗₗ′δₘₘ′，<br>Y₀₀=1/√(4π)，<br>Y₁₀=√[3/(4π)]cosθ，<br>Y₁₁=−√[3/(8π)]sinθ e<sup>iφ</sup>，<br>Y₁,−1=√[3/(8π)]sinθ e<sup>−iφ</sup>。</div>
+<details class="lesson-detail"><summary>教材表中的 d 态角函数及如何检查归一化</summary><div class="formula">Y₂₀=√[5/(16π)](3cos²θ−1)，<br>Y₂,±1=∓√[15/(8π)]sinθcosθ e<sup>±iφ</sup>，<br>Y₂,±2=√[15/(32π)]sin²θ e<sup>±2iφ</sup>。</div><p>例如 Y₁₀：∫|Y₁₀|²dΩ=(3/4π)·2π∫₀<sup>π</sup>cos²θ sinθdθ=(3/2)·(2/3)=1。不能漏掉体积元里的 sinθ，也不能把函数本身的正负当作概率的正负。</p></details>
+<p>L 的大小为 √[l(l+1)]ℏ，z 分量为 mℏ。比如 l=2，大小为 √6ℏ，z 分量有 −2ℏ、−ℏ、0、ℏ、2ℏ 五个测量值。画出的方向示意表示量子化分量，不能理解成电子绕核的经典轨道或同时确定的三个角动量分量。</p>
+<p>对单个复球谐函数 Yₗₘ，|e<sup>imφ</sup>|²=1，角密度绕 z 轴对称。但 pₓ、pᵧ 是 m=±1 的线性组合，密度可依赖 φ；因此<strong>并非所有氢原子态的电子云都绕 z 轴对称</strong>。s、p、d、f 分别对应 l=0、1、2、3。</p>
+<h2 id="radial">三、径向方程如何给出能级</h2>
+<p>把 ψ=RY 代入方程并用 L̂²Y=l(l+1)ℏ²Y，得到：</p>
+<div class="formula">(1/r²)d/dr(r²dR/dr)<br>+[2mₑ(E+κ/r)/ℏ²−l(l+1)/r²]R=0。</div>
+<p>令 u(r)=rR(r)，可去掉一阶导数：</p>
+<div class="formula">−ℏ²u″/(2mₑ)+V<sub>eff</sub>(r)u=Eu，<br>V<sub>eff</sub>(r)=−κ/r+ℏ²l(l+1)/(2mₑr²)。</div>
+<p>第二项叫离心势垒。它来自三维角运动的数学分离，并非再加了一种相互作用。对束缚态 E&lt;0，要求原点处物理解规则、u(0)=0，并在无穷远衰减到可归一。把这些边界要求同时满足，能量才会离散。</p>
+<details class="lesson-detail"><summary>从衰减因子到量子化：不跳过关键一步</summary>
+<p>定义 a₀=ℏ²/(mₑκ)，b=√(−2mₑE)/ℏ，ρ=2br，ν=1/(ba₀)。大 r 时 u″≈b²u，取衰减的 e<sup>−ρ/2</sup>；原点规则解有 u∝r<sup>l+1</sup>。因此令 u=ρ<sup>l+1</sup>e<sup>−ρ/2</sup>F(ρ)，代入消去已知项：</p>
+<div class="formula">ρF″+(2l+2−ρ)F′+(ν−l−1)F=0。</div>
+<p>令 F=Σⱼcⱼρʲ，逐次幂比较，得 cⱼ₊₁=(j+l+1−ν)cⱼ/[(j+1)(j+2l+2)]。通常不截断的规则级数会产生增长分量，破坏无穷远归一化；必须在 j=k≥0 时分子为零，使 F 成为 k 次多项式。于是 ν=k+l+1=n 为正整数，且 l≤n−1。由 b=1/(na₀) 得下式。</p></details>
+<div class="formula">Eₙ=−mₑκ²/(2ℏ²n²)≈−13.6 eV/n²，<br>a₀≈5.29×10⁻¹¹m，　n=1,2,…。</div>
+<p>主量子数 n 决定本模型的能量；l 和 m 决定同一能级内不同的空间形状与角动量。只谈束缚态时用上式，E≥0 的散射态属于连续谱，不能继续套用正整数 n 的束缚能级公式。</p>
+<details class="lesson-detail"><summary>需要实际代入波函数时：通式、约定和低阶结果</summary>
+<p>记 ρ=2r/(na₀)，采用广义拉盖尔多项式 L<sub>k</sub><sup>α</sup>(ρ)=Σⱼ₌₀<sup>k</sup>(−1)ʲ C(k+α,k−j)ρʲ/j!。在这个定义下：</p>
+<div class="formula">Rₙₗ=(2/na₀)<sup>3/2</sup>√[(n−l−1)!/(2n(n+l)!)]<br>×e<sup>−ρ/2</sup>ρˡL<sub>n−l−1</sub><sup>2l+1</sup>(ρ)。</div>
+<p>教材采用的缔合拉盖尔多项式定义和前因子写法不同；必须连同其定义使用，不能把一种定义的多项式与另一种定义的归一化常数混用。下表直接给可代入的函数，x=r/a₀，每项右边还要乘 a₀<sup>−3/2</sup>。</p>
+<div class="table-wrap"><table><thead><tr><th>n,l</th><th>a₀<sup>3/2</sup>Rₙₗ</th></tr></thead><tbody><tr><td>1,0</td><td>2e<sup>−x</sup></td></tr><tr><td>2,0</td><td>(2−x)e<sup>−x/2</sup>/(2√2)</td></tr><tr><td>2,1</td><td>xe<sup>−x/2</sup>/(2√6)</td></tr><tr><td>3,0</td><td>2(27−18x+2x²)e<sup>−x/3</sup>/(81√3)</td></tr><tr><td>3,1</td><td>4x(6−x)e<sup>−x/3</sup>/(81√6)</td></tr><tr><td>3,2</td><td>4x²e<sup>−x/3</sup>/(81√30)</td></tr></tbody></table></div>
+<p>归一化条件是 ∫₀<sup>∞</sup>|Rₙₗ|²r²dr=1。同一个 l、不同 n 的径向函数按这个权重正交；不同 l 的径向函数本身不必正交，它们的完整空间态由角函数保证正交。上表六个函数均已另用数值积分核验归一化为1。</p></details>
+<div class="example"><b>保留的新编例｜n=2 有多少状态？</b><p>先列允许量子数：l=0 时 m=0；l=1 时 m=−1,0,1。所以空间态为 (l,m)=(0,0)、(1,−1)、(1,0)、(1,1)，共4个。一般 n 下，Σₗ₌₀<sup>n−1</sup>(2l+1)=n²。加入两种自旋后有 2n² 个状态，n=2 时为8个；能量完全简并是在本节忽略精细修正的模型中成立。</p></div>
+<h2 id="s3">四、位置密度与径向概率：少一个或多一个因子都不行</h2>
+<p>位置密度 |ψ|² 的单位是 m⁻³，乘 dV 才是概率。若只问“半径在 r 到 r+dr”，须把所有方向加起来。已取角归一化 ∫|Y|²dΩ=1，因此：</p>
+<div class="formula">dP=∫|R(r)Y(θ,φ)|²r²dr dΩ<br>=r²|R(r)|²dr，<br>Pᵣ(r)=r²|R(r)|²，　∫₀<sup>∞</sup>Pᵣdr=1。</div>
+<p><strong>教材核对提示：</strong>纸295页在此前已经给出上述角向、径向归一化，却把球壳概率写成 4πr²|Rₙₗ|²dr。按该处 R 的定义，多了4π：积分将成为4π而不是1。若用球对称的<strong>完整波函数</strong> ψ，例如 ψ₁₀₀=R₁₀/√(4π)，才可写 dP=4πr²|ψ₁₀₀|²dr。区分 R 与 ψ 就能消除矛盾。</p>
+<div class="example"><b>基态：最可能半径不等于位置密度最大处</b>
+<div class="formula">ψ₁₀₀=e<sup>−r/a₀</sup>/(√π a₀<sup>3/2</sup>)，<br>Pᵣ=4r²e<sup>−2r/a₀</sup>/a₀³。</div>
+<ol><li>完整密度 |ψ|² 随 r 递减，在原点最大；但恰在一个点测到位置的概率仍为0，须给有限体积。</li><li>径向密度中还有球壳大小 r²。Pᵣ′=(8r/a₀³)e<sup>−2r/a₀</sup>(1−r/a₀)，因此在 r=a₀ 达极大，不是 r=0。</li><li>令 x=r/a₀，P(r≤a₀)=∫₀¹4x²e<sup>−2x</sup>dx=[−(2x²+2x+1)e<sup>−2x</sup>]₀¹=1−5e⁻²≈0.3233。</li><li>平均半径 ⟨r⟩=a₀∫₀<sup>∞</sup>4x³e<sup>−2x</sup>dx=3a₀/2，与最可能半径 a₀ 不同。</li></ol>
+<p>用到 ∫₀<sup>∞</sup>xⁿe<sup>−αx</sup>dx=n!/αⁿ⁺¹（α&gt;0）。归一化检验给 4·2!/2³=1；这也能独立检查球壳因子。电子没有因此获得一条半径 a₀ 的圆轨道。</p></div>
+<figure><img src="hydrogen-radial.svg" alt="1s、2s、2p态的无量纲径向概率密度曲线；1s在x等于1最大，2s在x等于2有节点"><figcaption>自制函数图：横轴 x=r/a₀，纵轴 a₀Pᵣ，曲线下面积均为1。2s在 r=2a₀ 有径向节点；2p在原点以外没有径向节点。曲线高度和形状不表示电子轨道。</figcaption></figure>
+<p>对本征态，径向节点数（不计 r=0 与无穷远）为 n−l−1；角节点结构由 Y 决定。|R|²、|Y|² 的零点不是“电子一定沿另一条线走”的证据，而是测量位置的概率分布特征。</p>
+<h2 id="s2">五、电子自旋：状态多了一个内部自由度</h2>
+<p>原子光谱精细结构以及非均匀磁场中的束流分裂提示，仅有空间波函数还不够。电子具有内禀角动量 S，叫自旋。它不是把电子当作有大小的带电球，再让球面按经典力学转动。</p>
+<div class="formula">s=1/2，S²=s(s+1)ℏ²=3ℏ²/4，<br>S<sub>z</sub>=mₛℏ，mₛ=±1/2，<br>[Ŝₓ,Ŝᵧ]=iℏŜz（循环成立）。</div>
+<p>自旋大小为 √3ℏ/2，而选定轴的投影只有 ±ℏ/2。两种投影态可记 χ₊=(1,0)ᵀ、χ₋=(0,1)ᵀ，二者正交归一；Ŝz=(ℏ/2)diag(1,−1)。自旋由两分量描述，不能用 r×p 构造出来。每个自旋分量算符的平方均为 ℏ²I/4。</p>
+<p>轨道与自旋磁矩都要记住电子带<strong>负电</strong>：</p>
+<div class="formula">μ<sub>L</sub>=−(e/2mₑ)L=−μ<sub>B</sub>L/ℏ，<br>μ<sub>S</sub>=−gₛμ<sub>B</sub>S/ℏ，gₛ≈2，<br>μ<sub>B</sub>=eℏ/(2mₑ)。</div>
+<p>所以 μ<sub>Lz</sub>=−mμ<sub>B</sub>，μ<sub>Sz</sub>≈−2mₛμ<sub>B</sub>。不要把自旋磁矩也乘成轨道的系数，更不要把投影符号写反。gₛ=2 是本节近似，并非无限精度的数值。</p>
+<p>本节 Ĥ 不含自旋，与 Ŝz 也对易，因此可选共同态 ψₙₗₘₘₛ=RₙₗYₗₘχₘₛ，由 n,l,m,mₛ 四个量子数标记。电子的 s 固定为1/2，通常不另列。若加入自旋与轨道耦合，Lz、Sz 一般不再分别守恒，应换合适的共同量子数，不能原样沿用这里的全部结论。</p>
+<h2 id="ex1712">六、教材例17-12：把系数变成概率，再求平均</h2><p class="small">手机可左右滑动下表查看完整结果。</p>
+<p>题给归一化叠加态（以下下标依次是 n,l,m,mₛ）：</p>
+<div class="formula">ψ=(1/2)ψ₂,₁,₁,₁/₂−(√3/2)ψ₂,₁,₀,−₁/₂。</div>
+<p>两基态的 m、mₛ 不同，互相正交。模平方为 1/4、3/4，和为1。对 Lz、Sz 和本题总磁矩 z 分量，它们也各有确定本征值，故直接按概率加权：</p>
+<div class="table-wrap"><table><thead><tr><th>分支</th><th>概率</th><th>Lz</th><th>Sz</th><th>μz≈−μB(Lz+2Sz)/ℏ</th></tr></thead><tbody><tr><td>m=1，mₛ=+1/2</td><td>1/4</td><td>ℏ</td><td>ℏ/2</td><td>−2μB</td></tr><tr><td>m=0，mₛ=−1/2</td><td>3/4</td><td>0</td><td>−ℏ/2</td><td>+μB</td></tr></tbody></table></div>
+<div class="formula">⟨Lz⟩=(1/4)ℏ+(3/4)·0=ℏ/4，<br>⟨Sz⟩=(1/4)(ℏ/2)+(3/4)(−ℏ/2)=−ℏ/4，<br>⟨μz⟩=(1/4)(−2μB)+(3/4)μB=μB/4<br>=eℏ/(8mₑ)。</div>
+<p><strong>结果检查：</strong>平均值位于两个可能结果 −2μB 与 +μB 之间。单次测量不是必得 μB/4；平均值也不必等于一个本征值。系数的相对负号不改变本题这些对角算符的测量概率，但对其他含非对角矩阵元的量，相对相位可能影响结果，不能一概删掉。</p>
+<h2 id="review">七、自测与章节衔接</h2>
+<details class="lesson-detail"><summary>1．3p态允许哪些量子数？含自旋共几个？</summary><p>3p 指 n=3、l=1，m=−1,0,1。每个 m 有 mₛ=±1/2，合计6态；不是整个 n=3 壳层的18态。</p></details>
+<details class="lesson-detail"><summary>2．若给 R₁₀=2a₀⁻³ᐟ²e⁻ʳ/ᵃ⁰，求球壳概率该乘什么？</summary><p>乘 r²dr，因为 ∫|Y₀₀|²dΩ=1。若先组成 ψ₁₀₀=R₁₀/√(4π)，再乘球壳体积 4πr²dr，得到完全相同结果。两条路线不能混用。</p></details>
+<details class="lesson-detail"><summary>3．基态 L=0，是否电子既无动能又没有角动量？</summary><p>它的轨道角动量确定为0，但动能并非0；波函数仍有空间变化。电子还具有非零自旋大小 √3ℏ/2。轨道角动量、自旋、动能是不同的物理量。</p></details>
+<details class="lesson-detail"><summary>4．一个本征态的电子云是否随时间旋转？</summary><p>定态只多整体因子 e⁻ⁱᴱᵗ/ℏ，位置密度不随时间改变；m≠0 时仍可有概率流。不能把密度不变等同于电子沿经典轨道静止，也不能把复相位直接画成电子绕核轨迹。</p></details>
+<p><strong>复习顺序：</strong>先认模型范围，再用 n,l,m,mₛ 检查状态是否合法；问位置用 |ψ|²dV，问半径用 r²|R|²dr；问测量均值先找本征值和系数概率。能级、角动量、磁矩的单位分别是能量、ℏ、磁矩，最后用量纲和归一化再查一遍。</p>
+<p>下一节进入<a href="17.9.html">全同粒子与泡利原理</a>，解释多个电子时为何不能只把单电子态随意相乘。复杂势的近似计算分别放在<a href="17.10.html">非简并微扰论</a>与<a href="17.11.html">变分法</a>，本节不再重复一套讲解。完成本章后到<a href="textbook-exercises-17.html">习题17</a>练习。</p>
+</main><div class="switch"><a href="17.7.html">← 上一节</a><a href="17.9.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版纸291—299页，教材例17-12为独立整理；标注新编的例题与图为自制。补充阅读：<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">OpenStax：氢原子</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-2-orbital-magnetic-dipole-moment-of-the-electron">轨道磁矩</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-3-electron-spin">电子自旋</a>。未使用视频内容，未见出版社答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
