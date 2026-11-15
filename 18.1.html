@@ -1,14 +1,53 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>18.1 量子纠缠、EPR佯谬与贝尔不等式</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><nav class="nav" aria-label="第18章导航"><a href="index.html">首页</a><a href="18.1.html" aria-current="page">18.1</a><a href="18.2.html">18.2</a><a href="18.3.html">18.3</a><a href="18.4.html">18.4</a></nav><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>18.1 量子纠缠、EPR 佯谬与贝尔不等式</h1><p class="intro"><strong>教材习题：</strong><a href="textbook-exercises-18.html">第十八章 9 道习题逐题讲解</a>，包含解题思路与适用条件。</p><p class="intro"><strong>综合练习：</strong><a href="modern-physics-practice-guide.html">光学与近代物理分步练习及解答</a>。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、态矢量与直积</a></li><li><a href="#s2">二、贝尔态与测量关联</a></li><li><a href="#s3">三、EPR 与贝尔不等式</a></li></ul></div><h2 id="s1">一、态矢量与直积</h2><p>量子态可用态矢 |ψ⟩ 表示；⟨φ|ψ⟩ 是内积，归一化纯态满足 ⟨ψ|ψ⟩=1。二态系统可选正交基 |0⟩、|1⟩。两个系统 A、B 的联合空间由直积构成，四个常用基态为 |00⟩、|01⟩、|10⟩、|11⟩；第一个数字代表 A，第二个代表 B。</p><p>若联合态能写为 |a⟩⊗|b⟩，称可分的纯态；若不能分解为两个单体纯态的直积，则为纠缠纯态。含噪声的混合态还需更一般的可分性定义，不能只检查一个波函数能否分解。</p><h2 id="s2">二、贝尔态与测量关联</h2><div class="formula">|Φ⁺⟩=(|00⟩+|11⟩)/√2</div><p>若两方都用计算基测量，两种结果 00、11 的概率各为 1/2，因此结果完全相同，但每一方单独看到的 0 和 1 仍各占一半。若用另一共同基测量，还需先把整个态换基后计算概率。纠缠不允许单方通过选择测量结果向远方超光速发送可控信息；远端本地统计在不接收经典信息时不因此改变。</p><h2 id="s3">三、EPR 与贝尔不等式</h2><p>EPR 讨论：如果对相距很远的关联粒子进行测量，量子力学对“物理实在”和局域性的描述是否完整？贝尔进一步证明，满足特定局域隐变量假设的模型，其可观测关联受到不等式约束。常见 CHSH 形式定义 S=E(a,b)+E(a,b′)+E(a′,b)−E(a′,b′)，局域隐变量模型满足 |S|≤2；量子理论在适当态和测量设置下可达到 2√2。</p><p>实验违反不等式约束，说明这一类局域隐变量模型不能解释全部观测结果；不等于可用纠缠超光速通信。具体实验结论还要考虑测量设置和漏洞控制。</p><div class="example"><b>例1｜贝尔态的测量（新编）</b><p>对 |Φ⁺⟩ 在计算基分别测量两个量子比特，求结果 00、01、10、11 的概率。</p><p>各概率是对应振幅模平方：00 与 11 的振幅均为 1/√2，01 与 10 的振幅为 0。</p><p class="answer">答案：P(00)=P(11)=1/2；P(01)=P(10)=0。</p><p>概率和为 1；结果相关不代表每一方可以预先指定测量结果。</p></div>
-<!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>两个量子比特</summary><p>两个比特的联合空间由 |00⟩、|01⟩、|10⟩、|11⟩ 四个计算基态张成。一个联合纯态如果能够写成第一个量子比特的态与第二个量子比特的态的直积，就是可分态；若不能写成这样的直积，则是纠缠态。</p>
-<p><strong>例 2</strong>：贝尔态 |Φ⁺⟩=(|00⟩+|11⟩)/√2。两方都在计算基测量时，00 和 11 各以 1/2 概率出现，01、10 不出现。每个人单独看到 0、1 的概率都是 1/2；把双方记录对照，才能看到这里描述的完全相关。</p>
-<p>不能把纠缠简单等同于“测到相同结果”：某些经典相关系统也可以在一个基下表现相同结果。贝尔不等式及合适的多种测量设置用于检验局域隐变量模型可达到的关联范围，具体结论依赖实验假设和设置。</p></details><details class="lesson-detail"><summary>自测与解答</summary><p><strong>1.</strong> |ψ⟩=(1/√2)|0⟩+(1/√2)|1⟩，计算基测量 1 的概率是多少？</p>
-<p>解：幅度的模平方为 |1/√2|²=1/2。</p>
-<p><strong>2.</strong> 对贝尔态 |Φ⁺⟩，双方都测量计算基，一方只看自己的结果能否知道对方想发送的任意消息？</p>
-<p>解：不能。单方结果为随机的 0 或 1，关联需双方比较，不能靠任意指定测量结果来发送消息。</p>
-<p><strong>3.</strong> |0⟩ 经 H 门两次后，理想情况下测得 0 的概率是多少？</p>
-<p>解：若中间没有测量且操作理想，由 H²=I，最终为 |0⟩，概率为 1。</p></details></div><!-- 归并结束 --><section id="self-study-check" style="margin:2em 0;padding:1em;border:1px solid #b7d6e7;border-radius:10px;background:#f4f9fc"><h2>自学检验：纠缠不等于可控超光速通信</h2><p><strong>先自己想一想：</strong>两个粒子处于纠缠态，甲测得某一结果后，能否仅靠选择结果向远方的乙发送消息？</p><details><summary style="cursor:pointer;color:#17577c;font-weight:bold">查看详细解答</summary><p>不能。纠缠可以表现为测量结果之间的关联，但单次测量结果不能由甲随意指定；乙单独看到的本地结果不足以读取甲想发送的信息。比较两地结果需要通常的信息交换。具体关联还依赖共同状态和测量方向。</p></details><p><small>这道练习为新编。建议先写出思路，再展开答案检查。</small></p></section><!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>怎样区分纠缠关联和普通关联</h2>
-<p>两个人各拿一张背面朝上的卡片，一张写 0、一张写 1：揭开一张就能推知另一张，但这是制备时已经确定的普通关联。对量子纠缠，关键不是“看到关联”这一点，而是整个量子态不可写成两个子系统状态的直积，且在不同测量方向下的关联可以超出某些局域隐变量模型的限制。</p>
-<p>例如单态 |Ψ⁻⟩＝(|01⟩−|10⟩)/√2，在相同计算基上测量，两人结果必定相反；每个人单独看到的 0、1 都各占一半。把实验改为多组恰当选择的测量方向，才能计算贝尔不等式涉及的不同关联。不能只测同一个方向，就把普通反相关误认为已经证明了贝尔不等式违反。</p>
-<p>贝尔不等式建立在明确假设上，如局域性、测量设置与隐变量的适当独立性等；量子力学对特定态和设置给出可违反的预言。远方一方仍不能通过随意指定本地随机测量结果来发送可控消息，比较两边数据需要常规通信。</p>
-</section><!-- 自学深化内容结束 --><!-- 教材小节整合 --><section class="integrated-section"><h2>例题与重点理解</h2><div class="integrated-reading"><h3>纠缠能传递超光速消息吗？</h3><p>不能仅靠一方选择测量操作或期望得到的结果，向远方单方面发送可读取的信息。单次测量结果不能任意指定；另一方的本地统计不会因对方选择局部测量而变成可用来无条件通信的消息。要利用双方关联完成协议，通常还需要经典通信。</p>
-<p>这不否认纠缠带来的非经典关联；它说明关联和可控传信是不同概念。</p></div></section><!-- 教材小节整合结束 --></main><div class="switch"><a href="index.html">← 返回目录</a><a href="18.2.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第18章；例题为新编，示意图为自制。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>18.1 量子纠缠、EPR佯谬与贝尔不等式</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}.formula{text-align:left;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;min-width:400px}td,th{border:1px solid #ccd9df;padding:.5em;text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><nav class="nav" aria-label="第18章导航"><a href="index.html">首页</a><a href="18.1.html" aria-current="page">18.1</a><a href="18.2.html">18.2</a><a href="18.3.html">18.3</a><a href="18.4.html">18.4</a></nav><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>18.1 量子纠缠、EPR佯谬与贝尔不等式</h1>
+<p class="intro">本节先把第17章的波函数换成便于计算的向量，再组合两个系统，最后说明哪些关联超出了局域隐变量模型。读到最后应能亲自算出一个纠缠判据、一个换基概率和CHSH不等式的上下界。</p>
+<p><strong>核对范围：</strong>已对照教材纸312—318页，合并多处重复“纠缠不能超光速通信”的讲解，补数学步骤和适用条件。张量积、测量换基、纠缠判据及CHSH值已独立计算；未见出版社答案，未使用视频。涉及教材的数值或表述问题，见对应提示。</p>
+<div class="toc"><strong>本节路线</strong><ol><li><a href="#s1">态矢、内积与纯态/混合态</a></li><li><a href="#tensor">两个系统怎样组合</a></li><li><a href="#s2">纠缠与测量关联</a></li><li><a href="#epr">EPR论证究竟在问什么</a></li><li><a href="#s3">亲自推出CHSH不等式</a></li><li><a href="#nosignal">关联为什么不能直接传消息</a></li><li><a href="#review">自测与回顾</a></li></ol></div>
+<h2 id="s1">一、态矢是波函数的另一种表示</h2>
+<p>一个纯态可用右矢|ψ⟩表示。在选定正交基后，它就是一列复数；对应左矢⟨ψ|是这列的<strong>复共轭转置</strong>。例如|ψ⟩=(a,b)ᵀ，则⟨ψ|=(a*,b*)，内积⟨φ|ψ⟩=c*a+d*b（|φ⟩=(c,d)ᵀ）。</p>
+<div class="formula">(α|ψ⟩+β|φ⟩)†=α*⟨ψ|+β*⟨φ|，<br>⟨φ|ψ⟩*=⟨ψ|φ⟩，<br>⟨ψ|ψ⟩=|a|²+|b|²=1。</div>
+<p>†表示复共轭转置。内积是一个数，|ψ⟩⟨ψ|则是算符（矩阵），次序不可互换。规范数学用语中，范数是√⟨ψ|ψ⟩，内积⟨ψ|ψ⟩是范数平方。若选择位置表象，ψ(x)=⟨x|ψ⟩，便回到第17章的波函数；不是从一种物理理论换到另一种理论。</p>
+<p><strong>相干叠加不等于随机混合。</strong>|+⟩=(|0⟩+|1⟩)/√2是一个纯态；“一半概率制备|0⟩，一半制备|1⟩但不记录是哪种”通常是混合态。二者在0/1基测量同为各半，却在+/−基不同：前者必得+，后者仍各半。</p>
+<details class="lesson-detail"><summary>用一个小矩阵看清纯态和混合态</summary><p>把态写成ρ，测量投影P的概率为Tr(ρP)。纯态ρ=|ψ⟩⟨ψ|；概率混合ρ=Σᵢpᵢ|ψᵢ⟩⟨ψᵢ|，Σpᵢ=1。对上例：</p><div class="formula">ρ₊=(1/2)[[1,1],[1,1]]，<br>ρ<sub>混</sub>=(1/2)[[1,0],[0,1]]。</div><p>纯态具有这里的非对角相干项。有限维归一化密度矩阵满足Trρ²=1时为纯态，小于1时为混合态。不能只看到一个“以概率p制备”的列表就断言一定混合：若列表里的态全是同一条射线，ρ仍可为纯态。</p></details>
+<h2 id="tensor">二、直积：两列数不能简单相加</h2>
+<p>A系统N维，B系统M维，联合空间H<sub>A</sub>⊗H<sub>B</sub>有NM维。教材的2×1列与3×1列的例子展开为：</p>
+<div class="formula">(a₁,a₂)ᵀ⊗(b₁,b₂,b₃)ᵀ<br>=(a₁b₁,a₁b₂,a₁b₃,a₂b₁,a₂b₂,a₂b₃)ᵀ。</div>
+<p>顺序约定是先A后B，先固定A的分量，再列完B。两个二态系统基底按|00⟩、|01⟩、|10⟩、|11⟩排列，其中|01⟩=|0⟩<sub>A</sub>⊗|1⟩<sub>B</sub>。光子偏振基也可写|h⟩、|v⟩，分别对应这里的0、1；在相距不同的光路模式中谈两个子系统。</p>
+<p>任意联合<strong>纯态</strong>写作|ψ⟩=a|00⟩+b|01⟩+c|10⟩+d|11⟩，且|a|²+|b|²+|c|²+|d|²=1。若它能分成两个单体态的直积，系数必须来自：</p><div class="formula">(α|0⟩+β|1⟩)⊗(γ|0⟩+δ|1⟩)<br>=αγ|00⟩+αδ|01⟩+βγ|10⟩+βδ|11⟩，<br>所以ad−bc=0。</div>
+<p>反过来，对非零的二比特纯态，把系数排成C=[[a,b],[c,d]]，若ad−bc=0，矩阵秩为1，可写一个列与一个行的乘积，即可分解。因此<strong>二比特纯态纠缠当且仅当ad−bc≠0</strong>。高维、多体、混合态不能原样只用这个2×2行列式。</p>
+<div class="example"><b>新编例｜叠加不一定纠缠</b><p>(|00⟩+|01⟩)/√2=|0⟩⊗|+⟩，是直积纯态；系数给ad−bc=0。(|00⟩+|11⟩)/√2的ad=1/2、bc=0，无法分解，是纠缠态。不要仅凭式子里有两个加项就下结论。</p></div>
+<h2 id="s2">三、纠缠态的联合统计与单方统计</h2>
+<p>保留原新编例的贝尔态|Φ⁺⟩=(|00⟩+|11⟩)/√2。按0/1基测量，各结果概率为对应振幅模平方：</p><div class="formula">P(00)=P(11)=1/2，P(01)=P(10)=0，<br>P<sub>A</sub>(0)=P(00)+P(01)=1/2，<br>P<sub>B</sub>(0)=P(00)+P(10)=1/2。</div>
+<p>双方结果完全相同，各方却都随机。若只问A的统计，必须把B所有可能结果加起来；不能把“已知道B=0”的条件概率1，当成未收到B信息时的本地概率。</p>
+<p>教材采用另一个贝尔态|Ψ⁻⟩=(|01⟩−|10⟩)/√2。它在同一计算基下必反相关：01、10各半。系数a=d=0、b=1/√2、c=−1/√2，所以ad=0、bc=−1/2，仍纠缠。<strong>纸315式(18.12)下写bc=−1，多漏掉了归一化后的1/2；纠缠结论不受影响。</strong></p>
+<h3>换一个基，亲自检查一次</h3><p>对自旋基|0⟩=|+z⟩、|1⟩=|−z⟩，令|±x⟩=(|0⟩±|1⟩)/√2。将|0⟩=(|+x⟩+|−x⟩)/√2、|1⟩=(|+x⟩−|−x⟩)/√2代回并展开交叉项：</p><div class="formula">|Ψ⁻⟩=(|−x,+x⟩−|+x,−x⟩)/√2。</div><p>它与用相反整体号书写的单态是同一物理态，所以同测x也必相反。自旋单态对双方相同的空间旋转保持这种性质，任意共同自旋轴都反相关。教材纸317的相应叙述有“沿z轴”与下标x混用，此处讨论的是<strong>双方同测x轴</strong>；若一方测x、一方测z，则并不必定相反，四种结果各1/4。</p>
+<p>“纠缠子系统没有态”也不是准确说法：对子系统可以给约化密度矩阵。上述最大纠缠态的每一方ρ=I/2，是确定的混合态，<strong>不能单独赋予一个确定纯态</strong>。两者要分清。</p>
+<details class="lesson-detail"><summary>普通卡片也相关，为什么还要测多个基？</summary><p>一半制备00、一半制备11的经典相关混合态，也能在0/1基给相同结果。但两方在+/−基测量时，四种结果各1/4；而|Φ⁺⟩=(|++⟩+|−−⟩)/√2，仍只给++、−−各半。单个基的相同或相反，不能单独证明纠缠，更不能单独证明贝尔不等式违反。混合态的可分定义为ρ=Σᵢpᵢρ<sub>A,i</sub>⊗ρ<sub>B,i</sub>，允许普通经典相关；不能用“不是单个直积”就把它误判为纠缠。</p></details>
+<h2 id="epr">四、EPR论证：争论的是完备性，不是同时偷测两个分量</h2>
+<p>1935年EPR论文提出：若不扰动远方系统就能确定预言一个物理量，是否应把该量视为客观实在？若理论完备，就应描述相应实在。对纠缠对，A可选择测一种量或另一种不相容量，分别预言B的对应结果。结合对远方不施加影响的局域性假定，EPR由此质疑仅用波函数描述是否完备。它不是一次实验已同时测出B两个不相容量，也不是已经证明量子力学算错。</p>
+<details class="lesson-detail"><summary>扫描连续变量例子的符号需要修正：用对易子检查</summary><p>纸316同时写理想关系xB=−xA、pB=−pA，即位置和动量的“和”都精确为0。但[xA+xB,pA+pB]=2iℏ，这两个和不能同时任意精确。与原始EPR构造一致，可选位置差Q=xA−xB=d和总动量P=pA+pB=0，因为：</p><div class="formula">[Q,P]=[xA,pA]−[xB,pB]=iℏ−iℏ=0。</div><p>于是测xA可推xB=xA−d，测pA可推pB=−pA；两种预言属于不同的测量选择。理想的差和完全确定态不平方可积，实际制备只能有限展宽。本文实际查阅了<a href="https://journals.aps.org/pr/pdf/10.1103/PhysRev.47.777">EPR原文</a>后按同一坐标约定说明，未把教材两个负号照抄成可实现的无限精确关联。</p></details>
+<p>Bohm的自旋版本用上一段单态：A测z可预言B的z结果，A测x可预言B的x结果。量子力学没有给B一个同时具有确定Sx和Sz的纯态。争论涉及如何解释未实施的另一种测量及“局域实在”的前提，需要由下面可检验的统计约束进一步区分。</p>
+<h2 id="s3">五、CHSH：从四个±1结果推到2，再算出2√2</h2>
+<p>教材介绍贝尔定理但未在正文展开不等式，这里采用常用CHSH形式补完整。每一轮A从设置a、a′中选一个，B从b、b′中选一个；每次结果只记+1或−1。对自旋，相当于把实际投影±ℏ/2乘2/ℏ，不能把带单位的自旋值直接与无量纲界2比较。</p>
+<p>在局域隐变量模型中，设共享变量λ决定A(a,λ)、A(a′,λ)、B(b,λ)、B(b′,λ)，均为±1；A的结果不依赖B当轮设置，反之亦然。还要求设置选择与λ的分布适当独立，使四组实验可用同一ρ(λ)平均。对每个λ，组合：</p>
+<div class="formula">sλ=A(a)[B(b)+B(b′)]<br>+A(a′)[B(b)−B(b′)]。</div>
+<p>B(b)与B(b′)不是相同就是相反，两括号中一个为0、另一个为±2，所以sλ必为±2。对共同ρ(λ)作平均，得到：</p>
+<div class="formula">S=E(a,b)+E(a,b′)+E(a′,b)−E(a′,b′)，<br>|S|≤2，<br>E(a,b)=P₊₊+P₋₋−P₊₋−P₋₊。</div>
+<p>带局部随机性的模型可视作加入更多随机变量后再平均，仍受该界限制。四组关联在不同实验轮次估计，不是声称一轮同时测了四个互不相容的设置。</p>
+<h3>量子计算：同一个单态，选合适的四个方向</h3>
+<p>对自旋单态，令观测量σ·a的结果为±1，由泡利矩阵或投影可得E(a,b)=−a·b。取a=z，a′=x，b=(z+x)/√2，b′=(z−x)/√2：</p>
+<div class="table-wrap"><table><thead><tr><th>设置组合</th><th>点积</th><th>E</th></tr></thead><tbody><tr><td>a,b</td><td>1/√2</td><td>−1/√2</td></tr><tr><td>a,b′</td><td>1/√2</td><td>−1/√2</td></tr><tr><td>a′,b</td><td>1/√2</td><td>−1/√2</td></tr><tr><td>a′,b′</td><td>−1/√2</td><td>+1/√2</td></tr></tbody></table></div>
+<div class="formula">S=−1/√2−1/√2−1/√2−1/√2=−2√2，<br>|S|=2√2≈2.828&gt;2。</div>
+<p>注意最后一项在S定义中有减号。上面是自旋测量的空间轴；用光子线偏振片实现时，偏振角与对应二态测量轴的角参数有两倍关系，不应照搬所有物理夹角。</p>
+<details class="lesson-detail"><summary>为什么标准量子理论也不能任意超过2√2？</summary><p>对本地二结果观测量A²=A′²=B²=B′²=I，定义CHSH算符K=A⊗(B+B′)+A′⊗(B−B′)，直接展开：</p><div class="formula">K²=4I−[A,A′]⊗[B,B′]。</div><p>这些观测量范数为1，每个对易子范数至多2，所以‖K²‖≤8，进而|⟨K⟩|≤‖K‖≤2√2。所列单态和方向达到该界。这个结果依赖上述观测量与量子模型条件，不是所有“相关性”一概都用2√2。</p></details>
+<p>实验违反局域模型的界，排除的是<strong>满足所列假设的那一类模型</strong>，不是排除一切隐变量理论或允许随意发送超光速信号。实际检验要控制测量设置、探测选择和两端通信等漏洞；本讲义不把教材“彻底排除所有疑问”的概述扩展成无条件结论。历史理论可读<a href="https://journals.aps.org/ppf/pdf/10.1103/PhysicsPhysiqueFizika.1.195">Bell原始论文</a>；CHSH的另一种直接阅读讲法见<a href="https://quantum.cloud.ibm.com/learning/en/courses/basics-of-quantum-information/entanglement-in-action/chsh-game">IBM Quantum文字课程</a>，无需看视频。</p>
+<h2 id="nosignal">六、相关性为什么不等于可控消息</h2>
+<p>关键不只是“A不能指定随机结果”，还要检查B的<strong>无条件本地分布</strong>。设A选某个测量基，其投影为Pᵢ，ΣPᵢ=I；B某个结果的投影为Qⱼ。不收到A的结果时：</p>
+<div class="formula">P<sub>B</sub>(j)=Σᵢ⟨ψ|Pᵢ⊗Qⱼ|ψ⟩<br>=⟨ψ|I⊗Qⱼ|ψ⟩。</div>
+<p>求和后A选择的基消失，B本地分布不因这个选择改变。条件分布P(B=j|A=i)可以不同，但B只有收到A哪轮得何结果的经典记录后，才能筛选比较。经典记录传播仍需遵守通常通信限制。对单态，无论A同测哪个自旋轴，B独自看任一自旋方向的±结果都各半。</p>
+<h2 id="review">七、自测与接续</h2>
+<details class="lesson-detail"><summary>1．(|00⟩+|01⟩+|10⟩+|11⟩)/2是否纠缠？</summary><p>ad−bc=1/4−1/4=0，等于|+⟩⊗|+⟩，不是纠缠。一般叠加与纠缠是不同概念。</p></details>
+<details class="lesson-detail"><summary>2．单态一方测x，另一方测z，是否必定相反？</summary><p>不是。E=−x·z=0，两边均匀边缘分布下四种联合结果各1/4。必相反的结论要求双方同一自旋轴。这里0关联也不代表联合态不纠缠。</p></details>
+<details class="lesson-detail"><summary>3．测到00与11各半，是否已经证明违反贝尔不等式？</summary><p>没有。普通经典相关混合也能做到；需合适的多个设置，计算对应的不等式并检查实验条件。</p></details>
+<details class="lesson-detail" id="self-study-check"><summary>4．甲能否选择测量基，直接让乙读出甲的消息？</summary><p>单靠共享纠缠和甲的局部测量不能。对甲未告知的结果求和，乙的本地分布不变；比较关联要交换经典记录。</p></details>
+<p><strong>回顾：</strong>先选基写列矢 → 直积组合并归一化 → 对纯态查能否分解 → 求联合概率再求边缘概率 → 明确测量方向后算相关函数。下一节<a href="18.2.html">量子比特与不可克隆</a>继续使用这些向量记号；原H门连做两次的练习放到<a href="18.4.html">量子计算</a>的门运算中理解。教材配套练习见<a href="textbook-exercises-18.html">习题18</a>。</p>
+</main><div class="switch"><a href="index.html">← 返回目录</a><a href="18.2.html">下一节 →</a></div><p class="footer">主线：用户提供《大学物理（下册）》第七版纸312—318页。推导与新编练习为独立整理；补充实际阅读的EPR原文、Bell原文和IBM Quantum文字资料已在相关位置链接。未见出版社答案，未使用视频内容。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
