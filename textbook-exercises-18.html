@@ -1,77 +1,23 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学物理教材习题18逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="18.1.html">← 返回第十八章</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>第十八章教材习题逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">18-1 两个矩阵的张量积</a></li><li><a href="#exercise-2">18-2 为什么四个贝尔态是纠缠态</a></li><li><a href="#exercise-3">18-3 用量子概率举出贝尔不等式的违反</a></li><li><a href="#exercise-4">18-4 单侧泡利操作转换贝尔态</a></li><li><a href="#exercise-5">18-5 贝尔态是相同泡利矩阵直积的本征态</a></li><li><a href="#exercise-6">18-6 泡利矩阵作用于计算基</a></li><li><a href="#exercise-7">18-7 四比特寄存器</a></li><li><a href="#exercise-8">18-8 Hadamard 门</a></li><li><a href="#exercise-9">18-9 两输入位 Deutsch–Jozsa 算法</a></li></ol></details>
-<p>对应教材第 333—334 页，共 9 题。先区分“一个量子态的叠加”和“两系统的直积”：|01⟩ 是 |0⟩⊗|1⟩ 的简写。下文按教材独立编写，并非官方答案。</p>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学物理教材习题18逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}.formula{padding:14px;background:#f3f6f8;margin:1em 0;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:500px}td,th{padding:.5em;border:1px solid #ccd9df;text-align:left}.matrix td{white-space:nowrap}</style></head><body><main><nav><a href="18.1.html">← 返回第十八章</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>第十八章教材习题逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">18-1 两个矩阵的张量积</a></li><li><a href="#exercise-2">18-2 为什么四个贝尔态是纠缠态</a></li><li><a href="#exercise-3">18-3 用量子概率举出贝尔不等式的违反</a></li><li><a href="#exercise-4">18-4 单侧泡利操作转换贝尔态</a></li><li><a href="#exercise-5">18-5 贝尔态是相同泡利矩阵直积的本征态</a></li><li><a href="#exercise-6">18-6 泡利矩阵作用于计算基</a></li><li><a href="#exercise-7">18-7 四比特寄存器</a></li><li><a href="#exercise-8">18-8 Hadamard 门</a></li><li><a href="#exercise-9">18-9 两输入位 Deutsch–Jozsa 算法</a></li></ol></details>
+<p><strong>核对记录：</strong>已逐题目视对照用户提供《大学物理（下册）》第七版纸333—334页的9题。解答、推导与矩阵表为独立整理，全部矩阵作用和概率另行独立计算；未见出版社答案。18-3原题的计数与负号约定仍有歧义，下文明确标记所采用的标准对应例，不宣称唯一题解。</p><p>系统顺序保持左边比特在前，|01⟩=|0⟩⊗|1⟩；先展开振幅再取概率，表格在手机上可左右滑动。</p>
 <h2 id="exercise-1">18-1 两个矩阵的张量积</h2>
-<p>把 A 的每个元素依次乘以完整矩阵 B，再按 A 的位置排成四个 2×2 分块：</p>
-<p>A⊗B＝[[a₁₁B, a₁₂B], [a₂₁B, a₂₂B]]。</p>
-<p>展开后的四行依次是：</p>
-<ul>
-<li>a₁₁b₁₁，a₁₁b₁₂，a₁₂b₁₁，a₁₂b₁₂；</li>
-<li>a₁₁b₂₁，a₁₁b₂₂，a₁₂b₂₁，a₁₂b₂₂；</li>
-<li>a₂₁b₁₁，a₂₁b₁₂，a₂₂b₁₁，a₂₂b₁₂；</li>
-<li>a₂₁b₂₁，a₂₁b₂₂，a₂₂b₂₁，a₂₂b₂₂。</li>
-</ul>
-<p>结果为 4×4 矩阵，通常 A⊗B 与 B⊗A 不相等，系统排列顺序很重要。</p>
+<p><strong>题设：</strong>A、B各为一般2×2矩阵，求A⊗B。按联合基|00⟩、|01⟩、|10⟩、|11⟩的顺序，把A每个元素替换成该元素乘整个B：</p><div class="formula">A⊗B=[[a₁₁B,a₁₂B],[a₂₁B,a₂₂B]]。</div><p>完整4×4矩阵按行写如下；手机可左右滑动：</p><div class="table-wrap"><table class="matrix"><tbody><tr><td>a₁₁b₁₁</td><td>a₁₁b₁₂</td><td>a₁₂b₁₁</td><td>a₁₂b₁₂</td></tr><tr><td>a₁₁b₂₁</td><td>a₁₁b₂₂</td><td>a₁₂b₂₁</td><td>a₁₂b₂₂</td></tr><tr><td>a₂₁b₁₁</td><td>a₂₁b₁₂</td><td>a₂₂b₁₁</td><td>a₂₂b₁₂</td></tr><tr><td>a₂₁b₂₁</td><td>a₂₁b₂₂</td><td>a₂₂b₂₁</td><td>a₂₂b₂₂</td></tr></tbody></table></div><p>检查元素位置可用(A⊗B)<sub>(i,k),(j,l)</sub>=aᵢⱼbₖₗ；它应把(u⊗v)映为(Au)⊗(Bv)。不是把A与B逐元素相乘，也不是普通2×2矩阵积。一般A⊗B与B⊗A不相同。</p>
 <h2 id="exercise-2">18-2 为什么四个贝尔态是纠缠态</h2>
-<p>教材的四态可记为 Φ±＝(|00⟩±|11⟩)/√2，Ψ±＝(|01⟩±|10⟩)/√2。检验两比特纯态是否可写成单比特直积：把 |ψ⟩＝c₀₀|00⟩＋c₀₁|01⟩＋c₁₀|10⟩＋c₁₁|11⟩ 的系数排成 2×2 矩阵。若可分解为两个向量的外积，则行列式必须为零。</p>
-<p>Φ± 的行列式为 ±1/2，Ψ± 的行列式为 ∓1/2，均不为零，故四态均无法分解成两个单比特态的直积，都是<strong>纠缠态</strong>。两粒子测量结果相关并不能单独证明纠缠；这里用的是完整纯态的不可分解性。</p>
-<!-- 习题18-2步骤 --><p>为什么看行列式：若两比特态是 (u₀|0⟩＋u₁|1⟩)⊗(v₀|0⟩＋v₁|1⟩)，系数矩阵为 [[u₀v₀,u₀v₁],[u₁v₀,u₁v₁]]，两行成比例，行列式必为 0。贝尔态的对应行列式不为 0，因此不可能写成这种直积。这里讨论的是纯态；混合态的纠缠判据需要另外处理。</p><h2 id="exercise-3">18-3 用量子概率举出贝尔不等式的违反</h2>
-<p>扫描题中的 n(α,β)、n(β,−γ) 及“三个差值频率相等”没有在题目中清楚定义，不能仅凭题面把 −γ 一定解释成反方向角度或相反测量结果。下面给出清楚标注条件的标准对应例子，不把它当作题面唯一解释。</p>
-<p>取两自旋 1/2 粒子单态，令 P₊₊(a,b) 表示两侧沿方向 a、b 都测得“＋”的概率，则量子力学给出 P₊₊(a,b)＝½sin²[(a−b)/2]。局域预定结果且同方向完全反相关时，事件包含关系给出 P₊₊(a,b)≤P₊₊(a,c)＋P₊₊(c,b)。取共面方向 a＝0°、c＝60°、b＝120°，左右分别为 <strong>3/8</strong> 和 <strong>1/8＋1/8＝1/4</strong>，量子预测违反这个不等式。</p>
-<p>若按偏振纠缠光子的角度记法使用 P₊₊＝½sin²(a−b)，可取 0°、30°、60° 得相同数值。必须同时指定量子态、测量结果编码、角度和计数归一化，不能混用光子偏振角与自旋 1/2 的半角公式。违反的是推导不等式所用的一组局域预定结果等假设，并不意味着可以利用纠缠发送超光速消息。</p>
+<p><strong>题设：</strong>证明教材式(18.26)、(18.27)的四个贝尔态为纠缠态。先用<a href="18.1.html#tensor">二比特纯态判据</a>，不要仅以某一基下结果相关作证明。</p><p>若|ψ⟩=(u₀|0⟩+u₁|1⟩)⊗(v₀|0⟩+v₁|1⟩)，系数矩阵C=[[u₀v₀,u₀v₁],[u₁v₀,u₁v₁]]的行列式为u₀u₁v₀v₁−u₀u₁v₁v₀=0。四个贝尔态的矩阵为：</p><div class="formula">C<sub>Φ±</sub>=(1/√2)[[1,0],[0,±1]]，det=±1/2；<br>C<sub>Ψ±</sub>=(1/√2)[[0,1],[±1,0]]，det=∓1/2。</div><p>全部非零，因此不能分解为两个单体纯态直积，均纠缠。作为另一次检查，各自单方约化态都是I/2，纯度Trρ²=1/2而非1；这与联合态纯、局部混合相符。这里的行列式判据只针对二比特纯态。</p>
+<h2 id="exercise-3">18-3 用量子概率举出贝尔不等式的违反</h2>
+<p><strong>扫描题意及歧义：</strong>题目要求给出某些偏振角，使所列贝尔不等式不成立。但其中n(α,β)、n(β,−γ)的计数含义，以及“三个差值频率应相等”一句，没有清楚定义；−γ也可能涉及方向或相反结果的约定。若把不同设置的实际相关频率强行设为全相等，就已排除了角度依赖，不能同时拿量子角度函数代入。本页不把猜测当成教材确定含义。</p><p>下面给出<strong>条件明确的标准对应解</strong>，展示题目要检验的物理差别，不能冒称原题唯一解释。</p><h3>先证明所用的局域模型不等式</h3><p>假定两侧结果在三个方向a、b、c已预定，且同方向完全反相关，设置选择独立、抽样可比。记A侧预定值s(a)=±1，B侧同方向为−s(a)。事件“A在a为+，B在b为+”等价于s(a)=+、s(b)=−。对s(c)分两种：</p><ul><li>若s(c)=−，则事件“A在a为+，B在c为+”成立。</li><li>若s(c)=+，则事件“A在c为+，B在b为+”成立。</li></ul><p>所以前一事件包含于后两事件的并集，故：</p><div class="formula">P₊₊(a,b)≤P₊₊(a,c)+P₊₊(c,b)。</div><h3>再代量子概率，而不是沿用预定标签</h3><p>取两光路的偏振单态(|HV⟩−|VH⟩)/√2，测“+”为通过方向θ的线偏振检验，|θ⟩=cosθ|H⟩+sinθ|V⟩。直接投影：</p><div class="formula">⟨a,b|Ψ⁻⟩<br>=[cosa sinb−sina cosb]/√2<br>=sin(b−a)/√2，<br>P₊₊(a,b)=(1/2)sin²(a−b)。</div><p>选a=0°、c=30°、b=60°，则左边=(1/2)sin²60°=3/8，右边=(1/2)sin²30°+(1/2)sin²30°=1/4，出现<strong>3/8&gt;1/4</strong>的违反。同一归一化常数下换成计数，两边同乘样本数，不改不等号。</p><p>若改用自旋1/2的空间方向，公式是P₊₊=(1/2)sin²[(a−b)/2]，应换成0°、60°、120°才得相同数值；不能混用两种角。具体实验还需相应设置与探测条件，不能把任何随意筛选的计数都当成上述概率。教材原题的−γ及计数约定未确认，本解保留这一限制，不擅自删符号。关于更明确的四设置CHSH推导见<a href="18.1.html#s3">18.1</a>。</p>
 <h2 id="exercise-4">18-4 单侧泡利操作转换贝尔态</h2>
-<p>只对第一比特操作，以 Φ＋ 为起点：I⊗I 得 Φ＋；Z⊗I 得 Φ−；X⊗I 得 Ψ＋；Y⊗I 得 −iΨ−。最后的 −i 是整体相位，不改变可观测状态。因此对一个子系统选择 I、X、Y、Z 即可在四个贝尔态之间转换，密集编码利用了这一性质。</p>
+<p><strong>题设：</strong>对一个子系统加泡利操作，证明四个贝尔态可相互转换。固定只操作第一个比特，即X⊗I、Y⊗I、Z⊗I。</p><p>以Φ⁺为例，X把00、11分别变为10、01，所以得到Ψ⁺；Z使11多负号，得到Φ⁻；Y给i|10⟩−i|01⟩，得到−iΨ⁻。全部转换逐项展开为：</p><div class="table-wrap"><table><thead><tr><th>输入</th><th>X⊗I</th><th>Y⊗I</th><th>Z⊗I</th></tr></thead><tbody><tr><td>Φ⁺</td><td>Ψ⁺</td><td>−iΨ⁻</td><td>Φ⁻</td></tr><tr><td>Φ⁻</td><td>−Ψ⁻</td><td>iΨ⁺</td><td>Φ⁺</td></tr><tr><td>Ψ⁺</td><td>Φ⁺</td><td>−iΦ⁻</td><td>Ψ⁻</td></tr><tr><td>Ψ⁻</td><td>−Φ⁻</td><td>iΦ⁺</td><td>Ψ⁺</td></tr></tbody></table></div><p>每行再含I⊗I保持原态，因此从任意一态都可到另外三态，表中的±1、±i都是该次输出的整体相位，不改变物理态。若换操作第二个比特，一些整体号会变，应从系统顺序重算；不能照搬分量的相对负号。</p>
 <h2 id="exercise-5">18-5 贝尔态是相同泡利矩阵直积的本征态</h2>
-<p>依次计算 X⊗X、Y⊗Y、Z⊗Z 的本征值：</p>
-<table>
-<thead>
-<tr>
-<th>态</th>
-<th align="right">X⊗X</th>
-<th align="right">Y⊗Y</th>
-<th align="right">Z⊗Z</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Φ＋</td>
-<td align="right">＋1</td>
-<td align="right">−1</td>
-<td align="right">＋1</td>
-</tr>
-<tr>
-<td>Φ−</td>
-<td align="right">−1</td>
-<td align="right">＋1</td>
-<td align="right">＋1</td>
-</tr>
-<tr>
-<td>Ψ＋</td>
-<td align="right">＋1</td>
-<td align="right">＋1</td>
-<td align="right">−1</td>
-</tr>
-<tr>
-<td>Ψ−</td>
-<td align="right">−1</td>
-<td align="right">−1</td>
-<td align="right">−1</td>
-</tr>
-</tbody></table>
-<p>例如 X 会交换 |0⟩ 与 |1⟩，故 (X⊗X)Φ＋＝Φ＋；其余结果按线性叠加逐项计算，注意 Y|0⟩＝i|1⟩、Y|1⟩＝−i|0⟩。</p>
+<p><strong>题设：</strong>证明贝尔态是相同泡利矩阵张量积的本征向量，即X⊗X、Y⊗Y、Z⊗Z。先对计算基写作用：</p><div class="formula">X⊗X：00↔11，01↔10；<br>Y⊗Y：00→−11，11→−00，01→10，10→01；<br>Z⊗Z：00→00，11→11，01→−01，10→−10。</div><p>Y的两个相位要相乘，例如i·i=−1，i·(−i)=+1。把四态分别代入得到：</p><div class="table-wrap"><table><thead><tr><th>态</th><th>X⊗X</th><th>Y⊗Y</th><th>Z⊗Z</th></tr></thead><tbody><tr><td>Φ⁺</td><td>+1</td><td>−1</td><td>+1</td></tr><tr><td>Φ⁻</td><td>−1</td><td>+1</td><td>+1</td></tr><tr><td>Ψ⁺</td><td>+1</td><td>+1</td><td>−1</td></tr><tr><td>Ψ⁻</td><td>−1</td><td>−1</td><td>−1</td></tr></tbody></table></div><p>例如(Y⊗Y)Φ⁺=(−|11⟩−|00⟩)/√2=−Φ⁺，故该格为−1。这些是无量纲泡利本征值，不是单粒子自旋±ℏ/2。三种<strong>联合</strong>算符两两对易，虽各单侧X、Y、Z不对易；其乘积为−I，因此每行三个本征值相乘都为−1，可独立查表中符号。</p>
 <h2 id="exercise-6">18-6 泡利矩阵作用于计算基</h2>
-<p>X|0⟩＝|1⟩，X|1⟩＝|0⟩；Y|0⟩＝i|1⟩，Y|1⟩＝−i|0⟩；Z|0⟩＝|0⟩，Z|1⟩＝−|1⟩。X 翻转计算基，Z 改变 |1⟩ 的相对符号；Y 同时翻转并引入相位。</p>
+<p><strong>题设：</strong>|0⟩=(1,0)ᵀ、|1⟩=(0,1)ᵀ，计算三个泡利矩阵的作用。矩阵乘第一基列向量，相当于取矩阵第一列，乘第二基列向量取第二列：</p><div class="formula">X|0⟩=(0,1)ᵀ=|1⟩，X|1⟩=(1,0)ᵀ=|0⟩；<br>Y|0⟩=(0,i)ᵀ=i|1⟩，Y|1⟩=(−i,0)ᵀ=−i|0⟩；<br>Z|0⟩=(1,0)ᵀ=|0⟩，Z|1⟩=(0,−1)ᵀ=−|1⟩。</div><p>取任一输入先做两次X、Y或Z，应回原态，验证各自平方为I。Y的两个输出相位相反，在叠加态中不能全部当作一个相同整体相位删掉；Z不是翻转0/1标签。</p>
 <h2 id="exercise-7">18-7 四比特寄存器</h2>
-<p>四个 (|0⟩−|1⟩)/√2 相乘后，得到所有 16 个四位二进制基态的叠加；振幅为 (−1)ʷ/4，其中 w 是该二进制串中 1 的个数。因此在计算基测量时，十进制 <strong>0 至 15</strong> 都可能出现，每个结果概率均为 <strong>1/16</strong>。一次测量只能得到其中一个结果，不能一次读出全部 16 个数。</p>
-<!-- 习题18-7步骤 --><p>每个比特有 0、1 两种计算基结果，四个比特共有 2⁴＝16 个基态。每次展开乘入一项时都带 1/√2，四次相乘得振幅绝对值 (1/√2)⁴＝1/4；测量概率是模平方 1/16。负号改变相位，不改变单个计算基结果的直接测量概率，但可能影响后续干涉。</p><h2 id="exercise-8">18-8 Hadamard 门</h2>
-<p>H＝(1/√2)[[1,1],[1,−1]]，所以 H|0⟩＝(|0⟩＋|1⟩)/√2，H|1⟩＝(|0⟩−|1⟩)/√2。将 q＝0、1 分别代入教材表达式 [|1−q⟩＋(−1)ᑫ|q⟩]/√2，恰好得到这两个结果。也常写作 [|0⟩＋(−1)ᑫ|1⟩]/√2；两式在 q＝0、1 时一致。</p>
+<p><strong>题设：</strong>四个|−⟩=(|0⟩−|1⟩)/√2的直积可表示哪些十进制数？按左高右低的四位顺序。</p><p>每个比特取0或1，共2⁴=16种基串；四次分母相乘为(√2)⁴=4。每选择一个1就多一个负号，振幅为(−1)<sup>w(x)</sup>/4，w(x)是串中1的个数：</p><div class="formula">|ψ⟩=(1/4)Σₓ₌₀¹⁵(−1)<sup>w(x)</sup>|x⟩<br>=(1/4)(|0⟩−|1⟩−|2⟩+|3⟩−|4⟩+|5⟩<br>+|6⟩−|7⟩−|8⟩+|9⟩+|10⟩−|11⟩<br>+|12⟩−|13⟩−|14⟩+|15⟩)。</div><p>最后一式|x⟩的标签用十进制，如|3⟩指四比特|0011⟩，不是单比特有16个内部标签。<strong>0至15全有非零振幅</strong>，计算基概率各1/16，总和1；一次测量只得其中一个值。这个均匀分布不能区别|−⟩<sup>⊗4</sup>与|+⟩<sup>⊗4</sup>，相位可通过再加H<sup>⊗4</sup>看出：前者必得1111，后者必得0000。</p>
+<h2 id="exercise-8">18-8 Hadamard 门</h2>
+<p><strong>题设：</strong>证明H|q⟩=[|1−q⟩+(−1)ᑫ|q⟩]/√2，q=0、1。</p><ol><li>q=0：右边为(|1⟩+|0⟩)/√2，等于H矩阵第一列(1,1)ᵀ/√2。</li><li>q=1：右边为(|0⟩−|1⟩)/√2，等于H矩阵第二列(1,−1)ᵀ/√2。</li></ol><p>两个基向量都成立，故对它们的线性组合也成立。常用另一式H|q⟩=[|0⟩+(−1)ᑫ|1⟩]/√2也在q=0、1时给同样结果；不要把q当任意实数去延拓两个离散标签。用H†H=H²=I再检查输出归一与正交。</p>
 <h2 id="exercise-9">18-9 两输入位 Deutsch–Jozsa 算法</h2>
-<p>前提：f:{0,1}²→{0,1} 已保证为常函数或平衡函数（四个输入中两个输出 0、两个输出 1）。</p>
-<ol>
-<li>准备 |00⟩|1⟩，对三个比特都作用 H，得到 (1/2)Σₓ|x⟩⊗(|0⟩−|1⟩)/√2。</li>
-<li>调用一次 U_f：|x,y⟩→|x,y⊕f(x)⟩。辅助比特不变，输入各项获得相位 (−1)ᶠ⁽ˣ⁾。</li>
-<li>只对两个输入比特再作用 H⊗H。此时 |00⟩ 的振幅为 (1/4)Σₓ(−1)ᶠ⁽ˣ⁾。</li>
-<li>测量输入寄存器：若 f 为常函数，该振幅为 ±1，必得 <strong>00</strong>；若 f 为平衡函数，振幅为 0，必得<strong>非 00</strong>。</li>
-</ol>
-<p>例如 f(x₁,x₂)＝x₁ 时测得 10；实际输出所用比特顺序应与线路约定一致。算法区分的是题目保证的两类函数，不是恢复函数全部四个值。</p>
+<p><strong>题设：</strong>给出n=2的Deutsch–Jozsa步骤。输入函数f:{0,1}²→{0,1}已承诺为常函数或平衡函数，后者四个输入恰有两个0、两个1。系统顺序为输入x₁、x₂在前，辅助y在后。</p><ol><li><strong>制备：</strong>|00⟩|1⟩，共3个量子比特，不是只需两个物理比特。</li><li><strong>叠加：</strong>对三比特各加H，输入为(1/2)(|00⟩+|01⟩+|10⟩+|11⟩)，辅助为|−⟩。</li><li><strong>查询一次：</strong>U<sub>f</sub>|x,y⟩=|x,y⊕f(x)⟩。因X|−⟩=−|−⟩，输入变为(1/2)Σₓ(−1)<sup>f(x)</sup>|x⟩，辅助仍可提出为|−⟩。</li><li><strong>干涉：</strong>仅对两个输入加H⊗H。由H<sup>⊗2</sup>|x⟩=(1/2)Σ<sub>z</sub>(−1)<sup>x₁z₁+x₂z₂</sup>|z⟩，最终输入振幅为A(z)=(1/4)Σₓ(−1)<sup>f(x)+x₁z₁+x₂z₂</sup>。</li><li><strong>读出：</strong>z=00时A(00)=(1/4)Σₓ(−1)<sup>f(x)</sup>。常函数给±1，必测00；平衡函数给0，必测非00。无需读取辅助比特。</li></ol><p>为核对符号，把n=2全部承诺函数列出。真值串按输入00、01、10、11排序；每行两次输入H后在理想线路中输出如下：</p><div class="table-wrap"><table><thead><tr><th>真值串</th><th>函数写法</th><th>类别</th><th>输入测量必得</th></tr></thead><tbody><tr><td>0000</td><td>0</td><td>常</td><td>00</td></tr><tr><td>1111</td><td>1</td><td>常</td><td>00</td></tr><tr><td>0011</td><td>x₁</td><td>平衡</td><td>10</td></tr><tr><td>1100</td><td>1⊕x₁</td><td>平衡</td><td>10</td></tr><tr><td>0101</td><td>x₂</td><td>平衡</td><td>01</td></tr><tr><td>1010</td><td>1⊕x₂</td><td>平衡</td><td>01</td></tr><tr><td>0110</td><td>x₁⊕x₂</td><td>平衡</td><td>11</td></tr><tr><td>1001</td><td>1⊕x₁⊕x₂</td><td>平衡</td><td>11</td></tr></tbody></table></div><p>例如f=x₁时，查询后的输入=(|00⟩+|01⟩−|10⟩−|11⟩)/2=|−⟩|+⟩，再加H⊗H成为|10⟩。互补函数仅改整体相位，故同样输出。n=2的六个平衡函数都在表中；n更大时，平衡函数不必只输出某一个确定的非零串，能保证的是全0概率为0。</p><p>经典确定性最坏查询3次，量子理想黑箱只查询1次；这比较的是查询资源，不包括构造任意黑箱的全部成本。若没承诺函数非恒定就一定平衡，一次测到00不再足以作同样确定的判断。</p>
 <h2 id="exercise-10">补充资料</h2>
 <p>有关量子态、矩阵和线路的基础可参阅 <a href="https://learning.quantum.ibm.com/">IBM Quantum Learning</a>；本页使用理想无噪声模型。</p>
 <nav><a href="18.1.html">返回第十八章</a> · <a href="study-resources.html">自学资料目录</a></nav></main></body></html>
