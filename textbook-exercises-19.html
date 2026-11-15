@@ -1,23 +1,40 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学物理教材习题19逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}</style></head><body><main><nav><a href="19.1.html">← 返回第十九章</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>第十九章教材习题逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">19-1 根据转动谱线求原子间距</a></li><li><a href="#exercise-2">19-2 CO 分子的等效劲度系数</a></li><li><a href="#exercise-3">19-3 金的费米能量、速度、温度与波长</a></li><li><a href="#exercise-4">19-4 零温电子气的平均能量</a></li><li><a href="#exercise-5">19-5 银中的碰撞时间与平均自由程</a></li></ol></details>
-<p>对应教材第 358 页，共 5 题。分子题先计算约化质量；金属题的数值依赖自由电子模型和每个原子贡献的导电电子数。以下是独立整理，不是官方答案。</p>
-<h2 id="exercise-1">19-1 根据转动谱线求原子间距</h2>
-<p>理想刚性转子的转动能级 E_J＝ħ²J(J＋1)/(2I)，I＝μr²。若相邻观察到的谱线对应连续的 ΔJ＝1 跃迁，则相邻频率间隔 Δν＝h/(4π²I)。代入 Δν＝8.6×10¹⁰ Hz，得 I≈1.95×10⁻⁴⁶ kg·m²。</p>
-<p>等质量的两个氧原子组成分子，约化质量 μ＝m_O/2＝1.33×10⁻²⁶ kg，故 r＝√(I/μ)≈<strong>1.21×10⁻¹⁰ m＝0.121 nm</strong>。</p>
-<p>这个结果明确依赖题目默认的连续 ΔJ＝1 刚性转子谱线间距。氧分子没有永久电偶极矩，通常不表现普通永久偶极纯转动电偶极谱；真实谱线还受跃迁机制、选择定则和分子结构影响，不能把这个理想推算当成任意实测谱线都适用的公式。</p>
-<h2 id="exercise-2">19-2 CO 分子的等效劲度系数</h2>
-<p>碳、氧原子的质量近似 12u、16u，μ＝12×16u/(12＋16)≈1.14×10⁻²⁶ kg。谐振模型中 ν＝(1/2π)√(k/μ)，因此 k＝μ(2πν)²。代入 6.42×10¹³ Hz 得 <strong>k≈1.85×10³ N/m</strong>。这里是平衡位置附近的小振动近似。</p>
-<!-- 习题19-2步骤 --><p>先计算约化质量 μ＝m_Cm_O/(m_C＋m_O)，使用 1 u≈1.66×10⁻²⁷ kg。把给定频率转为角频率 ω＝2πν，再由简谐振动关系 ω²＝k/μ 得 k＝μ(2πν)²。频率和角频率相差 2π，若直接用 k＝μν² 会少一个 (2π)² 因子。</p><h2 id="exercise-3">19-3 金的费米能量、速度、温度与波长</h2>
-<p>假定每个金原子贡献 1 个自由电子，密度 ρ＝1.93×10⁴ kg/m³，摩尔质量 M≈0.19697 kg/mol。电子数密度 n＝ρN_A/M≈5.90×10²⁸ m⁻³。</p>
-<p>三维自由电子气中 k_F＝(3π²n)¹ᐟ³，E_F＝ħ²k_F²/(2mₑ)，v_F＝ħk_F/mₑ，T_F＝E_F/k_B。代入得 <strong>E_F≈5.53 eV，v_F≈1.39×10⁶ m/s，T_F≈6.41×10⁴ K</strong>。相应德布罗意波长 λ_F＝2π/k_F≈<strong>5.22×10⁻¹⁰ m</strong>。</p>
-<p>费米温度是用能量除以玻尔兹曼常数得到的温度尺度，不是说金属实际处在这个温度。若假设每原子贡献的自由电子数不同，结果也会改变。</p>
-<h2 id="exercise-4">19-4 零温电子气的平均能量</h2>
-<p>三维自由电子气每单位体积的能态密度 g(E)∝√E。0 K 时从 E＝0 填充到 E_F，故电子数密度 n＝∫₀ᴱᶠg(E)dE，而能量密度 u＝∫₀ᴱᶠE g(E)dE。</p>
-<p>分别积分后比值为 u/n＝[(2/5)E_F⁵ᐟ²]/[(2/3)E_F³ᐟ²]＝<strong>3E_F/5</strong>。因此总能量每单位体积 <strong>u＝3nE_F/5</strong>，每个电子的平均能量 <strong>3E_F/5</strong>。这里以自由电子能带底为零点，忽略电子间相互作用等修正。</p>
-<!-- 习题19-4步骤 --><p>将每个能量附近的状态数写成 g(E)dE，零温时只填充 0 到 E_F。总粒子数与 ∫₀ᴱᶠE^(1/2)dE 成正比，总能量与 ∫₀ᴱᶠE^(3/2)dE 成正比；同一比例常数相除后抵消，于是平均能量为 (2E_F^(5/2)/5)/(2E_F^(3/2)/3)＝3E_F/5。这里的 E_F 是费米能量，不是所有电子都具有同一个能量。</p><h2 id="exercise-5">19-5 银中的碰撞时间与平均自由程</h2>
-<p>按每个银原子提供一个自由电子，取摩尔质量 M≈0.10787 kg/mol，由 n＝ρN_A/M 得 n≈5.86×10²⁸ m⁻³。德鲁德模型中电阻率 ρ电＝mₑ/(ne²τ)，故 <strong>τ≈3.78×10⁻¹⁴ s</strong>。注意题中的质量密度与电阻率都常用希腊字母 ρ，不要混淆。</p>
-<p>经典估计需约定“热速率”的定义。若把室温取 300 K，使用麦克斯韦分布平均速率 v̄＝√[8k_BT/(πmₑ)]≈1.08×10⁵ m/s，则经典自由程 <strong>ℓ经典＝v̄τ≈4.07×10⁻⁹ m</strong>；若使用均方根速率 √(3k_BT/mₑ)，则约 4.42×10⁻⁹ m。题目只说室温，温度或速率口径不同会略有不同。</p>
-<p>自由电子气费米速率 v_F＝ħ(3π²n)¹ᐟ³/mₑ≈1.39×10⁶ m/s，故 <strong>ℓ_F＝v_Fτ≈5.26×10⁻⁸ m</strong>。</p>
-<p>点阵原子间距的粗估可取 d≈n原子⁻¹ᐟ³≈<strong>2.57×10⁻¹⁰ m</strong>；按此口径，经典自由程约 16d，费米自由程约 204d。n⁻¹ᐟ³ 只是平均体积对应的长度，不是晶体最近邻间距的精确值。τ 是输运弛豫时间的模型估计；这两种速度代入所得自由程也都是相应模型下的估算。</p>
-<h2 id="exercise-6">补充阅读</h2>
-<p>转动能级、电子气和固体能带可参阅 <a href="https://openstax.org/books/university-physics-volume-3/pages/9-2-molecular-spectra">OpenStax：分子光谱</a> 和 <a href="https://openstax.org/books/university-physics-volume-3/pages/9-4-free-electron-model-of-metals">OpenStax：自由电子模型</a>。具体谱线和材料参数仍应以题设及适用模型为准。</p>
-<nav><a href="19.1.html">返回第十九章</a> · <a href="study-resources.html">自学资料目录</a></nav></main></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>大学物理教材习题19逐题讲解</title><style>*{box-sizing:border-box}body{margin:0;background:#edf2f7;color:#213147;font:17px/1.85 system-ui,'Microsoft YaHei',sans-serif;overflow-wrap:anywhere}main{max-width:760px;margin:auto;background:#fff;padding:22px 20px 80px}h1,h2,h3{color:#174b74;line-height:1.4}h2{margin-top:2em;border-bottom:2px solid #dce9f2}a{color:#145e96}nav{padding:14px;background:#eaf3fa;border-radius:10px}@media print{body{background:#fff}main{padding:0}}.exercise-index{margin:1em 0 1.5em;padding:12px 16px;background:#f2f7fa;border:1px solid #dbe8ef;border-radius:9px}.exercise-index summary{cursor:pointer;color:#174b74;font-weight:700}.exercise-index summary span{font-size:.85em;font-weight:400;color:#526d80}.exercise-index ol{padding-left:1.5em;margin:.7em 0 0}.exercise-index li{margin:.35em 0}.exercise-index a{text-decoration:none}.exercise-index a:hover{text-decoration:underline}.formula{padding:14px;background:#f4f7fa;overflow-wrap:anywhere}.table-wrap{overflow-x:auto}table{width:100%;min-width:520px;border-collapse:collapse}td,th{border:1px solid #ccd9df;padding:.5em;text-align:left}.answer{border-left:3px solid #7ea4ba;padding-left:12px}</style></head><body><main><nav><a href="19.1.html">← 返回第十九章</a> · <a href="study-resources.html">自学资料目录</a></nav><h1>第十九章教材习题逐题讲解</h1><details class="exercise-index"><summary>按题号查看目录 <span>（点击展开）</span></summary><ol><li><a href="#exercise-1">19-1 根据转动谱线求原子间距</a></li><li><a href="#exercise-2">19-2 CO 分子的等效劲度系数</a></li><li><a href="#exercise-3">19-3 金的费米能量、速度、温度与波长</a></li><li><a href="#exercise-4">19-4 零温电子气的平均能量</a></li><li><a href="#exercise-5">19-5 银中的碰撞时间与平均自由程</a></li></ol></details>
+<p><strong>核对说明：</strong>5题均已目视对照扫描教材纸358页；题意以下为便于阅读的独立整理，不是出版社排版原文。5题推导及相应数值已独立复算，未见出版社答案，不能称已与官方答案核对。分子谱线的跃迁机制、金银每原子导电电子数和室温取值不足处，均在题内说明。</p>
+<p>本页用h=6.62607015×10⁻³⁴J·s，ℏ=h/(2π)，mₑ≈9.1094×10⁻³¹kg，e=1.602176634×10⁻¹⁹C，k<sub>B</sub>=1.380649×10⁻²³J/K，N<sub>A</sub>=6.02214076×10²³mol⁻¹；补充摩尔质量与模型假设不冒称题面都已给出。末位差异可能来自常数取舍。</p>
+<h2 id="exercise-1">19-1 根据转动谱线求氧分子两核间距</h2>
+<p><strong>题设：</strong>氧分子相邻两转动谱线的频率差δν=8.6×10¹⁰Hz，氧原子质量m<sub>O</sub>=2.66×10⁻²⁶kg，求两原子间距。</p>
+<h3>先把所用光谱模型说清</h3>
+<p>如果按教材前文的理想刚性转子、观察到连续j→j+1的一串线，那么I=μR₀²、Eⱼ=ℏ²j(j+1)/(2I)，光子频率为：</p><div class="formula">νⱼ=ℏ²(j+1)/(Ih)=h(j+1)/(4π²I)；<br>δν=νⱼ₊₁−νⱼ=h/(4π²I)。</div>
+<p>δν是<strong>两条谱线的频率差</strong>，不是某一条线的频率，不可直接写成Eⱼ=hδν。先求I：</p><div class="formula">I=h/(4π²δν)<br>=6.62607×10⁻³⁴/[4π²×8.6×10¹⁰]<br>≈1.9516×10⁻⁴⁶kg·m²。</div>
+<p>同质量双原子约化质量为μ=m<sub>O</sub>/2=1.33×10⁻²⁶kg；每核到质心距离为R₀/2。因此：</p><div class="formula">R₀=√(I/μ)<br>=√[(1.9516×10⁻⁴⁶)/(1.33×10⁻²⁶)]<br>≈1.211×10⁻¹⁰m=0.121nm。</div>
+<p class="answer"><strong>教材简化模型下的条件解：R₀≈0.121nm。</strong>单位检查I/μ为m²，数量级是原子尺度；回代h/(4π²μR₀²)恢复给定频率间隔。</p>
+<p><strong>必须保留的题意限制：</strong>O₂无永久电偶极矩，不能把它当成普通极性双原子分子的电偶极纯转动谱；氧分子的自旋、核对称性与具体跃迁机制还会改变实际线系。题面未说明探测机制/允许线序列，本题只能按教材隐含的连续Δj=1模型给上述条件结果，不能冒称已经从任意实测氧谱唯一反推出键长。若线系并非这一序列，须重新推δν与I的关系；不能只因数值像键长就跳过物理检查。相关说明见<a href="19.2.html#h2">19.2教材例的选择定则</a>。</p>
+<h2 id="exercise-2">19-2 CO分子两核间的等效劲度系数</h2>
+<p><strong>题设：</strong>CO分子的振动频率ν=6.42×10¹³Hz，求等效刚度/劲度系数k。按小振动、取主要同位素质量m<sub>C</sub>≈12u、m<sub>O</sub>≈16u，1u≈1.66054×10⁻²⁷kg；这些原子质量是计算所用补充近似。</p>
+<p>两粒子相对坐标的动力学是μq̈=−kq，不能只用碳或氧一方质量。先算：</p><div class="formula">μ=m<sub>C</sub>m<sub>O</sub>/(m<sub>C</sub>+m<sub>O</sub>)<br>=(12×16/28)u≈1.13866×10⁻²⁶kg；<br>ω=2πν≈4.0338×10¹⁴s⁻¹；<br>k=μω²≈(1.13866×10⁻²⁶)(4.0338×10¹⁴)²<br>≈1.8528×10³N/m。</div>
+<p class="answer"><strong>k≈1.85×10³N/m。</strong>kg·s⁻²=N/m；回代√(k/μ)/(2π)得6.42×10¹³Hz。若直接用k=μν²，会漏(2π)²；若ν不是近似谐振基频而含明显非谐修正，这个k只是相应模型的等效值。</p>
+<h2 id="exercise-3">19-3 金的费米能量、速度、温度与波长</h2>
+<p><strong>题设：</strong>金密度19.3g/cm³，求E<sub>F</sub>、v<sub>F</sub>、T<sub>F</sub>及费米能量电子的德布罗意波长。</p>
+<p><strong>模型和补充量：</strong>按三维非相对论自由电子气，每个金原子贡献z=1个导电电子，取摩尔质量M≈196.97g/mol。题面未明列z；这是标准入门近似，不是从密度单独推出的唯一事实，真实能带会修正。</p>
+<div class="formula">ρ=19.3g/cm³=1.93×10⁴kg/m³，<br>M=0.19697kg/mol；<br>n=zρN<sub>A</sub>/M<br>≈5.9008×10²⁸m⁻³。</div>
+<p>先算k<sub>F</sub>=(3π²n)¹ᐟ³≈1.2044×10¹⁰m⁻¹，再逐项代入，避免各步重复开分数次幂：</p>
+<div class="table-wrap"><table><thead><tr><th>量</th><th>代入关系</th><th>结果</th></tr></thead><tbody><tr><td>费米能</td><td>E<sub>F</sub>=ℏ²k<sub>F</sub>²/(2mₑ)</td><td>8.855×10⁻¹⁹J≈5.527eV</td></tr><tr><td>费米速度</td><td>v<sub>F</sub>=ℏk<sub>F</sub>/mₑ</td><td>1.394×10⁶m/s</td></tr><tr><td>费米温度</td><td>T<sub>F</sub>=E<sub>F</sub>/k<sub>B</sub></td><td>6.414×10⁴K</td></tr><tr><td>费米波长</td><td>λ<sub>F</sub>=h/(mₑv<sub>F</sub>)=2π/k<sub>F</sub></td><td>5.217×10⁻¹⁰m≈0.522nm</td></tr></tbody></table></div>
+<p><strong>独立检查：</strong>mₑv<sub>F</sub>²/2回到E<sub>F</sub>；波长必须用h/p，若写ℏ/p会少2π。v<sub>F</sub>/c≈0.00465，非相对论假设在此自洽。T<sub>F</sub>是能量尺度，不是金样品实际被加热到6万K；平衡时净电流仍可为0。</p>
+<p>若模型选其他z，则n∝z、E<sub>F</sub>∝z²ᐟ³、v<sub>F</sub>∝z¹ᐟ³、λ<sub>F</sub>∝z⁻¹ᐟ³，说明补充假设怎样影响结果。<a href="19.3.html#s1">19.3填充推导</a>给出这些关系的来由。</p>
+<h2 id="exercise-4">19-4 零温自由电子的总能量和平均能量</h2>
+<p><strong>题设：</strong>求0K时单位体积自由电子总能量及每电子平均能量。采用三维自由电子、两自旋、宏观连续近似，以抛物带底为能量零点。</p>
+<p>记每体积每能量态密度g(E)=C√E，C=(2mₑ)³ᐟ²/(2π²ℏ³)。零温E&lt;E<sub>F</sub>占满、以上空；并不是每个电子都恰有E<sub>F</sub>。</p><div class="formula">n=∫₀ᴱᶠC E¹ᐟ²dE=(2C/3)E<sub>F</sub>³ᐟ²；<br>u=∫₀ᴱᶠE·C E¹ᐟ²dE<br>=(2C/5)E<sub>F</sub>⁵ᐟ²；<br>u/n=[(2C/5)E<sub>F</sub>⁵ᐟ²]/[(2C/3)E<sub>F</sub>³ᐟ²]<br>=(3/5)E<sub>F</sub>。</div>
+<p class="answer"><strong>单位体积总能量u=(3/5)nE<sub>F</sub>，每电子平均能量Ē=(3/5)E<sub>F</sub>。</strong>若体积为V，则总能量U=uV=(3/5)NE<sub>F</sub>，不可把U、u和平均量混用。</p>
+<p>单位分别为J/m³、J、J。平均值0.6E<sub>F</sub>在0与E<sub>F</sub>之间，是合理范围；零温能量非零来自填充，不是热运动能3kT/2。若能量零点整体平移E₀，平均量也平移E₀，u增加nE₀；本结果应连同“以带底为0”使用。</p>
+<h2 id="exercise-5">19-5 银的弛豫时间、两种自由程与原子间距</h2>
+<p><strong>题设：</strong>银质量密度ρ<sub>m</sub>=1.05×10⁴kg/m³，室温电阻率ρ<sub>el</sub>=1.6×10⁻⁸Ω·m；依次求(1)自由飞行时间，(2)经典平均自由程，(3)用费米速率求自由程，(4)估原子间距并比较。</p>
+<p>按每原子一个导电电子、M<sub>Ag</sub>≈107.87g/mol补充计算；室温取300K。将题称的“自由飞行时间”在所用电导模型中解释为输运动量弛豫时间τ，不冒称所有散射事件有同一间隔。两个ρ物理意义与单位不同，先分符号：</p><div class="formula">n=ρ<sub>m</sub>N<sub>A</sub>/M<sub>Ag</sub><br>≈5.8619×10²⁸m⁻³；<br>σ=1/ρ<sub>el</sub>=6.25×10⁷S/m。</div>
+<h3>（1）从实测电阻率倒求τ</h3><p>σ=ne²τ/mₑ，所以：</p><div class="formula">τ=mₑ/(ne²ρ<sub>el</sub>)<br>=(9.1094×10⁻³¹)/[(5.8619×10²⁸)(1.60218×10⁻¹⁹)²(1.6×10⁻⁸)]<br>≈3.784×10⁻¹⁴s。</div>
+<p>这是以同一自由电子/常τ模型从ρ<sub>el</sub>反演的参数，不是单独跟踪电子测到的碰撞钟表。回代给6.25×10⁷S/m。</p>
+<h3>（2）经典平均速率口径</h3><p>若用麦克斯韦分布平均<strong>速率</strong>（不是平均速度矢量）：</p><div class="formula">v̄=√[8k<sub>B</sub>T/(πmₑ)]≈1.076×10⁵m/s；<br>ℓ<sub>经典</sub>=v̄τ≈4.071×10⁻⁹m=4.07nm。</div><p>若课堂采用均方根速率v<sub>rms</sub>=√(3k<sub>B</sub>T/mₑ)≈1.168×10⁵m/s，则相应估计4.42nm。题面只说“室温”和“经典平均”，没有进一步指定口径；这里明确选300K与平均速率，保留另一口径，不伪造唯一末位。</p>
+<h3>（3）费米速率口径</h3><div class="formula">v<sub>F</sub>=ℏ(3π²n)¹ᐟ³/mₑ≈1.391×10⁶m/s；<br>ℓ<sub>F</sub>=v<sub>F</sub>τ≈5.264×10⁻⁸m=52.6nm。</div><p>它约为经典平均速率估计的12.93倍。在简并金属中，费米面附近的速度才是相应输运尺度；教材要求对照两种模型，不等于两者在银中都同样准确。这里τ均由给定同一电阻率反演，不能再据自由程不同说重新测出了两种电阻率。</p>
+<h3>（4）平均体积给出的长度尺度</h3><p>每原子体积约1/n<sub>atom</sub>，以立方体边长估d<sub>vol</sub>=n<sub>atom</sub>⁻¹ᐟ³。z=1时n<sub>atom</sub>=n：</p><div class="formula">d<sub>vol</sub>≈2.574×10⁻¹⁰m=0.257nm；<br>ℓ<sub>经典</sub>/d<sub>vol</sub>≈15.8，<br>ℓ<sub>F</sub>/d<sub>vol</sub>≈204。</div>
+<p>这是粗估长度，<strong>不是精确最近邻距或晶格常数</strong>，后两者还要知道晶体结构。两种估计都超过原子尺度，费米估计约数百倍；实际周期势中的电子不能想成每过一个原子必被撞停。数值也说明不能把正文某处“经典自由程约原子间距”的量级描述不加条件地照搬到这道给定参数题。</p>
+<h2 id="exercise-6">本章结果与复习路线</h2>
+<div class="table-wrap"><table><thead><tr><th>题</th><th>结果（按各题写明的条件）</th><th>回看位置</th></tr></thead><tbody><tr><td>19-1</td><td>R₀≈0.121nm，连续Δj=1模型的条件解</td><td><a href="19.2.html#s3">转动线系与选择定则</a></td></tr><tr><td>19-2</td><td>k≈1.85×10³N/m</td><td><a href="19.2.html#s2">约化质量与振动</a></td></tr><tr><td>19-3</td><td>5.53eV；1.39×10⁶m/s；6.41×10⁴K；0.522nm</td><td><a href="19.3.html#s1">费米填充</a></td></tr><tr><td>19-4</td><td>u=3nE<sub>F</sub>/5，Ē=3E<sub>F</sub>/5</td><td><a href="19.3.html#heat">能量积分</a></td></tr><tr><td>19-5</td><td>τ≈3.78×10⁻¹⁴s；4.07nm/52.6nm；d<sub>vol</sub>≈0.257nm</td><td><a href="19.3.html#s2">输运模型</a></td></tr></tbody></table></div>
+<p>题号锚点保留；补充参考放回正文各节，不另建重复专题目录。掌握公式还需能解释每个条件：j序列怎样选择、μ为什么不是总质量、g与gf不同、费米速度为何不是漂移、平均体积长度为何不是最近邻距。</p><nav><a href="19.6.html#review">第19章回顾</a> · <a href="20.1.html">进入第20章 →</a></nav></main></body></html>
