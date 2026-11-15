@@ -1,12 +1,51 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.6 力学量与厄米算符</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.6）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html" aria-current="page">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.6 力学量与厄米算符</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">一、算符和本征态</a></li><li><a href="#s2">二、平均值与哈密顿算符</a></li></ul></div><h2 id="s1">一、算符和本征态</h2><p>算符是作用在函数上的规则。例如位置算符 x̂ 使波函数乘以 x；一维动量算符 p̂=−iħ d/dx。若 Âφ=aφ，φ 是 Â 的本征函数，a 是对应本征值。状态恰为可观测量的本征态时，理想测量给出相应本征值；一般态可展开为本征态的叠加，概率取决于展开系数。</p><p>复内积 ⟨u|v⟩=∫u* v dx；星号表示复共轭。厄米算符满足 ⟨u|Âv⟩=⟨Âu|v⟩，应结合其定义域与边界条件理解。本征值为实数；不同本征值对应的本征态正交。连续谱和简并情况需要相应的广义或正交化处理。</p><h2 id="s2">二、平均值与哈密顿算符</h2><p>归一化态中的期望值 ⟨A⟩=∫ψ*Âψ dx，是大量相同制备的测量结果的平均预测，不一定是某一次测量会得到的值。一维动能算符 T̂=p̂²/(2m)=−ħ²/(2m)d²/dx²；若势能是 V(x)，Ĥ=T̂+V(x)。</p><div class="example"><b>例1｜无限阱基态的位置平均值（新编）</b><p>粒子处于 0 到 a 的无限深势阱基态，求 ⟨x⟩。</p><p>|φ₁(x)|²=(2/a)sin²(πx/a)，关于 x=a/2 对称。概率密度在中心左右镜像相同，位置平均值必须在中心。</p><p class="answer">答案：⟨x⟩=a/2。</p><p>这不是说每次测量位置都等于 a/2；单次结果仍有概率分布。</p></div>
-<!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>算符作用、测量值和平均值</h2>
-<p>位置表象中，x 算符是“乘以 x”，动量算符 p̂ₓ＝−iħd/dx。说 ψ 是 Â 的本征态，意思是 Âψ＝aψ；在理想条件下对该态测量 A 得到对应本征值 a。若 ψ 不是本征态，测量可能产生多个结果，期望值则是重复测量的加权平均。</p>
-<p><strong>新编例题</strong>：对平面波 ψ(x)＝Ceⁱᵏˣ，有 p̂ₓψ＝−iħ(ik)ψ＝ħkψ，因此它是动量本征函数，本征值 <strong>ħk</strong>。平面波在整个实轴上不能按通常方式平方归一化；它是理想化广义本征态，局域粒子可用波包描述。</p>
-<p>对已归一化 ψ，平均动量为 ⟨pₓ⟩＝∫ψ* (−iħ∂ψ/∂x)dx。计算厄米算符时要同时检查积分存在、边界条件和定义域；“对波函数求导得到一个数”不等于每次测量一定得到这个数。</p>
-</section><!-- 自学深化内容结束 --><!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>函数、导数与算符</summary><p>函数把输入位置 x 对应到输出值 ψ(x)。导数 dψ/dx 描述函数随 x 的局部变化。算符是作用在函数上的规则：位置算符给出 xψ(x)，一维动量算符形式上给出 −iℏ dψ/dx。</p>
-<p><strong>例 3</strong>：若 ψ(x)=x²，则 dψ/dx=2x，一维动量算符形式作用结果为 −2iℏx。这只是演示运算；要作为物理态，还需要考虑空间范围、归一化及算符定义域等条件。</p></details><details class="lesson-detail"><summary>算符、测量和期望值</summary><p>量子力学中的可观测量由适当的厄米算符表示；本征方程 Âψ=aψ 表示本征态对应确定的本征值 a。对归一化态，观测量期望值通常写为 ⟨A⟩=∫ψ* Âψ dx，具体定义域、边界条件和积分区域随问题而定。</p>
-<p>算符次序不一定可交换。对易子定义为 [Â,B̂]=ÂB̂−B̂Â；不要把普通数的乘法交换律直接搬到算符上。两个算符是否存在共同本征态、是否能同时确定，还需结合对易关系与具体谱结构分析。</p></details><details class="lesson-detail"><summary>算符是对函数或态的操作</summary><p>普通数可以乘以一个函数；算符则是一个规则，作用在函数或态上，产生另一个函数或态。例如位置表象中，位置算符 x̂ 对 ψ(x) 的作用是乘以 x：x̂ψ=xψ；一维动量算符 p̂ₓ=−iℏ d/dx 的作用是先对 ψ 求导，再乘 −iℏ。</p>
-<p>写 Âψ 时，算符 Â 作用于右边的 ψ。若两个算符连写，ÂB̂ψ 意味着先让 B̂ 作用于 ψ，再让 Â 作用于结果。一般不能随意交换次序。</p></details><details class="lesson-detail"><summary>本征方程和测量</summary><p>如果非零态 ψ 满足 Âψ=aψ，则称它是算符 Â 的本征态，a 是相应本征值。适当定义的厄米可观测量算符具有实数测量结果；数学上还需说明算符的定义域和边界条件。</p>
-<p>如果系统处于某可观测量的归一化本征态，按理想测量规则测该量，结果确定为对应本征值。一般态可按合适的本征态展开，测量结果概率由展开系数及谱的性质决定；连续谱需使用相应的积分与归一化方式。</p>
-<p><strong>例 1</strong>：设 ψ(x)=Ae^(ikx)，其中 k 是实常数。对它求导，dψ/dx=ikψ，所以 p̂ₓψ=−iℏ(ik)ψ=ℏkψ。因此形式上它是动量算符本征函数，本征值为 ℏk。无限空间中的平面波不是通常意义下平方可积的归一化态，实际处理可使用波包或广义归一化；不要忽略这一限制。</p></details><details class="lesson-detail"><summary>期望值不是每次的测量结果</summary><p>对于归一化态，A 的期望值写作 ⟨A⟩=∫ψ*(Âψ)dx，积分范围覆盖位置空间。它描述同态重复测量的平均，不一定是一次测量可得到的本征值。</p>
-<p><strong>例 2</strong>：一个二能级系统以概率 1/2 得到能量 1 eV，以概率 1/2 得到 3 eV，则平均能量为 2 eV；但若只有这两个可能测量值，一次测量不会得到 2 eV。期望值与本征值应区分。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.5.html">← 上一节</a><a href="17.7.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.6 力学量与厄米算符</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}details:not(.toc){margin:.8em 0}details summary{cursor:pointer}.formula{text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.6）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html" aria-current="page">17.6</a><a href="17.7.html">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">本节已对照扫描教材 · 推导独立复核</span></p><main><h1>17.6 力学量与厄米算符</h1><p class="intro">对照教材纸281—287。本节把“操作波函数”与“测出物理量”联系起来：先认识算符，再说明本征值为什么是实数、怎样计算测量概率和平均值。此前分散的算符基础与例题在这里连起来学习。</p>
+<div class="toc"><strong>本节目录</strong><ul><li><a href="#s1">算符、本征态和内积</a></li><li><a href="#hermitian">厄米性、实本征值与正交性</a></li><li><a href="#example17-7">例17-7：势阱正交性</a></li><li><a href="#s2">展开系数、测量概率与期望</a></li><li><a href="#example17-8">例17-8：谐振子位置、动量平均值</a></li><li><a href="#construct">常用力学量算符</a></li><li><a href="#review">自测</a></li></ul></div>
+<h2 id="s1">一、算符是作用于函数的规则</h2>
+<p>普通函数把位置x对应到数值ψ(x)；算符则接收一个函数，再产生一个函数。例如位置算符x̂ψ＝xψ，是“乘x”；动量算符p̂ₓψ＝−iℏdψ/dx，是“先求导，再乘−iℏ”。帽子表示操作规则，不是待求普通数。</p>
+<div class="example"><b>保留的运算示例</b><p>对f(x)＝x²，x̂f＝x³，p̂ₓf＝−2iℏx。对常数f＝C，p̂ₓf＝0。这些只演示运算；x²或常数在整个实轴上不能普通归一化，不能直接称为实际制备的局域粒子态。</p></div>
+<p>ÂB̂ψ表示先让右边B̂作用，再让Â作用；次序不一定可交换。算符的输入还必须在它允许的函数范围内，这个范围称定义域，包含可微性、积分和边界等条件。</p>
+<p>若非零函数φ满足 <strong>Âφ＝aφ</strong>，称φ为本征函数、a为本征值：操作后只改变一个常数倍，函数形状不变。在相应理想测量模型中，对该量的本征态测量，结果确定为a。</p>
+<p>复函数的内积定义为⟨u|v⟩＝∫u*v dx，三维改用dV。⟨u|u⟩＝∫|u|²dx是模平方积分；它为0仅当u为零态。正交指内积为0，不是两条函数曲线在平面上成直角。</p>
+<h2 id="hermitian">二、厄米性为什么与真实测量有关</h2>
+<div class="formula">⟨u|Âv⟩＝⟨Âu|v⟩，<br>即∫u*(Âv)dx＝∫(Âu)*v dx。</div>
+<p>教材把满足这个内积关系的算符称为厄米算符。要对定义域内所有合适的u、v成立，不是只挑一个函数算相等即可。严谨的可观测量还需自伴条件；入门计算采用相应模型中已选好边界和定义域的可观测量，不能只凭微分表达式的外形判断。</p>
+<h3>本征值为实数：把定义代进去</h3>
+<p>设可归一化非零φ满足Âφ＝aφ，取u＝v＝φ，厄米性给 a⟨φ|φ⟩＝a*⟨φ|φ⟩。模平方积分非零，所以 <strong>a＝a*</strong>，即a是实数。连续谱理想本征函数用广义处理，不能直接照搬有限模积分证明每一步。</p>
+<h3>不同本征值的本征态正交</h3>
+<p>设Âφₙ＝aₙφₙ、Âφₘ＝aₘφₘ，两本征值已知为实数。由厄米性：</p>
+<div class="formula">⟨φₘ|Âφₙ⟩＝aₙ⟨φₘ|φₙ⟩；<br>⟨Âφₘ|φₙ⟩＝aₘ⟨φₘ|φₙ⟩；<br>⇒ (aₙ−aₘ)⟨φₘ|φₙ⟩＝0。</div>
+<p>若aₙ≠aₘ，则内积为0。同一本征值下的不同独立态称简并；此时上式是0＝0，不会自动证明它们正交，但可在该子空间内选择正交归一基。</p>
+<h3>求导算符为什么必须检查边界</h3>
+<p>对p̂ₓ＝−iℏd/dx分部积分：</p>
+<div class="formula">∫u*(p̂ₓv)dx−∫(p̂ₓu)*v dx＝−iℏ[u*v]<sub>边界</sub>。</div>
+<p>必须由函数衰减或匹配的周期边界等条件消掉边界项，才有这个积分对称关系；完整自伴性还涉及定义域。不能说“带−i的导数天然适用于所有边界”。对有限区间问题，动量和能量算符的可接受定义域也不能随意互换。</p>
+<h2 id="example17-7">三、教材例17-7：势阱态怎样正交</h2>
+<p>无限深势阱φₙ＝√(2/a)sin(nπx/a)，n＝1,2,…。当m≠n，用积化和差：</p>
+<div class="formula">∫₀ᵃφₘ*φₙdx<br>＝(1/a)∫₀ᵃ{cos[(m−n)πx/a]−cos[(m＋n)πx/a]}dx<br>＝0。</div>
+<p>因为积分后是整数倍π的正弦，在两端均为0；m≠n时分母m−n非零。m＝n必须另外算，积分为1。合写为∫φₘ*φₙdx＝δₘₙ，其中克罗内克符号δₘₙ在m＝n时为1，否则为0，不是连续变量的δ函数。</p>
+<p>完整定态含时间因子，内积多出e<sup>−i(Eₙ−Eₘ)t/ℏ</sup>；m≠n时乘0，m＝n时相位为1，因此正交归一性不受影响。</p>
+<h2 id="s2">四、展开系数怎样给出测量概率</h2>
+<p>先讨论离散谱、已选正交归一的完备本征态组{φₙ}。任意合适的归一化态可展开ψ＝Σcₙφₙ。左乘φₘ*并积分，正交性只留下m项：</p>
+<div class="formula">cₘ＝∫φₘ*ψ dx；<br>1＝∫ψ*ψdx＝ΣₘΣₙcₘ*cₙδₘₙ＝Σₙ|cₙ|²。</div>
+<p>理想测量得到aₙ的概率为|cₙ|²；若多个基态同属一个简并本征值，要把该本征子空间各项概率相加。连续谱要把求和改成相应积分，系数模平方解释为密度。这里本征展开的完备性是必要条件，不能只用少数不完备函数代表任意态。</p>
+<p>概率加权平均与直接用算符积分相同：</p>
+<div class="formula"><strong>⟨A⟩＝Σₙaₙ|cₙ|²＝∫ψ*(Âψ)dx。</strong><br>(ΔA)²＝⟨A²⟩−⟨A⟩²。</div>
+<p>例如先展开Âψ＝Σcₙaₙφₙ，再与ψ取内积，双重求和中的交叉项由δₘₙ消失。若原ψ未归一化，期望应除以∫|ψ|²dx，不能漏分母。<strong>先算Âψ，再乘ψ*积分</strong>；不是把算符当普通数移出积分。</p>
+<div class="example"><b>保留的新编：平均值未必是一次可测到的值</b><p>能量只可能为1 eV或3 eV且各概率1/2，平均能量为2 eV，但单次不会测到2 eV。相应⟨E²⟩＝5 eV²，ΔE＝1 eV；这说明用平均值不能代替完整分布。</p></div>
+<h2 id="example17-8">五、教材例17-8：谐振子基态的平均位置和动量</h2>
+<p>用17.5的φ₀＝√α/π<sup>1/4</sup>·e<sup>−α²x²/2</sup>，α＝√(mω/ℏ)，整体时间相位在期望中相消。</p>
+<ol><li>⟨x⟩＝∫x|φ₀|²dx。密度为偶函数，乘x变奇函数，在全实轴积分为0。</li><li>φ₀′＝−α²xφ₀，故p̂φ₀＝iℏα²xφ₀，⟨p⟩＝iℏα²∫x|φ₀|²dx＝0。</li></ol>
+<p>两个平均值都是0，但φ₀既不是位置本征态，也不是零动量本征态；p̂φ₀与φ₀的比值依赖x，不是一个常数本征值。⟨p²⟩＝mℏω/2＞0，动能平均仍为ℏω/4。</p>
+<div class="example"><b>保留的新编：无限阱基态的位置平均值</b><p>对ρ＝(2/a)sin²(πx/a)，⟨x⟩＝∫₀ᵃxρdx。令x↔a−x，密度不变，故⟨x⟩＝a−⟨x⟩，得a/2。它是大量测量的平均，不表示每次都在中点。</p></div>
+<h2 id="construct">六、从位置、动量构造常用算符</h2>
+<p>以下为常质量、无电磁矢势的普通位置表象：</p>
+<div class="formula">r̂：乘以r；p̂＝−iℏ∇；<br>T̂＝p̂²/(2m)＝−ℏ²∇²/(2m)；<br>V̂ψ＝V(r)ψ；Ĥ＝T̂＋V̂。</div>
+<p>例如固定氢核的库仑势V(r)＝−e²/(4πε₀r)，故Ĥ＝−ℏ²∇²/(2mₑ)−e²/(4πε₀r)。这里势能零点在无穷远，负号来自吸引；不是电势本身。精细质量修正在氢原子一节再说明。</p>
+<p>轨道角动量L̂＝r̂×p̂，逐分量写为：</p>
+<div class="formula">L̂ₓ＝−iℏ(y∂/∂z−z∂/∂y)；<br>L̂ᵧ＝−iℏ(z∂/∂x−x∂/∂z)；<br>L̂_z＝−iℏ(x∂/∂y−y∂/∂x)；<br>L̂²＝L̂ₓ²＋L̂ᵧ²＋L̂_z²。</div>
+<p>L̂ₓ²的意思是让L̂ₓ作用两次，求导时仍需对右侧全部乘积使用乘积法则，不是只把系数逐个平方。自旋等内部自由度不能都由r、p的经典表达式构造，后面另学。</p>
+<h2 id="review">七、自测：能否分清操作、测量和平均</h2>
+<details><summary>1. p̂作用于Ae<sup>ikx</sup>，为什么能得到本征值ℏk？</summary><p>求导为ik乘原函数，再乘−iℏ得到ℏk乘原函数；比例为常数，故是形式上的动量本征函数。无限空间平面波需广义归一化，不能漏掉模型限制。</p></details>
+<details><summary>2. 为什么必须取复共轭，而不是∫ψÂψ？</summary><p>复内积要求左边函数取共轭，才能使模平方和测量概率为非负实数，并与厄米性相容。只有在某些实函数特例才可省写星号，不能作一般规则。</p></details>
+<details><summary>3. 两个不同函数是否必正交？同一本征值下呢？</summary><p>都不必。不同本征值的厄米本征态才由定理保证正交；简并子空间可选正交基，但任意选出的两个不同函数未必正交。</p></details>
+<p>下一节<a href="17.7.html">对易关系</a>用算符次序解释哪些量可以选择共同确定的状态。</p></main><div class="switch"><a href="17.5.html">← 上一节</a><a href="17.7.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版纸281—287；教材例题、公式与推导已逐项对照并独立整理，保留的新编示例已标明。没有见到出版社习题答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>

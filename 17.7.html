@@ -1,16 +1,36 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.7 对易关系</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.7）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html" aria-current="page">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">讲义已整理 · 持续校对</span></p><main><h1>17.7 对易关系</h1><p class="intro"><strong>学习与练习：</strong><a href="quantum-practice-guide.html">量子力学分步典型题：分步讲解和练习</a>，附详细例题与练习。</p><div class="intro"><strong>本章学习与练习</strong><ul></ul></div><p>两个算符的对易子定义为 [Â,B̂]=ÂB̂−B̂Â，表示先后作用顺序的差别。坐标和一维动量满足 [x̂,p̂]=iħ。验证时必须让两边作用于同一个足够光滑、符合定义域的测试函数 f：</p><div class="formula">(x̂p̂−p̂x̂)f=−iħxf′+iħ(xf)′=iħf</div><p>因此先求导再乘 x 与先乘 x 再求导一般不同。两个可观测量的算符在合适条件下对易，通常可选择共同本征态；非对易时一般不能建立完整的共同本征态组。简并和算符定义域等细节需另外处理，不能把“某个态恰巧同时有确定值”与“算符普遍对易”混为一谈。</p><p>角动量分量满足 [L̂ₓ,L̂ᵧ]=iħL̂𝓏 及循环关系；L̂² 与各分量对易，所以可同时选定 L² 和一个分量（常取 L𝓏），但一般不能同时精确指定三个分量。</p><div class="example"><b>例1｜位置与动量的顺序（新编）</b><p>取 f(x)=x²，计算 [x̂,p̂]f。</p><p>根据上式，[x̂,p̂]f=iħf=iħx²。直接展开时，两次求导要对全部乘积使用乘积法则。</p><p class="answer">答案：iħx²。</p><p>它是对函数的作用结果，不是普通数值 0。</p></div>
-<!-- 自学深化内容开始 --><section class="self-study-expansion"><h2>对易子怎样计算、能说明什么</h2>
-<p>定义 [A,B]＝AB−BA，先做右边算符再做左边算符。计算时让两项作用在任意足够光滑的测试函数 f(x) 上，可以避免把微分算符误当成普通代数符号。</p>
-<p>例如 [x,p̂]f＝x(−iħf′)−[−iħ(xf)′]＝iħf，所以 <strong>[x,p̂]＝iħ</strong>。再利用 [A,BC]＝[A,B]C＋B[A,C]，得到 [x,p̂²]＝2iħp̂；顺序换成 [p̂²,x] 时结果整体变号。</p>
-<p>若两个自伴算符在适当条件下具有共同完备本征态，可以在这些态中同时具有确定值；仅凭某个态的 ⟨[A,B]⟩＝0，不能倒推出算符本身对易。对易性质、某个态中的平均值、以及具体测量序列是三个不同的问题。</p>
-</section><!-- 自学深化内容结束 --><!-- 教材小节整合 --><section class="integrated-section"><h2>例题与重点理解</h2><div class="integrated-reading"><h3>题 9：对易子的次序</h3><p>设 p̂=−iℏd/dx，计算 (x̂p̂−p̂x̂)f(x)。</p>
-<details class="answer"><summary>查看解答</summary><p> x̂p̂f=−iℏxf′；p̂x̂f=−iℏ(xf)′=−iℏ(f+xf′)。相减后得到 iℏf。关键是对 xf 求导时保留乘积求导产生的 f 项。</p></details></div></section><!-- 教材小节整合结束 --><!-- 按教材小节归并 physical --><div class="integrated-lesson"><h3>详细讲解与练习</h3><details class="lesson-detail"><summary>对易子为什么不是普通乘法？</summary><p>定义 [Â,B̂]=ÂB̂−B̂Â。对位置与一维动量，在适当的光滑函数上直接计算：</p>
-<p>x̂p̂ψ=−iℏ xψ′；</p>
-<p>p̂x̂ψ=−iℏ d(xψ)/dx=−iℏ(ψ+xψ′)。</p>
-<p>两者相减得到 [x̂,p̂]ψ=iℏψ，所以 [x̂,p̂]=iℏ Î。关键是第二步对 xψ 求导时要使用乘积求导法则，不能只对 ψ 求导。</p>
-<p>非零对易子与不确定性关系有关；但“对易”与“能否构造完整共同本征基”在一般无限维空间涉及定义域和谱的细节，具体问题应结合算符条件判断。</p></details><details class="lesson-detail"><summary>练习与解答</summary><p><strong>1.</strong> 在位置表象中，对常数函数 ψ(x)=C，p̂ₓψ 是什么？</p>
-<p>解：导数为零，所以形式上 p̂ₓψ=0。是否为合格的物理态取决于空间范围、归一化和边界条件，不能仅凭这个计算断定它一定是可实现态。</p>
-<p><strong>2.</strong> 两种测量值分别为 −1 和 +1，概率各为 1/2，期望值是多少？是否意味着每次都测得 0？</p>
-<p>解：期望为 0；每次仍只得到 −1 或 +1，0 是重复测量的平均值。</p>
-<p><strong>3.</strong> [Â,B̂]=0 是否是 AB 和 BA 在所讨论态上相等的代数表示？</p>
-<p>解：在算符及其乘积都有定义的共同定义域上，是。无限维体系中的测量问题还可能需要更强条件，不能忽略定义域。</p></details></div><!-- 归并结束 --></main><div class="switch"><a href="17.6.html">← 上一节</a><a href="17.8.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版第17章；例题为新编，示意图为自制。补充参考：<a href="https://openstax.org/books/university-physics-volume-3/pages/7-summary">OpenStax 量子力学</a>、<a href="https://openstax.org/books/university-physics-volume-3/pages/8-1-the-hydrogen-atom">氢原子</a>。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="style.css"><title>17.7 对易关系</title><style>details.lesson-detail{margin:.7em 0;padding:.1em .9em;border-left:3px solid #a8c3d2;background:#f7f9fa}details.lesson-detail>summary{padding:.55em 0;cursor:pointer;color:#174b74;font-weight:600}details.lesson-detail[open]>summary{border-bottom:1px solid #d8e3e9}details:not(.toc){margin:.8em 0}details summary{cursor:pointer}.formula{text-align:left}</style></head><body><header class="top"><a href="index.html">大学物理 · 返回首页</a></header><div class="shell"><details class="toc"><summary>第17章小节导航（当前 17.7）</summary><nav class="nav"><a href="index.html">首页</a><a href="17.1.html">17.1</a><a href="17.2.html">17.2</a><a href="17.3.html">17.3</a><a href="17.4.html">17.4</a><a href="17.5.html">17.5</a><a href="17.6.html">17.6</a><a href="17.7.html" aria-current="page">17.7</a><a href="17.8.html">17.8</a><a href="17.9.html">17.9</a><a href="17.10.html">17.10</a><a href="17.11.html">17.11</a></nav></details><p><span class="badge">本节已对照扫描教材 · 推导独立复核</span></p><main><h1>17.7 对易关系</h1><p class="intro">对应教材纸287—290。算符不是普通数，先乘位置再求导，与先求导再乘位置会有差别。本节把教材例17-9—17-11的省略步补齐，并联系共同本征态和不确定性。</p>
+<div class="toc"><strong>本节路线</strong><ul><li><a href="#definition">对易子和乘积求导</a></li><li><a href="#example17-9">例17-9：四个恒等式</a></li><li><a href="#common">共同本征态与测量</a></li><li><a href="#example17-10">例17-10：角动量对易子</a></li><li><a href="#example17-11">例17-11与球坐标</a></li><li><a href="#review">自测</a></li></ul></div>
+<h2 id="definition">一、对易子衡量操作次序的差别</h2>
+<div class="formula">[Â,B̂]＝ÂB̂−B̂Â。</div>
+<p>在同一个足够光滑、满足共同定义域的测试函数f上分别算两项，右边算符先作用。若对所讨论的所有这些函数结果为0，称算符对易；在某一个特殊f上恰好为0，不能证明普遍对易。</p>
+<p>对x̂和p̂ₓ＝−iℏd/dx：</p>
+<div class="formula">x̂p̂ₓf＝−iℏxf′；<br>p̂ₓx̂f＝−iℏ(xf)′＝−iℏ(f＋xf′)；<br>⇒ [x̂,p̂ₓ]f＝iℏf，<strong>[x̂,p̂ₓ]＝iℏÎ</strong>。</div>
+<p>Î是保持函数不变的单位算符，常简写为[x,pₓ]＝iℏ。遗漏乘积求导产生的f项，就会错误地得到0。保留的新编例f＝x²直接算得：xpf＝−2iℏx²，pxf＝−3iℏx²，两者差为iℏx²。</p>
+<p>普通直角坐标、无磁矢势的正则变量有：[xᵢ,pⱼ]＝iℏδᵢⱼÎ，[xᵢ,xⱼ]＝0，[pᵢ,pⱼ]＝0。不同方向的x与pᵧ对易；含磁场时机械动量不应无条件照搬正则动量关系。</p>
+<h2 id="example17-9">二、教材例17-9：四个恒等式怎样展开</h2>
+<p>以下式子省略帽子，但所有字母仍是算符；只在各乘积都有定义的共同范围内使用。</p>
+<div class="formula">[A,B＋C]＝[A,B]＋[A,C]；<br>[A＋B,C]＝[A,C]＋[B,C]；<br>[A,BC]＝[A,B]C＋B[A,C]；<br>[AB,C]＝A[B,C]＋[A,C]B。</div>
+<ol><li>第一式：A(B＋C)−(B＋C)A＝AB−BA＋AC−CA。</li><li>第二式：(A＋B)C−C(A＋B)＝AC−CA＋BC−CB。</li><li>第三式：ABC−BCA中加减BAC，得(AB−BA)C＋B(AC−CA)。</li><li>第四式：ABC−CAB中加减ACB，得A(BC−CB)＋(AC−CA)B。</li></ol>
+<p>每次只加减同一项，没有交换不对易算符的次序。另外[A,B]＝−[B,A]、[A,A]＝0，常数倍单位算符与所有算符对易。</p>
+<h3>从恒等式算出实用结果</h3>
+<div class="formula">[x,p²]＝[x,p]p＋p[x,p]＝2iℏp；<br>[p²,x]＝−2iℏp。</div>
+<p>对足够光滑的乘法函数g(x)，直接作用于f并用乘积法则可得[p,g(x)]＝−iℏg′(x)。例如[p,x²]＝−2iℏx；不要把导数误作用到括号外不存在的函数上。</p>
+<p>教材还计算[p_z,L_z]。由L_z＝xpᵧ−ypₓ和不同方向基本对易式：</p>
+<div class="formula">[p_z,L_z]＝[p_z,xpᵧ]−[p_z,ypₓ]<br>＝x[p_z,pᵧ]＋[p_z,x]pᵧ<br>−y[p_z,pₓ]−[p_z,y]pₓ＝0。</div>
+<h2 id="common">三、对易与“同时确定”要分清层次</h2>
+<p>若一套完备基同时满足Aφₙ＝aₙφₙ、Bφₙ＝bₙφₙ，则[A,B]φₙ＝(aₙbₙ−bₙaₙ)φₙ＝0；把任意合适态按这套基展开，对易子也为0。</p>
+<p>反过来，在有限维厄米矩阵或本教材通常采用的适当谱、定义域条件下，对易可观测量可以选择共同本征态；简并时需在简并子空间内再选基。一般无限维算符不能只看一个形式对易式就忽略自伴性和定义域。</p>
+<p><strong>“具有共同完备基”不等于“所有态中两量都确定”</strong>：只有相应共同本征态才同时有确定值；它们的任意叠加一般会有分布。两个算符不对易也不排除某些特殊共同本征态，只是一般不能构造完整共同基。某态中⟨[A,B]⟩＝0更不能倒推出算符普遍对易。</p>
+<p>对标准差存在的合适态，ΔAΔB≥|⟨[A,B]⟩|/2。代入[x,p]＝iℏÎ便得到17.3的ΔxΔp≥ℏ/2；不是“仪器精度不足”。若某态中对易子平均为0，这个下界只是0，不等于两种标准差实际都为0。</p>
+<h2 id="example17-10">四、教材例17-10：角动量分量为何不对易</h2>
+<p>由Lₓ＝yp_z−zpᵧ、Lᵧ＝zpₓ−xp_z，展开四项。两项为0，留下：</p>
+<div class="formula">[Lₓ,Lᵧ]＝[yp_z,zpₓ]＋[zpᵧ,xp_z]；<br>[yp_z,zpₓ]＝y[p_z,z]pₓ＝−iℏypₓ；<br>[zpᵧ,xp_z]＝x[z,p_z]pᵧ＝iℏxpᵧ；<br>⇒ <strong>[Lₓ,Lᵧ]＝iℏ(xpᵧ−ypₓ)＝iℏL_z。</strong></div>
+<p>循环交换x、y、z得到[Lᵧ,L_z]＝iℏLₓ、[L_z,Lₓ]＝iℏLᵧ；反向交换次序则改负号。这里“循环”指x→y→z→x，不是任意换两个下标都保留正号。</p>
+<h3>再算[L_z,L²]，不要把LₓLᵧ偷偷交换</h3>
+<div class="formula">[L_z,L²]＝[L_z,Lₓ²]＋[L_z,Lᵧ²]；<br>[L_z,Lₓ²]＝iℏ(LᵧLₓ＋LₓLᵧ)；<br>[L_z,Lᵧ²]＝−iℏ(LₓLᵧ＋LᵧLₓ)；<br>⇒ <strong>[L_z,L²]＝0</strong>。</div>
+<p>两项按相同次序成对相消，无需假定Lₓ和Lᵧ对易。同理[Lₓ,L²]＝[Lᵧ,L²]＝0。因此可以选L²和一个分量（常取L_z）的共同本征态；一般不能把三个分量都赋予确定值。ℓ＝0的零角动量态是三个分量都为0的特殊情形，不能把“一般不能”误写成无例外的绝对禁止。</p>
+<h2 id="example17-11">五、教材例17-11：三个动量分量的共同本征函数</h2><p>在全空间、普通正则动量模型中，[pₓ,pᵧ]＝[pᵧ,p_z]＝[p_z,pₓ]＝0。分别求一维本征方程，形式解为e<sup>ipₓx/ℏ</sup>、e<sup>ipᵧy/ℏ</sup>、e<sup>ip_zz/ℏ</sup>；三个变量可分离，乘积给：</p><div class="formula">φ_p(r)＝(2πℏ)<sup>−3/2</sup>exp[i(pₓx＋pᵧy＋p_zz)/ℏ]<br>＝(2πℏ)<sup>−3/2</sup>exp(ip·r/ℏ)。</div><p>分别对x、y、z求导再乘−iℏ，均得到相应p分量乘原函数，因此三个分量同时确定。教材系数采用<strong>动量δ函数广义归一化</strong>，不是∫全空间|φ|²dV＝1的普通概率归一化；实际局域粒子需叠加成波包。</p><h3>换成球坐标，物理关系不变，微分形式会变</h3><p>取x＝r sinθ cosϕ，y＝r sinθ sinϕ，z＝r cosθ；θ为从＋z轴量起的极角，ϕ为绕z轴的方位角。不要把角变量ϕ与波函数φ混淆。用链式求导可把角动量写成：</p><div class="formula">Lₓ＝iℏ(sinϕ∂/∂θ＋cotθ cosϕ∂/∂ϕ)；<br>Lᵧ＝−iℏ(cosϕ∂/∂θ−cotθ sinϕ∂/∂ϕ)；<br>L_z＝−iℏ∂/∂ϕ；<br>L²＝−ℏ²{[1/sinθ]∂/∂θ(sinθ∂/∂θ)<br>＋[1/sin²θ]∂²/∂ϕ²}。</div><p>算符外形改变，但对易关系本身不依赖坐标选择。例如L_z作用于e<sup>imϕ</sup>给mℏ乘原函数；下一节将结合球面条件确定允许的量子数。球坐标内积也需dV＝r²sinθ dr dθ dϕ，不能只换求导公式而漏积分的几何因子。</p><h2 id="review">六、自测：先自己展开，再核对</h2>
+<details><summary>1. [p,x]和[x,p]相同吗？[x,p²]是零吗？</summary><p>次序倒转改负号：[p,x]＝−iℏÎ；[x,p²]＝2iℏp，不是零。</p></details>
+<details><summary>2. 常数函数的导数为0，能否证明[x,p]＝0？</summary><p>不能。即使pf＝0，p(xf)仍为−iℏf，故两种次序之差为iℏf；此外还需检查函数是否处于问题允许的定义域。</p></details>
+<details><summary>3. L²和L_z对易，是否说明任何状态的L²、L_z都确定？</summary><p>不是。可以选择共同本征态；一般叠加态仍有测量概率分布。应结合状态和算符共同判断。</p></details>
+<p>期望值不一定是单次结果等练习已整合到<a href="17.6.html#s2">上一节测量概率与期望</a>。下一节<a href="17.8.html">氢原子</a>将使用能量、L²、L_z这些量标记状态。</p></main><div class="switch"><a href="17.6.html">← 上一节</a><a href="17.8.html">下一节 →</a></div><p class="footer">主要依据：用户提供的《大学物理（下册）》第七版纸287—290；教材例题、公式与推导已逐项对照并独立整理，保留的新编示例已标明。没有见到出版社习题答案。</p></div><script>try{localStorage.setItem("physics-last",location.pathname.split("/").pop())}catch(e){}</script></body></html>
